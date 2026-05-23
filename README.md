@@ -1,6 +1,7 @@
 # N2LPI — Natural Language to Propositional Logic Interface
 
 Translate Spanish sentences into classical propositional logic formulas using a hybrid ML + rule-based approach.
+> **Note:** The translation of Spanish sentences into propositional logic formulas provided by this tool is an **approximation** and should not be considered 100% exact.
 
 ## Features
 
