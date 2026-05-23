@@ -1,0 +1,11 @@
+#Entorno
+env/
+
+#Cache
+__pycache__/
+
+#Modelo No es necesario para la ejecucion
+model/
+
+#Readme en redaccion
+README.md
