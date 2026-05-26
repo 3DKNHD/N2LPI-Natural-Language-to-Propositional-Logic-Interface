@@ -420,8 +420,8 @@
     "formula": "(P ∨ Q) ∧ R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -435,8 +435,8 @@
     "formula": "(P ∨ Q) ∧ R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -450,8 +450,8 @@
     "formula": "(P ∨ Q) ∧ R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -465,8 +465,8 @@
     "formula": "(P ∨ Q) ∧ R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -480,8 +480,8 @@
     "formula": "(P ∨ Q) ∧ R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -495,8 +495,8 @@
     "formula": "(P ∨ Q) ∧ R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -510,8 +510,8 @@
     "formula": "(P ∨ Q) ∧ R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -525,8 +525,8 @@
     "formula": "(P ∨ Q) ∧ R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -540,8 +540,8 @@
     "formula": "(P ∨ Q) ∧ R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -555,8 +555,8 @@
     "formula": "(P ∨ Q) ∧ R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -980,8 +980,8 @@
     "formula": "(P ∧ Q) ∨ R",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "∨"
+      "∨",
+      "∧"
     ]
   },
   {
@@ -995,8 +995,8 @@
     "formula": "(P ∧ Q) ∨ R",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "∨"
+      "∨",
+      "∧"
     ]
   },
   {
@@ -1010,8 +1010,8 @@
     "formula": "(P ∧ Q) ∨ R",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "∨"
+      "∨",
+      "∧"
     ]
   },
   {
@@ -1025,8 +1025,8 @@
     "formula": "(P ∧ Q) ∨ R",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "∨"
+      "∨",
+      "∧"
     ]
   },
   {
@@ -1040,8 +1040,8 @@
     "formula": "(P ∧ Q) ∨ R",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "∨"
+      "∨",
+      "∧"
     ]
   },
   {
@@ -1055,8 +1055,8 @@
     "formula": "(P ∧ Q) ∨ R",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "∨"
+      "∨",
+      "∧"
     ]
   },
   {
@@ -1070,8 +1070,8 @@
     "formula": "(P ∧ Q) ∨ R",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "∨"
+      "∨",
+      "∧"
     ]
   },
   {
@@ -1085,8 +1085,8 @@
     "formula": "(P ∧ Q) ∨ R",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "∨"
+      "∨",
+      "∧"
     ]
   },
   {
@@ -1100,8 +1100,8 @@
     "formula": "(P ∧ Q) ∨ R",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "∨"
+      "∨",
+      "∧"
     ]
   },
   {
@@ -1115,8 +1115,8 @@
     "formula": "(P ∧ Q) ∨ R",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "∨"
+      "∨",
+      "∧"
     ]
   },
   {
@@ -1435,8 +1435,8 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "→"
+      "→",
+      "∧"
     ]
   },
   {
@@ -1495,8 +1495,8 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "→"
+      "→",
+      "∧"
     ]
   },
   {
@@ -1540,8 +1540,8 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "→"
+      "→",
+      "∧"
     ]
   },
   {
@@ -1555,8 +1555,8 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "→"
+      "→",
+      "∧"
     ]
   },
   {
@@ -1570,8 +1570,8 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "→"
+      "→",
+      "∧"
     ]
   },
   {
@@ -1600,8 +1600,8 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "→"
+      "→",
+      "∧"
     ]
   },
   {
@@ -1615,8 +1615,8 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "→"
+      "→",
+      "∧"
     ]
   },
   {
@@ -1630,8 +1630,8 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "→"
+      "→",
+      "∧"
     ]
   },
   {
@@ -1660,8 +1660,8 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "→"
+      "→",
+      "∧"
     ]
   },
   {
@@ -1675,8 +1675,8 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "→"
+      "→",
+      "∧"
     ]
   },
   {
@@ -2331,8 +2331,8 @@
     "formula": "¬P → Q",
     "complexity": "simple",
     "connectives": [
-      "¬",
-      "→"
+      "→",
+      "¬"
     ]
   },
   {
@@ -2346,9 +2346,9 @@
     "formula": "(P ∧ ¬Q) → R",
     "complexity": "medium",
     "connectives": [
+      "→",
       "∧",
-      "¬",
-      "→"
+      "¬"
     ]
   },
   {
@@ -2362,8 +2362,8 @@
     "formula": "(P ∨ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "→"
+      "→",
+      "∨"
     ]
   },
   {
@@ -2391,9 +2391,9 @@
     "formula": "(¬P ∨ ¬Q) → ¬R",
     "complexity": "medium",
     "connectives": [
+      "→",
       "¬",
-      "∨",
-      "→"
+      "∨"
     ]
   },
   {
@@ -2438,9 +2438,9 @@
     "formula": "(P ∨ ¬Q) → R",
     "complexity": "medium",
     "connectives": [
+      "→",
       "∨",
-      "¬",
-      "→"
+      "¬"
     ]
   },
   {
@@ -2470,8 +2470,8 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "→"
+      "→",
+      "∧"
     ]
   },
   {
@@ -2485,9 +2485,9 @@
     "formula": "(¬Q ∧ R) → P",
     "complexity": "medium",
     "connectives": [
+      "→",
       "¬",
-      "∧",
-      "→"
+      "∧"
     ]
   },
   {
@@ -2501,8 +2501,8 @@
     "formula": "¬P → (¬Q ∧ ¬R)",
     "complexity": "medium",
     "connectives": [
-      "¬",
       "→",
+      "¬",
       "∧"
     ]
   },
@@ -2518,9 +2518,9 @@
     "formula": "((P ∨ Q) ∧ R) → S",
     "complexity": "complex",
     "connectives": [
+      "→",
       "∨",
-      "∧",
-      "→"
+      "∧"
     ]
   },
   {
@@ -2586,8 +2586,8 @@
     "formula": "((P ∧ Q) ∧ R) → ¬S",
     "complexity": "complex",
     "connectives": [
-      "∧",
       "→",
+      "∧",
       "¬"
     ]
   },
@@ -2704,9 +2704,9 @@
     "formula": "(P ∧ ¬Q) → R",
     "complexity": "medium",
     "connectives": [
+      "→",
       "∧",
-      "¬",
-      "→"
+      "¬"
     ]
   },
   {
@@ -2749,8 +2749,8 @@
     "formula": "(P ∨ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "→"
+      "→",
+      "∨"
     ]
   },
   {
@@ -2810,9 +2810,9 @@
     "formula": "(¬P ∨ Q) → R",
     "complexity": "medium",
     "connectives": [
+      "→",
       "¬",
-      "∨",
-      "→"
+      "∨"
     ]
   },
   {
@@ -2826,8 +2826,8 @@
     "formula": "(P → Q) ∧ R",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -2856,8 +2856,8 @@
     "formula": "(P ↔ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "↔",
-      "→"
+      "→",
+      "↔"
     ]
   },
   {
@@ -2886,9 +2886,9 @@
     "formula": "((P ∨ Q) ∧ R) → S",
     "complexity": "complex",
     "connectives": [
+      "→",
       "∨",
-      "∧",
-      "→"
+      "∧"
     ]
   },
   {
@@ -2903,9 +2903,9 @@
     "formula": "(P ∧ (Q → R)) ∨ S",
     "complexity": "complex",
     "connectives": [
+      "∨",
       "∧",
-      "→",
-      "∨"
+      "→"
     ]
   },
   {
@@ -2919,9 +2919,9 @@
     "formula": "(¬P ∨ ¬Q) → ¬R",
     "complexity": "complex",
     "connectives": [
+      "→",
       "¬",
-      "∨",
-      "→"
+      "∨"
     ]
   },
   {
@@ -2952,8 +2952,8 @@
     "formula": "(P → Q) ∧ (¬R → S)",
     "complexity": "complex",
     "connectives": [
-      "→",
       "∧",
+      "→",
       "¬"
     ]
   },
@@ -2986,9 +2986,9 @@
     "formula": "((P ∧ Q) ∨ (R ∧ S)) → ¬P",
     "complexity": "complex",
     "connectives": [
+      "→",
       "∧",
       "∨",
-      "→",
       "¬"
     ]
   },
@@ -3004,9 +3004,9 @@
     "formula": "(P ∨ (Q ∧ R)) ↔ S",
     "complexity": "complex",
     "connectives": [
+      "↔",
       "∨",
-      "∧",
-      "↔"
+      "∧"
     ]
   },
   {
@@ -3021,9 +3021,9 @@
     "formula": "¬(P → Q) ∧ (R ∨ S)",
     "complexity": "complex",
     "connectives": [
+      "∧",
       "¬",
       "→",
-      "∧",
       "∨"
     ]
   },
@@ -3039,9 +3039,9 @@
     "formula": "(P ↔ ¬Q) → (R ∧ S)",
     "complexity": "complex",
     "connectives": [
+      "→",
       "↔",
       "¬",
-      "→",
       "∧"
     ]
   },
@@ -3172,8 +3172,8 @@
     "formula": "¬P → Q",
     "complexity": "medium",
     "connectives": [
-      "¬",
-      "→"
+      "→",
+      "¬"
     ]
   },
   {
@@ -3245,8 +3245,8 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "→"
+      "→",
+      "∧"
     ]
   },
   {
@@ -3260,8 +3260,8 @@
     "formula": "(P ∨ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "→"
+      "→",
+      "∨"
     ]
   },
   {
@@ -3303,8 +3303,8 @@
     "formula": "¬P ∨ Q",
     "complexity": "medium",
     "connectives": [
-      "¬",
-      "∨"
+      "∨",
+      "¬"
     ]
   },
   {
@@ -3319,8 +3319,8 @@
     "formula": "(P ∧ Q) → (R ∨ S)",
     "complexity": "complex",
     "connectives": [
-      "∧",
       "→",
+      "∧",
       "∨"
     ]
   },
@@ -3336,9 +3336,9 @@
     "formula": "(¬P ∧ ¬Q) → (R ∧ S)",
     "complexity": "complex",
     "connectives": [
+      "→",
       "¬",
-      "∧",
-      "→"
+      "∧"
     ]
   },
   {
@@ -3371,9 +3371,9 @@
     "formula": "((P ∧ Q) → R) ↔ ¬S",
     "complexity": "complex",
     "connectives": [
+      "↔",
       "∧",
       "→",
-      "↔",
       "¬"
     ]
   },
@@ -3389,10 +3389,10 @@
     "formula": "((P ∨ Q) ∧ ¬R) → S",
     "complexity": "complex",
     "connectives": [
+      "→",
       "∨",
       "∧",
-      "¬",
-      "→"
+      "¬"
     ]
   },
   {
@@ -3424,8 +3424,8 @@
     "formula": "(P ∧ Q) → (R ↔ ¬S)",
     "complexity": "complex",
     "connectives": [
-      "∧",
       "→",
+      "∧",
       "↔",
       "¬"
     ]
@@ -3442,9 +3442,9 @@
     "formula": "(¬P ∨ Q) → (R ∧ S)",
     "complexity": "complex",
     "connectives": [
+      "→",
       "¬",
       "∨",
-      "→",
       "∧"
     ]
   },
@@ -3477,9 +3477,9 @@
     "formula": "(P ∧ ¬Q) → (R ∨ S)",
     "complexity": "complex",
     "connectives": [
+      "→",
       "∧",
       "¬",
-      "→",
       "∨"
     ]
   },
@@ -3569,8 +3569,8 @@
     "formula": "¬P → Q",
     "complexity": "medium",
     "connectives": [
-      "¬",
-      "→"
+      "→",
+      "¬"
     ]
   },
   {
@@ -3625,8 +3625,8 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "→"
+      "→",
+      "∧"
     ]
   },
   {
@@ -3640,8 +3640,8 @@
     "formula": "(P ∨ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "→"
+      "→",
+      "∨"
     ]
   },
   {
@@ -3654,8 +3654,8 @@
     "formula": "¬Q → P",
     "complexity": "medium",
     "connectives": [
-      "¬",
-      "→"
+      "→",
+      "¬"
     ]
   },
   {
@@ -3669,8 +3669,8 @@
     "formula": "(Q ∧ R) → P",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "→"
+      "→",
+      "∧"
     ]
   },
   {
@@ -3758,8 +3758,8 @@
     "formula": "¬Q → ¬P",
     "complexity": "medium",
     "connectives": [
-      "¬",
-      "→"
+      "→",
+      "¬"
     ]
   },
   {
@@ -3773,9 +3773,9 @@
     "formula": "(P ∧ ¬Q) → ¬R",
     "complexity": "medium",
     "connectives": [
+      "→",
       "∧",
-      "¬",
-      "→"
+      "¬"
     ]
   },
   {
@@ -3789,8 +3789,8 @@
     "formula": "(Q ∨ R) → P",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "→"
+      "→",
+      "∨"
     ]
   },
   {
@@ -3804,8 +3804,8 @@
     "formula": "¬P → (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "¬",
       "→",
+      "¬",
       "∧"
     ]
   },
@@ -3820,8 +3820,8 @@
     "formula": "(Q ∨ R) → P",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "→"
+      "→",
+      "∨"
     ]
   },
   {
@@ -3851,9 +3851,9 @@
     "formula": "(P ∧ ¬Q) → R",
     "complexity": "medium",
     "connectives": [
+      "→",
       "∧",
-      "¬",
-      "→"
+      "¬"
     ]
   },
   {
@@ -3867,8 +3867,8 @@
     "formula": "(P ∨ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "→"
+      "→",
+      "∨"
     ]
   },
   {
@@ -3912,9 +3912,9 @@
     "formula": "(¬P ∧ Q) → (R ∨ S)",
     "complexity": "complex",
     "connectives": [
+      "→",
       "¬",
       "∧",
-      "→",
       "∨"
     ]
   },
@@ -3930,8 +3930,8 @@
     "formula": "(P ∧ Q) → (¬S → R)",
     "complexity": "complex",
     "connectives": [
-      "∧",
       "→",
+      "∧",
       "¬"
     ]
   },
@@ -3947,8 +3947,8 @@
     "formula": "(P ∧ Q) → (R ↔ S)",
     "complexity": "complex",
     "connectives": [
-      "∧",
       "→",
+      "∧",
       "↔"
     ]
   },
@@ -3964,9 +3964,9 @@
     "formula": "(¬P ∨ Q) → (R ∧ S)",
     "complexity": "complex",
     "connectives": [
+      "→",
       "¬",
       "∨",
-      "→",
       "∧"
     ]
   },
@@ -3999,8 +3999,8 @@
     "formula": "(P ∨ Q) → (R ∧ ¬S)",
     "complexity": "complex",
     "connectives": [
-      "∨",
       "→",
+      "∨",
       "∧",
       "¬"
     ]
@@ -4017,9 +4017,9 @@
     "formula": "(P ∧ ¬Q) → (S → R)",
     "complexity": "complex",
     "connectives": [
+      "→",
       "∧",
-      "¬",
-      "→"
+      "¬"
     ]
   },
   {
@@ -4049,8 +4049,8 @@
     "formula": "(Q ∧ R) → P",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "→"
+      "→",
+      "∧"
     ]
   },
   {
@@ -4064,8 +4064,8 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "→"
+      "→",
+      "∧"
     ]
   },
   {
@@ -4092,8 +4092,8 @@
     "formula": "¬P → (R → Q)",
     "complexity": "medium",
     "connectives": [
-      "¬",
-      "→"
+      "→",
+      "¬"
     ]
   },
   {
@@ -4123,8 +4123,8 @@
     "formula": "(P ∨ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "→"
+      "→",
+      "∨"
     ]
   },
   {
@@ -4138,8 +4138,8 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "→"
+      "→",
+      "∧"
     ]
   },
   {
@@ -4153,9 +4153,9 @@
     "formula": "(Q ∧ ¬R) → P",
     "complexity": "medium",
     "connectives": [
+      "→",
       "∧",
-      "¬",
-      "→"
+      "¬"
     ]
   },
   {
@@ -4185,9 +4185,9 @@
     "formula": "(¬P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
+      "→",
       "¬",
-      "∧",
-      "→"
+      "∧"
     ]
   },
   {
@@ -4216,8 +4216,8 @@
     "formula": "(P ∧ Q) → (¬S → R)",
     "complexity": "complex",
     "connectives": [
-      "∧",
       "→",
+      "∧",
       "¬"
     ]
   },
@@ -4233,8 +4233,8 @@
     "formula": "(P ∨ Q) → (S → R)",
     "complexity": "complex",
     "connectives": [
-      "∨",
-      "→"
+      "→",
+      "∨"
     ]
   },
   {
@@ -4503,8 +4503,8 @@
     "formula": "¬P → Q",
     "complexity": "medium",
     "connectives": [
-      "¬",
-      "→"
+      "→",
+      "¬"
     ]
   },
   {
@@ -4518,8 +4518,8 @@
     "formula": "(P ∨ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "→"
+      "→",
+      "∨"
     ]
   },
   {
@@ -4547,8 +4547,8 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "→"
+      "→",
+      "∧"
     ]
   },
   {
@@ -4578,9 +4578,9 @@
     "formula": "(P ∨ ¬Q) → R",
     "complexity": "medium",
     "connectives": [
+      "→",
       "∨",
-      "¬",
-      "→"
+      "¬"
     ]
   },
   {
@@ -4623,8 +4623,8 @@
     "formula": "(P ∨ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "→"
+      "→",
+      "∨"
     ]
   },
   {
@@ -4653,8 +4653,8 @@
     "formula": "¬P → (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "¬",
       "→",
+      "¬",
       "∧"
     ]
   },
@@ -4669,9 +4669,9 @@
     "formula": "(P ∧ ¬Q) → R",
     "complexity": "medium",
     "connectives": [
+      "→",
       "∧",
-      "¬",
-      "→"
+      "¬"
     ]
   },
   {
@@ -4699,9 +4699,9 @@
     "formula": "(¬P ∨ Q) → R",
     "complexity": "medium",
     "connectives": [
+      "→",
       "¬",
-      "∨",
-      "→"
+      "∨"
     ]
   },
   {
@@ -4730,8 +4730,8 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "→"
+      "→",
+      "∧"
     ]
   },
   {
@@ -4745,9 +4745,9 @@
     "formula": "(¬P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
+      "→",
       "¬",
-      "∧",
-      "→"
+      "∧"
     ]
   },
   {
@@ -4775,8 +4775,8 @@
     "formula": "(P ∨ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "→"
+      "→",
+      "∨"
     ]
   },
   {
@@ -4806,8 +4806,8 @@
     "formula": "(P ∨ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "→"
+      "→",
+      "∨"
     ]
   },
   {
@@ -4821,9 +4821,9 @@
     "formula": "(¬P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
+      "→",
       "¬",
-      "∧",
-      "→"
+      "∧"
     ]
   },
   {
@@ -4881,8 +4881,8 @@
     "formula": "(P ∨ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "→"
+      "→",
+      "∨"
     ]
   },
   {
@@ -4910,9 +4910,9 @@
     "formula": "(P ∧ ¬Q) → R",
     "complexity": "medium",
     "connectives": [
+      "→",
       "∧",
-      "¬",
-      "→"
+      "¬"
     ]
   },
   {
@@ -4926,8 +4926,8 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "→"
+      "→",
+      "∧"
     ]
   },
   {
@@ -4957,8 +4957,8 @@
     "formula": "(P ∧ Q) → (R ↔ ¬S)",
     "complexity": "complex",
     "connectives": [
-      "∧",
       "→",
+      "∧",
       "↔",
       "¬"
     ]
@@ -4975,9 +4975,9 @@
     "formula": "(¬P ∨ Q) → (R ∧ S)",
     "complexity": "complex",
     "connectives": [
+      "→",
       "¬",
       "∨",
-      "→",
       "∧"
     ]
   },
@@ -5027,8 +5027,8 @@
     "formula": "(P ∧ Q) → (R ∨ S)",
     "complexity": "complex",
     "connectives": [
-      "∧",
       "→",
+      "∧",
       "∨"
     ]
   },
@@ -5044,10 +5044,10 @@
     "formula": "((P ∨ Q) ∧ ¬R) → S",
     "complexity": "complex",
     "connectives": [
+      "→",
       "∨",
       "∧",
-      "¬",
-      "→"
+      "¬"
     ]
   },
   {
@@ -5079,8 +5079,8 @@
     "formula": "(P ∧ Q) → (R ∧ ¬S)",
     "complexity": "complex",
     "connectives": [
-      "∧",
       "→",
+      "∧",
       "¬"
     ]
   },
@@ -5114,9 +5114,9 @@
     "formula": "((P ∧ Q) ∨ (R ∧ S)) → T",
     "complexity": "complex",
     "connectives": [
+      "→",
       "∧",
-      "∨",
-      "→"
+      "∨"
     ]
   },
   {
@@ -5148,9 +5148,9 @@
     "formula": "(¬P ∧ Q) → (R ↔ S)",
     "complexity": "complex",
     "connectives": [
+      "→",
       "¬",
       "∧",
-      "→",
       "↔"
     ]
   },
@@ -5166,9 +5166,9 @@
     "formula": "((P ∨ Q) ∧ R) → S",
     "complexity": "complex",
     "connectives": [
+      "→",
       "∨",
-      "∧",
-      "→"
+      "∧"
     ]
   },
   {
@@ -5201,8 +5201,8 @@
     "formula": "(P ∧ Q) → (R ∧ ¬S)",
     "complexity": "complex",
     "connectives": [
-      "∧",
       "→",
+      "∧",
       "¬"
     ]
   },
@@ -5235,8 +5235,8 @@
     "formula": "(P ∧ Q) → (R ∨ S)",
     "complexity": "complex",
     "connectives": [
-      "∧",
       "→",
+      "∧",
       "∨"
     ]
   },
@@ -5252,10 +5252,10 @@
     "formula": "((P ∨ Q) ∧ ¬R) → S",
     "complexity": "complex",
     "connectives": [
+      "→",
       "∨",
       "∧",
-      "¬",
-      "→"
+      "¬"
     ]
   },
   {
@@ -5287,8 +5287,8 @@
     "formula": "(P ∧ Q) → (R ↔ S)",
     "complexity": "complex",
     "connectives": [
-      "∧",
       "→",
+      "∧",
       "↔"
     ]
   },
@@ -5321,9 +5321,9 @@
     "formula": "(¬P ∨ Q) → (R ∧ S)",
     "complexity": "complex",
     "connectives": [
+      "→",
       "¬",
       "∨",
-      "→",
       "∧"
     ]
   },
@@ -5339,8 +5339,8 @@
     "formula": "(P ∧ Q) → (R ∨ S)",
     "complexity": "complex",
     "connectives": [
-      "∧",
       "→",
+      "∧",
       "∨"
     ]
   },
@@ -5374,9 +5374,9 @@
     "formula": "((P ∧ Q) ∨ (R ∧ S)) → T",
     "complexity": "complex",
     "connectives": [
+      "→",
       "∧",
-      "∨",
-      "→"
+      "∨"
     ]
   },
   {
@@ -5408,8 +5408,8 @@
     "formula": "(P ∧ Q) → (R ↔ ¬S)",
     "complexity": "complex",
     "connectives": [
-      "∧",
       "→",
+      "∧",
       "↔",
       "¬"
     ]
@@ -5426,9 +5426,9 @@
     "formula": "(¬P ∨ Q) → (R ∧ S)",
     "complexity": "complex",
     "connectives": [
+      "→",
       "¬",
       "∨",
-      "→",
       "∧"
     ]
   },
@@ -5461,10 +5461,10 @@
     "formula": "((P ∨ Q) ∧ ¬R) → S",
     "complexity": "complex",
     "connectives": [
+      "→",
       "∨",
       "∧",
-      "¬",
-      "→"
+      "¬"
     ]
   },
   {
@@ -5490,8 +5490,8 @@
     "formula": "¬P ∨ Q",
     "complexity": "complex",
     "connectives": [
-      "¬",
-      "∨"
+      "∨",
+      "¬"
     ]
   },
   {
@@ -5505,8 +5505,8 @@
     "formula": "(P ∧ Q) ∨ ¬R",
     "complexity": "complex",
     "connectives": [
-      "∧",
       "∨",
+      "∧",
       "¬"
     ]
   },
@@ -5591,8 +5591,8 @@
     "formula": "(P ∧ Q) ∨ ¬R",
     "complexity": "complex",
     "connectives": [
-      "∧",
       "∨",
+      "∧",
       "¬"
     ]
   },
@@ -5650,8 +5650,8 @@
     "formula": "¬P ∨ Q",
     "complexity": "complex",
     "connectives": [
-      "¬",
-      "∨"
+      "∨",
+      "¬"
     ]
   },
   {
@@ -5698,8 +5698,8 @@
     "formula": "(Q ∨ R) → P",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "→"
+      "→",
+      "∨"
     ]
   },
   {
@@ -5713,9 +5713,9 @@
     "formula": "¬(Q ∧ R) → P",
     "complexity": "complex",
     "connectives": [
+      "→",
       "¬",
-      "∧",
-      "→"
+      "∧"
     ]
   },
   {
@@ -5760,8 +5760,8 @@
     "formula": "(R ∨ S) → (P ∧ Q)",
     "complexity": "complex",
     "connectives": [
-      "∨",
       "→",
+      "∨",
       "∧"
     ]
   },
@@ -5811,9 +5811,9 @@
     "formula": "¬(Q ∨ R) → ¬P",
     "complexity": "complex",
     "connectives": [
+      "→",
       "¬",
-      "∨",
-      "→"
+      "∨"
     ]
   },
   {
@@ -5861,8 +5861,8 @@
     "formula": "(Q ∨ R) → P",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "→"
+      "→",
+      "∨"
     ]
   },
   {
@@ -5877,9 +5877,9 @@
     "formula": "¬(Q ∧ R ∧ ¬S) → ¬P",
     "complexity": "complex",
     "connectives": [
+      "→",
       "¬",
-      "∧",
-      "→"
+      "∧"
     ]
   },
   {
@@ -5960,8 +5960,8 @@
     "formula": "(R ∨ S) → (P ∧ Q)",
     "complexity": "complex",
     "connectives": [
-      "∨",
       "→",
+      "∨",
       "∧"
     ]
   },
@@ -5976,9 +5976,9 @@
     "formula": "¬(Q ∧ R) → ¬P",
     "complexity": "complex",
     "connectives": [
+      "→",
       "¬",
-      "∧",
-      "→"
+      "∧"
     ]
   },
   {
@@ -6041,9 +6041,9 @@
     "formula": "(Q ∧ ¬R) → P",
     "complexity": "complex",
     "connectives": [
+      "→",
       "∧",
-      "¬",
-      "→"
+      "¬"
     ]
   },
   {
@@ -6057,9 +6057,9 @@
     "formula": "¬(Q ∨ R) → P",
     "complexity": "complex",
     "connectives": [
+      "→",
       "¬",
-      "∨",
-      "→"
+      "∨"
     ]
   },
   {
@@ -6141,9 +6141,9 @@
     "formula": "(Q ∧ ¬R) → P",
     "complexity": "complex",
     "connectives": [
+      "→",
       "∧",
-      "¬",
-      "→"
+      "¬"
     ]
   },
   {
@@ -6157,9 +6157,9 @@
     "formula": "¬(Q ∨ R) → ¬P",
     "complexity": "complex",
     "connectives": [
+      "→",
       "¬",
-      "∨",
-      "→"
+      "∨"
     ]
   },
   {
@@ -6207,9 +6207,9 @@
     "formula": "(¬P ∨ Q) → (S → R)",
     "complexity": "complex",
     "connectives": [
+      "→",
       "¬",
-      "∨",
-      "→"
+      "∨"
     ]
   },
   {
@@ -6239,8 +6239,8 @@
     "formula": "(Q ∨ R) → ¬P",
     "complexity": "complex",
     "connectives": [
-      "∨",
       "→",
+      "∨",
       "¬"
     ]
   },
@@ -6255,9 +6255,9 @@
     "formula": "¬(Q ∧ R) → P",
     "complexity": "complex",
     "connectives": [
+      "→",
       "¬",
-      "∧",
-      "→"
+      "∧"
     ]
   },
   {
@@ -6336,9 +6336,9 @@
     "formula": "¬(Q ∧ R) → ¬P",
     "complexity": "complex",
     "connectives": [
+      "→",
       "¬",
-      "∧",
-      "→"
+      "∧"
     ]
   },
   {
@@ -6416,8 +6416,8 @@
     "formula": "(Q ∨ R) → P",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "→"
+      "→",
+      "∨"
     ]
   },
   {
@@ -6431,9 +6431,9 @@
     "formula": "¬(Q ∨ R) → ¬P",
     "complexity": "complex",
     "connectives": [
+      "→",
       "¬",
-      "∨",
-      "→"
+      "∨"
     ]
   },
   {
@@ -6478,9 +6478,9 @@
     "formula": "(Q ∧ ¬R) → P",
     "complexity": "complex",
     "connectives": [
+      "→",
       "∧",
-      "¬",
-      "→"
+      "¬"
     ]
   },
   {
@@ -6494,9 +6494,9 @@
     "formula": "¬(Q ∧ R) → ¬P",
     "complexity": "complex",
     "connectives": [
+      "→",
       "¬",
-      "∧",
-      "→"
+      "∧"
     ]
   },
   {
@@ -6588,8 +6588,8 @@
     "formula": "(Q ∨ R) → P",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "→"
+      "→",
+      "∨"
     ]
   },
   {
@@ -6603,9 +6603,9 @@
     "formula": "¬(Q ∧ R) → ¬P",
     "complexity": "complex",
     "connectives": [
+      "→",
       "¬",
-      "∧",
-      "→"
+      "∧"
     ]
   },
   {
@@ -6683,8 +6683,8 @@
     "formula": "(Q ∧ R) → P",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "→"
+      "→",
+      "∧"
     ]
   },
   {
@@ -6698,9 +6698,9 @@
     "formula": "¬(Q ∨ R) → ¬P",
     "complexity": "complex",
     "connectives": [
+      "→",
       "¬",
-      "∨",
-      "→"
+      "∨"
     ]
   },
   {
@@ -6775,9 +6775,9 @@
     "formula": "(Q ∧ ¬R) → P",
     "complexity": "complex",
     "connectives": [
+      "→",
       "∧",
-      "¬",
-      "→"
+      "¬"
     ]
   },
   {
@@ -6791,9 +6791,9 @@
     "formula": "¬(Q ∧ R) → ¬P",
     "complexity": "complex",
     "connectives": [
+      "→",
       "¬",
-      "∧",
-      "→"
+      "∧"
     ]
   },
   {
@@ -6870,8 +6870,8 @@
     "formula": "(Q ∧ R) → P",
     "complexity": "medium",
     "connectives": [
-      "∧",
-      "→"
+      "→",
+      "∧"
     ]
   },
   {
@@ -6885,9 +6885,9 @@
     "formula": "¬(Q ∨ R) → ¬P",
     "complexity": "complex",
     "connectives": [
+      "→",
       "¬",
-      "∨",
-      "→"
+      "∨"
     ]
   },
   {
@@ -6964,8 +6964,8 @@
     "formula": "(Q ∨ R) → P",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "→"
+      "→",
+      "∨"
     ]
   },
   {
@@ -6979,9 +6979,9 @@
     "formula": "¬(Q ∧ R) → ¬P",
     "complexity": "complex",
     "connectives": [
+      "→",
       "¬",
-      "∧",
-      "→"
+      "∧"
     ]
   },
   {
@@ -7084,8 +7084,8 @@
     "formula": "¬P → ¬Q",
     "complexity": "medium",
     "connectives": [
-      "¬",
-      "→"
+      "→",
+      "¬"
     ]
   },
   {
@@ -7098,8 +7098,8 @@
     "formula": "¬P ∧ ¬Q",
     "complexity": "medium",
     "connectives": [
-      "¬",
-      "∧"
+      "∧",
+      "¬"
     ]
   },
   {
@@ -7113,8 +7113,8 @@
     "formula": "(P ∨ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "→"
+      "→",
+      "∨"
     ]
   },
   {
@@ -7160,8 +7160,8 @@
     "formula": "(P ∧ Q) → (R ∨ S)",
     "complexity": "complex",
     "connectives": [
-      "∧",
       "→",
+      "∧",
       "∨"
     ]
   },
@@ -7193,9 +7193,9 @@
     "formula": "((P ∨ Q) ∧ R) → S",
     "complexity": "complex",
     "connectives": [
+      "→",
       "∨",
-      "∧",
-      "→"
+      "∧"
     ]
   },
   {
@@ -7337,9 +7337,9 @@
     "formula": "(¬P ∨ Q) → ¬R",
     "complexity": "medium",
     "connectives": [
+      "→",
       "¬",
-      "∨",
-      "→"
+      "∨"
     ]
   },
   {
@@ -7369,9 +7369,9 @@
     "formula": "(P ∧ ¬Q) → R",
     "complexity": "medium",
     "connectives": [
+      "→",
       "∧",
-      "¬",
-      "→"
+      "¬"
     ]
   },
   {
@@ -7386,9 +7386,9 @@
     "formula": "(P ∧ ¬Q) → (R ∨ S)",
     "complexity": "complex",
     "connectives": [
+      "→",
       "∧",
       "¬",
-      "→",
       "∨"
     ]
   },
