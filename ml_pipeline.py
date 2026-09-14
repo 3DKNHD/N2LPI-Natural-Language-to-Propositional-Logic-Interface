@@ -16,13 +16,15 @@ import os
 import re
 import json
 import joblib
+import numpy as np
 import pandas as pd
 from typing import Dict, List, Tuple, Optional
 from sklearn.ensemble import HistGradientBoostingClassifier, RandomForestClassifier
-from sklearn.multioutput import MultiOutputClassifier
+from sklearn.linear_model import SGDClassifier
+from sklearn.metrics import accuracy_score, classification_report, f1_score
 from sklearn.model_selection import train_test_split, StratifiedKFold, cross_val_score
-from sklearn.metrics import accuracy_score, classification_report
 from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.multioutput import MultiOutputClassifier
 
 from logic_utils import standardize_formula_variables
 from config import NEGATION_START_PHRASES, logger
@@ -41,12 +43,13 @@ class HybridPipelineTrainer:
 
         self.clf_multi: Optional[MultiOutputClassifier] = None
         self.clf_main: Optional[RandomForestClassifier] = None
+        self.boundary: Optional["BoundaryClassifier"] = None
 
         self._load_data()
         self._extract_features()
         self._define_targets()
 
-    def predict_with_confidence(self, sentence: str) -> Tuple[str, float, Dict[str, bool]]:
+    def predict_with_confidence(self, sentence: str, allowed: Optional[set] = None) -> Tuple[str, float, Dict[str, bool]]:
         """Predict the main connective with confidence score and sub-connector flags."""
         feat = self.extract_advanced_features(sentence)
         hand_df = pd.DataFrame([feat])
@@ -61,8 +64,16 @@ class HybridPipelineTrainer:
         X_user_aug['pred_disj'] = pred_multi[2]
 
         proba = self.clf_main.predict_proba(X_user_aug)[0]
-        confidence = min(proba)
-        pred_main = self.clf_main.classes_[proba.argmax()]
+        classes = list(self.clf_main.classes_)
+        if allowed:
+            masked = np.array(
+                [p if cls_name in allowed else 0.0 for cls_name, p in zip(classes, proba)],
+                dtype=float,
+            )
+            if float(masked.sum()) > 0:
+                proba = masked
+        confidence = float(proba.max())
+        pred_main = classes[int(proba.argmax())]
 
         return pred_main, confidence, {
             'has_negation': bool(pred_multi[0]),
@@ -298,9 +309,15 @@ class HybridPipelineTrainer:
         
         Splits data, fits MultiOutputClassifier, and builds stacked features.
         """
-        X_train, X_test, y_multi_train, y_multi_test = train_test_split(
-            self.X, self.y_multilabel, test_size=0.2, random_state=42, stratify=self.y_main
-        )
+        strat = self.y_main if self.y_main.value_counts().min() >= 2 else None
+        try:
+            X_train, X_test, y_multi_train, y_multi_test = train_test_split(
+                self.X, self.y_multilabel, test_size=0.2, random_state=42, stratify=strat
+            )
+        except ValueError:
+            X_train, X_test, y_multi_train, y_multi_test = train_test_split(
+                self.X, self.y_multilabel, test_size=0.2, random_state=42
+            )
         self.X_train = X_train
         self.X_test = X_test
         self.y_multi_train = y_multi_train
@@ -340,6 +357,13 @@ class HybridPipelineTrainer:
         logger.info("\n--- Rendimiento del clasificador de conector principal (Holdout) ---")
         logger.info(f"Accuracy: {accuracy_score(self.y_main_test, y_main_pred):.3f}")
         logger.info(classification_report(self.y_main_test, y_main_pred, zero_division=0))
+        # Deployed models: refit on the full training set after reporting holdout.
+        self.clf_multi.fit(self.X, self.y_multilabel)
+        X_full = self.X.copy()
+        full_multi = self.clf_multi.predict(self.X)
+        for i, label in enumerate(['pred_neg', 'pred_conj', 'pred_disj']):
+            X_full[label] = full_multi[:, i]
+        self.clf_main.fit(X_full, self.y_main)
 
     def cross_validate_main(self, n_splits: int = 5) -> None:
         """Run stratified k-fold cross-validation on the main connector classifier."""
@@ -390,11 +414,13 @@ class HybridPipelineTrainer:
     def save_models(self, filepath: str = 'models.joblib') -> None:
         """Serialize classifiers, TF-IDF vectorizer, and feature columns to disk."""
         try:
+            os.makedirs(os.path.dirname(filepath) or '.', exist_ok=True)
             data = {
                 'clf_multi': self.clf_multi,
                 'clf_main': self.clf_main,
                 'tfidf': self._tfidf,
-                'feature_columns': self.feature_columns
+                'feature_columns': self.feature_columns,
+                'boundary': None if self.boundary is None else self.boundary.to_dict(),
             }
             joblib.dump(data, filepath)
             logger.info(f"Modelos guardados exitosamente en '{filepath}'.")
@@ -415,8 +441,185 @@ class HybridPipelineTrainer:
             self.clf_main = data['clf_main']
             self._tfidf = data['tfidf']
             self.feature_columns = data['feature_columns']
+            if data.get('boundary'):
+                self.boundary = BoundaryClassifier.from_dict(data['boundary'])
             logger.info(f"Modelos cargados en memoria desde '{filepath}'.")
             return True
         except Exception as e:
             logger.error(f"Error al cargar los modelos: {e}")
             return False
+
+    def train_boundary_classifier(self) -> None:
+        items = self.df.to_dict(orient="records")
+        self.boundary = BoundaryClassifier()
+        self.boundary.train_from_dataset(items)
+
+    def predict_boundary_proba(self, sentence: str, cue) -> float:
+        if self.boundary is None:
+            from pipeline_parser import gold_is_boundary
+            return 1.0 if (cue.force or gold_is_boundary(sentence, cue, None)) else 0.25
+        return self.boundary.predict_boundary_proba(sentence, cue)
+
+
+class BoundaryClassifier:
+    """Stage-2 clause-boundary model with batch HGB + online SGD."""
+
+    def __init__(self, feedback_path: str = "data/feedback.jsonl", refit_every: int = 20):
+        self.batch_clf = HistGradientBoostingClassifier(
+            max_iter=120, learning_rate=0.08, max_depth=5, random_state=42
+        )
+        self.sgd = SGDClassifier(loss="log_loss", random_state=42)
+        self.feedback_path = feedback_path
+        self.refit_every = refit_every
+        self.gold_X: Optional[np.ndarray] = None
+        self.gold_y: Optional[np.ndarray] = None
+        self.feedback_X: List[List[float]] = []
+        self.feedback_y: List[int] = []
+        self._sgd_ready = False
+        self._batch_ready = False
+        self._feedback_events = 0
+
+    def train_from_dataset(self, items: List[dict]) -> None:
+        from pipeline_parser import detect_cues, extract_boundary_features, gold_is_boundary, vectorize_features
+
+        X, y = [], []
+        for item in items:
+            sentence = item.get("sentence") or ""
+            for cue in detect_cues(sentence):
+                X.append(vectorize_features(extract_boundary_features(sentence, cue)))
+                y.append(int(gold_is_boundary(sentence, cue, item)))
+        self.gold_X = np.asarray(X, dtype=float)
+        self.gold_y = np.asarray(y, dtype=int)
+        if self.gold_X.size == 0:
+            logger.info("No hay cues para entrenar fronteras.")
+            return
+        unique = set(self.gold_y.tolist())
+        if len(unique) >= 2:
+            self.batch_clf.fit(self.gold_X, self.gold_y)
+            self._batch_ready = True
+            self.sgd.partial_fit(self.gold_X, self.gold_y, classes=np.array([0, 1]))
+            self._sgd_ready = True
+            pred = self.batch_clf.predict(self.gold_X)
+            logger.info(
+                f"Fronteras: n={len(y)} pos={int(self.gold_y.sum())} "
+                f"acc={accuracy_score(self.gold_y, pred):.3f} "
+                f"f1={f1_score(self.gold_y, pred, zero_division=0):.3f}"
+            )
+        else:
+            logger.info(f"Fronteras: una sola clase ({unique}); se usarán heurísticas.")
+
+    def predict_boundary_proba(self, sentence: str, cue) -> float:
+        from pipeline_parser import extract_boundary_features, gold_is_boundary, vectorize_features
+
+        if cue.force:
+            return 0.99
+        vec = np.asarray([vectorize_features(extract_boundary_features(sentence, cue))], dtype=float)
+        p_batch = None
+        p_sgd = None
+        if self._batch_ready:
+            p_batch = float(self.batch_clf.predict_proba(vec)[0, 1])
+        if self._sgd_ready:
+            try:
+                p_sgd = float(self.sgd.predict_proba(vec)[0, 1])
+            except Exception:
+                p_sgd = p_batch
+        from pipeline_parser import is_np_coordination, looks_verbal
+        left, right = sentence[:cue.start], sentence[cue.end:]
+        prior = None
+        if cue.kind in {"AND", "OR", "SINO"}:
+            if looks_verbal(left) and looks_verbal(right):
+                prior = 0.62
+            elif is_np_coordination(left, right):
+                prior = 0.6
+        if p_batch is None and p_sgd is None:
+            base = 0.9 if gold_is_boundary(sentence, cue, None) else 0.2
+            return max(base, prior or 0.0)
+        if p_sgd is None:
+            p = p_batch
+        elif p_batch is None:
+            p = p_sgd
+        else:
+            w = min(0.5, 0.04 * self._feedback_events)
+            p = (1.0 - w) * p_batch + w * p_sgd
+        if prior is not None:
+            p = max(p, prior)
+        return p
+
+    def learn_labels(self, sentence: str, labels: List[dict], meta: Optional[dict] = None) -> None:
+        from pipeline_parser import Cue, detect_cues, extract_boundary_features, vectorize_features
+
+        cues = detect_cues(sentence)
+        X, y = [], []
+        for lab in labels:
+            cue = next((c for c in cues if c.start == lab["start"] and c.end == lab["end"]), None)
+            if cue is None:
+                cue = Cue(lab["start"], lab["end"], lab.get("kind", "AND"), "∧", lab.get("text", ""), False)
+            X.append(vectorize_features(extract_boundary_features(sentence, cue)))
+            y.append(int(lab["boundary"]))
+        if not X:
+            return
+        arr_x, arr_y = np.asarray(X, dtype=float), np.asarray(y, dtype=int)
+        classes = np.array([0, 1])
+        self.sgd.partial_fit(arr_x, arr_y, classes=classes)
+        self._sgd_ready = True
+        self.feedback_X.extend(X)
+        self.feedback_y.extend(y)
+        self._feedback_events += 1
+        self._append_feedback(sentence, labels, meta)
+        if self._feedback_events % self.refit_every == 0:
+            self.refit()
+
+    def refit(self) -> None:
+        if self.gold_X is None or self.gold_X.size == 0:
+            return
+        extra_x = np.asarray(self.feedback_X, dtype=float) if self.feedback_X else None
+        extra_y = np.asarray(self.feedback_y, dtype=int) if self.feedback_y else None
+        if extra_x is not None and extra_x.size:
+            X = np.vstack([self.gold_X, extra_x])
+            y = np.concatenate([self.gold_y, extra_y])
+        else:
+            X, y = self.gold_X, self.gold_y
+        if len(set(y.tolist())) < 2:
+            return
+        self.batch_clf.fit(X, y)
+        self._batch_ready = True
+        self.sgd.partial_fit(X, y, classes=np.array([0, 1]))
+        logger.info(f"Refit de fronteras con {len(y)} ejemplos (feedback={len(self.feedback_y)}).")
+
+    def _append_feedback(self, sentence: str, labels: List[dict], meta: Optional[dict]) -> None:
+        os.makedirs(os.path.dirname(self.feedback_path) or ".", exist_ok=True)
+        row = {"sentence": sentence, "labels": labels, "meta": meta or {}}
+        with open(self.feedback_path, "a", encoding="utf-8") as fh:
+            fh.write(json.dumps(row, ensure_ascii=False) + "\n")
+
+    def to_dict(self) -> dict:
+        return {
+            "batch_clf": self.batch_clf if self._batch_ready else None,
+            "sgd": self.sgd if self._sgd_ready else None,
+            "gold_X": self.gold_X,
+            "gold_y": self.gold_y,
+            "feedback_X": self.feedback_X,
+            "feedback_y": self.feedback_y,
+            "feedback_path": self.feedback_path,
+            "refit_every": self.refit_every,
+            "feedback_events": self._feedback_events,
+            "batch_ready": self._batch_ready,
+            "sgd_ready": self._sgd_ready,
+        }
+
+    @classmethod
+    def from_dict(cls, data: dict) -> "BoundaryClassifier":
+        obj = cls(feedback_path=data.get("feedback_path", "data/feedback.jsonl"),
+                  refit_every=int(data.get("refit_every", 20)))
+        if data.get("batch_clf") is not None:
+            obj.batch_clf = data["batch_clf"]
+            obj._batch_ready = bool(data.get("batch_ready", True))
+        if data.get("sgd") is not None:
+            obj.sgd = data["sgd"]
+            obj._sgd_ready = bool(data.get("sgd_ready", True))
+        obj.gold_X = data.get("gold_X")
+        obj.gold_y = data.get("gold_y")
+        obj.feedback_X = list(data.get("feedback_X") or [])
+        obj.feedback_y = list(data.get("feedback_y") or [])
+        obj._feedback_events = int(data.get("feedback_events") or 0)
+        return obj

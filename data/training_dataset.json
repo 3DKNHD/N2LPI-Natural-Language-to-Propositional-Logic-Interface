@@ -1,18 +1,5 @@
 [
   {
-    "id": 1,
-    "sentence": "El servidor responde y la aplicación funciona correctamente.",
-    "propositions": {
-      "P": "el servidor responde",
-      "Q": "la aplicación funciona correctamente"
-    },
-    "formula": "P ∧ Q",
-    "complexity": "simple",
-    "connectives": [
-      "∧"
-    ]
-  },
-  {
     "id": 2,
     "sentence": "La médica revisó al paciente y el tratamiento comenzó hoy.",
     "propositions": {
@@ -29,8 +16,8 @@
     "id": 3,
     "sentence": "Pedro terminó el informe y María envió los correos.",
     "propositions": {
-      "P": "Pedro terminó el informe",
-      "Q": "María envió los correos"
+      "P": "pedro terminó el informe",
+      "Q": "maría envió los correos"
     },
     "formula": "P ∧ Q",
     "complexity": "simple",
@@ -44,19 +31,6 @@
     "propositions": {
       "P": "la impresora tiene tinta",
       "Q": "el documento salió completo"
-    },
-    "formula": "P ∧ Q",
-    "complexity": "simple",
-    "connectives": [
-      "∧"
-    ]
-  },
-  {
-    "id": 5,
-    "sentence": "El autobús llegó temprano y los pasajeros subieron rápido.",
-    "propositions": {
-      "P": "el autobús llegó temprano",
-      "Q": "los pasajeros subieron rápido"
     },
     "formula": "P ∧ Q",
     "complexity": "simple",
@@ -94,8 +68,8 @@
     "id": 8,
     "sentence": "Ana preparó café y Luis limpió la cocina.",
     "propositions": {
-      "P": "Ana preparó café",
-      "Q": "Luis limpió la cocina"
+      "P": "ana preparó café",
+      "Q": "luis limpió la cocina"
     },
     "formula": "P ∧ Q",
     "complexity": "simple",
@@ -122,19 +96,6 @@
     "propositions": {
       "P": "el clima está despejado",
       "Q": "las calles permanecen tranquilas"
-    },
-    "formula": "P ∧ Q",
-    "complexity": "simple",
-    "connectives": [
-      "∧"
-    ]
-  },
-  {
-    "id": 11,
-    "sentence": "La enfermera tomó la presión y el paciente descansó después.",
-    "propositions": {
-      "P": "la enfermera tomó la presión",
-      "Q": "el paciente descansó después"
     },
     "formula": "P ∧ Q",
     "complexity": "simple",
@@ -211,8 +172,8 @@
     "id": 17,
     "sentence": "Carlos reservó el hotel y Marta compró los boletos.",
     "propositions": {
-      "P": "Carlos reservó el hotel",
-      "Q": "Marta compró los boletos"
+      "P": "carlos reservó el hotel",
+      "Q": "marta compró los boletos"
     },
     "formula": "P ∧ Q",
     "complexity": "simple",
@@ -294,8 +255,8 @@
     "sentence": "El autobús llegó y además Pedro o Laura subieron primero.",
     "propositions": {
       "P": "el autobús llegó",
-      "Q": "Pedro subió primero",
-      "R": "Laura subió primero"
+      "Q": "pedro subió primero",
+      "R": "laura subió primero"
     },
     "formula": "P ∧ (Q ∨ R)",
     "complexity": "medium",
@@ -339,8 +300,8 @@
     "sentence": "La oficina permanece abierta y Marta o Diego atienden las llamadas.",
     "propositions": {
       "P": "la oficina permanece abierta",
-      "Q": "Marta atiende las llamadas",
-      "R": "Diego atiende las llamadas"
+      "Q": "marta atiende las llamadas",
+      "R": "diego atiende las llamadas"
     },
     "formula": "P ∧ (Q ∨ R)",
     "complexity": "medium",
@@ -413,8 +374,8 @@
     "id": 31,
     "sentence": "Pedro o Ana prepararon el desayuno y la cocina quedó limpia.",
     "propositions": {
-      "P": "Pedro preparó el desayuno",
-      "Q": "Ana preparó el desayuno",
+      "P": "pedro preparó el desayuno",
+      "Q": "ana preparó el desayuno",
       "R": "la cocina quedó limpia"
     },
     "formula": "(P ∨ Q) ∧ R",
@@ -473,24 +434,9 @@
     "id": 35,
     "sentence": "Laura o Miguel enviaron el reporte y el gerente lo aprobó.",
     "propositions": {
-      "P": "Laura envió el reporte",
-      "Q": "Miguel envió el reporte",
+      "P": "laura envió el reporte",
+      "Q": "miguel envió el reporte",
       "R": "el gerente lo aprobó"
-    },
-    "formula": "(P ∨ Q) ∧ R",
-    "complexity": "medium",
-    "connectives": [
-      "∧",
-      "∨"
-    ]
-  },
-  {
-    "id": 36,
-    "sentence": "El taxi o el autobús llegaron rápido y los pasajeros salieron tranquilos.",
-    "propositions": {
-      "P": "el taxi llegó rápido",
-      "Q": "el autobús llegó rápido",
-      "R": "los pasajeros salieron tranquilos"
     },
     "formula": "(P ∨ Q) ∧ R",
     "complexity": "medium",
@@ -589,8 +535,8 @@
     "id": 43,
     "sentence": "Pedro envió el reporte o Marta lo entregó en persona.",
     "propositions": {
-      "P": "Pedro envió el reporte",
-      "Q": "Marta lo entregó en persona"
+      "P": "pedro envió el reporte",
+      "Q": "marta lo entregó en persona"
     },
     "formula": "P ∨ Q",
     "complexity": "simple",
@@ -638,50 +584,11 @@
     ]
   },
   {
-    "id": 47,
-    "sentence": "La conexión wifi es lenta o el proveedor tiene problemas.",
-    "propositions": {
-      "P": "la conexión wifi es lenta",
-      "Q": "el proveedor tiene problemas"
-    },
-    "formula": "P ∨ Q",
-    "complexity": "simple",
-    "connectives": [
-      "∨"
-    ]
-  },
-  {
-    "id": 48,
-    "sentence": "Ana prepara café o Luis compra jugo.",
-    "propositions": {
-      "P": "Ana prepara café",
-      "Q": "Luis compra jugo"
-    },
-    "formula": "P ∨ Q",
-    "complexity": "simple",
-    "connectives": [
-      "∨"
-    ]
-  },
-  {
     "id": 49,
     "sentence": "El técnico reinicia el router o bien cambia el módem.",
     "propositions": {
       "P": "el técnico reinicia el router",
       "Q": "el técnico cambia el módem"
-    },
-    "formula": "P ∨ Q",
-    "complexity": "simple",
-    "connectives": [
-      "∨"
-    ]
-  },
-  {
-    "id": 50,
-    "sentence": "El clima mejora o las calles siguen vacías.",
-    "propositions": {
-      "P": "el clima mejora",
-      "Q": "las calles siguen vacías"
     },
     "formula": "P ∨ Q",
     "complexity": "simple",
@@ -755,32 +662,6 @@
     ]
   },
   {
-    "id": 56,
-    "sentence": "La pantalla está congelada o el teclado no responde.",
-    "propositions": {
-      "P": "la pantalla está congelada",
-      "Q": "el teclado no responde"
-    },
-    "formula": "P ∨ Q",
-    "complexity": "simple",
-    "connectives": [
-      "∨"
-    ]
-  },
-  {
-    "id": 57,
-    "sentence": "Carlos reserva el hotel o Marta busca otro alojamiento.",
-    "propositions": {
-      "P": "Carlos reserva el hotel",
-      "Q": "Marta busca otro alojamiento"
-    },
-    "formula": "P ∨ Q",
-    "complexity": "simple",
-    "connectives": [
-      "∨"
-    ]
-  },
-  {
     "id": 58,
     "sentence": "El repartidor llega temprano o el paquete se retrasa.",
     "propositions": {
@@ -830,8 +711,8 @@
     "formula": "P ∨ (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -845,8 +726,8 @@
     "formula": "P ∨ (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -854,14 +735,14 @@
     "sentence": "El autobús llegó o Pedro y Laura ya están en la estación.",
     "propositions": {
       "P": "el autobús llegó",
-      "Q": "Pedro está en la estación",
-      "R": "Laura está en la estación"
+      "Q": "pedro está en la estación",
+      "R": "laura está en la estación"
     },
     "formula": "P ∨ (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -875,8 +756,8 @@
     "formula": "P ∨ (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -890,8 +771,8 @@
     "formula": "P ∨ (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -899,14 +780,14 @@
     "sentence": "La oficina permanece abierta o Marta y Diego atienden las llamadas.",
     "propositions": {
       "P": "la oficina permanece abierta",
-      "Q": "Marta atiende las llamadas",
-      "R": "Diego atiende las llamadas"
+      "Q": "marta atiende las llamadas",
+      "R": "diego atiende las llamadas"
     },
     "formula": "P ∨ (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -920,23 +801,8 @@
     "formula": "P ∨ (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
-    ]
-  },
-  {
-    "id": 68,
-    "sentence": "La alarma sigue activa o el guardia y la policía revisan el edificio.",
-    "propositions": {
-      "P": "la alarma sigue activa",
-      "Q": "el guardia revisa el edificio",
-      "R": "la policía revisa el edificio"
-    },
-    "formula": "P ∨ (Q ∧ R)",
-    "complexity": "medium",
-    "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -950,38 +816,23 @@
     "formula": "P ∨ (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
-    ]
-  },
-  {
-    "id": 70,
-    "sentence": "La batería está cargada o el teléfono y la tableta funcionan normalmente.",
-    "propositions": {
-      "P": "la batería está cargada",
-      "Q": "el teléfono funciona normalmente",
-      "R": "la tableta funciona normalmente"
-    },
-    "formula": "P ∨ (Q ∧ R)",
-    "complexity": "medium",
-    "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
     "id": 71,
     "sentence": "Pedro y Ana preparan el desayuno o la cocina queda vacía.",
     "propositions": {
-      "P": "Pedro prepara el desayuno",
-      "Q": "Ana prepara el desayuno",
+      "P": "pedro prepara el desayuno",
+      "Q": "ana prepara el desayuno",
       "R": "la cocina queda vacía"
     },
     "formula": "(P ∧ Q) ∨ R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -995,8 +846,8 @@
     "formula": "(P ∧ Q) ∨ R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -1010,8 +861,8 @@
     "formula": "(P ∧ Q) ∨ R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -1025,38 +876,23 @@
     "formula": "(P ∧ Q) ∨ R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
     "id": 75,
     "sentence": "Laura y Miguel envían el reporte o el gerente llama nuevamente.",
     "propositions": {
-      "P": "Laura envía el reporte",
-      "Q": "Miguel envía el reporte",
+      "P": "laura envía el reporte",
+      "Q": "miguel envía el reporte",
       "R": "el gerente llama nuevamente"
     },
     "formula": "(P ∧ Q) ∨ R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
-    ]
-  },
-  {
-    "id": 76,
-    "sentence": "El taxi y el autobús llegan rápido o los pasajeros toman otro camino.",
-    "propositions": {
-      "P": "el taxi llega rápido",
-      "Q": "el autobús llega rápido",
-      "R": "los pasajeros toman otro camino"
-    },
-    "formula": "(P ∧ Q) ∨ R",
-    "complexity": "medium",
-    "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -1070,8 +906,8 @@
     "formula": "(P ∧ Q) ∨ R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -1085,8 +921,8 @@
     "formula": "(P ∧ Q) ∨ R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -1100,8 +936,8 @@
     "formula": "(P ∧ Q) ∨ R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -1115,8 +951,8 @@
     "formula": "(P ∧ Q) ∨ R",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -1125,32 +961,6 @@
     "propositions": {
       "P": "el servidor se reinicia",
       "Q": "la aplicación volverá a funcionar"
-    },
-    "formula": "P → Q",
-    "complexity": "simple",
-    "connectives": [
-      "→"
-    ]
-  },
-  {
-    "id": 82,
-    "sentence": "Si el paciente toma el medicamento, entonces la fiebre disminuirá.",
-    "propositions": {
-      "P": "el paciente toma el medicamento",
-      "Q": "la fiebre disminuirá"
-    },
-    "formula": "P → Q",
-    "complexity": "simple",
-    "connectives": [
-      "→"
-    ]
-  },
-  {
-    "id": 83,
-    "sentence": "Si Pedro envía el archivo, entonces Marta podrá revisarlo.",
-    "propositions": {
-      "P": "Pedro envía el archivo",
-      "Q": "Marta podrá revisarlo"
     },
     "formula": "P → Q",
     "complexity": "simple",
@@ -1185,19 +995,6 @@
     ]
   },
   {
-    "id": 86,
-    "sentence": "Solo si el estudiante entrega la tarea, recibirá la calificación completa.",
-    "propositions": {
-      "P": "el estudiante recibe la calificación completa",
-      "Q": "el estudiante entrega la tarea"
-    },
-    "formula": "P → Q",
-    "complexity": "simple",
-    "connectives": [
-      "→"
-    ]
-  },
-  {
     "id": 87,
     "sentence": "Si la conexión wifi mejora, entonces la videollamada será estable.",
     "propositions": {
@@ -1214,7 +1011,7 @@
     "id": 88,
     "sentence": "Cuando Ana prepara café, todos desayunan en la cocina.",
     "propositions": {
-      "P": "Ana prepara café",
+      "P": "ana prepara café",
       "Q": "todos desayunan en la cocina"
     },
     "formula": "P → Q",
@@ -1302,19 +1099,6 @@
     ]
   },
   {
-    "id": 95,
-    "sentence": "Si el chef prepara sopa, entonces también servirá pan.",
-    "propositions": {
-      "P": "el chef prepara sopa",
-      "Q": "el chef servirá pan"
-    },
-    "formula": "P → Q",
-    "complexity": "simple",
-    "connectives": [
-      "→"
-    ]
-  },
-  {
     "id": 96,
     "sentence": "Solo si el teclado funciona, el usuario podrá escribir el informe.",
     "propositions": {
@@ -1331,7 +1115,7 @@
     "id": 97,
     "sentence": "Si Carlos reserva el hotel, entonces el viaje seguirá según el plan.",
     "propositions": {
-      "P": "Carlos reserva el hotel",
+      "P": "carlos reserva el hotel",
       "Q": "el viaje seguirá según el plan"
     },
     "formula": "P → Q",
@@ -1380,21 +1164,6 @@
     ]
   },
   {
-    "id": 101,
-    "sentence": "Si el servidor está activo, entonces la aplicación cargará y los usuarios podrán iniciar sesión.",
-    "propositions": {
-      "P": "el servidor está activo",
-      "Q": "la aplicación cargará",
-      "R": "los usuarios podrán iniciar sesión"
-    },
-    "formula": "P → (Q ∧ R)",
-    "complexity": "medium",
-    "connectives": [
-      "→",
-      "∧"
-    ]
-  },
-  {
     "id": 102,
     "sentence": "Cuando el médico revisa al paciente, el tratamiento comienza y la enfermera actualiza el expediente.",
     "propositions": {
@@ -1405,23 +1174,23 @@
     "formula": "P → (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
     "id": 103,
     "sentence": "Si Pedro envía el reporte, entonces Marta lo leerá y el gerente recibirá una copia.",
     "propositions": {
-      "P": "Pedro envía el reporte",
-      "Q": "Marta leerá el reporte",
+      "P": "pedro envía el reporte",
+      "Q": "marta leerá el reporte",
       "R": "el gerente recibirá una copia"
     },
     "formula": "P → (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -1435,8 +1204,8 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -1450,8 +1219,8 @@
     "formula": "P → (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -1465,23 +1234,23 @@
     "formula": "P → (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
     "id": 107,
     "sentence": "Si Ana prepara café, entonces todos desayunarán juntos y la cocina quedará ocupada.",
     "propositions": {
-      "P": "Ana prepara café",
+      "P": "ana prepara café",
       "Q": "todos desayunarán juntos",
       "R": "la cocina quedará ocupada"
     },
     "formula": "P → (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -1495,8 +1264,8 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -1510,8 +1279,8 @@
     "formula": "P → (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -1525,8 +1294,8 @@
     "formula": "P → (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -1540,38 +1309,23 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
-    ]
-  },
-  {
-    "id": 112,
-    "sentence": "Cuando el médico llega temprano y el paciente tiene cita, la consulta comienza rápido.",
-    "propositions": {
-      "P": "el médico llega temprano",
-      "Q": "el paciente tiene cita",
-      "R": "la consulta comienza rápido"
-    },
-    "formula": "(P ∧ Q) → R",
-    "complexity": "medium",
-    "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
     "id": 113,
     "sentence": "Si Pedro termina el informe y Marta revisa los datos, entonces el gerente aprobará el proyecto.",
     "propositions": {
-      "P": "Pedro termina el informe",
-      "Q": "Marta revisa los datos",
+      "P": "pedro termina el informe",
+      "Q": "marta revisa los datos",
       "R": "el gerente aprobará el proyecto"
     },
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -1585,8 +1339,8 @@
     "formula": "P → (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -1600,8 +1354,8 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -1615,23 +1369,23 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
     "id": 117,
     "sentence": "Si Ana prepara café y Luis limpia la mesa, entonces todos desayunarán tranquilos.",
     "propositions": {
-      "P": "Ana prepara café",
-      "Q": "Luis limpia la mesa",
+      "P": "ana prepara café",
+      "Q": "luis limpia la mesa",
       "R": "todos desayunarán tranquilos"
     },
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -1645,23 +1399,8 @@
     "formula": "P → (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
-    ]
-  },
-  {
-    "id": 119,
-    "sentence": "Si el clima está despejado y el aeropuerto opera normalmente, entonces el vuelo saldrá hoy.",
-    "propositions": {
-      "P": "el clima está despejado",
-      "Q": "el aeropuerto opera normalmente",
-      "R": "el vuelo saldrá hoy"
-    },
-    "formula": "(P ∧ Q) → R",
-    "complexity": "medium",
-    "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -1675,8 +1414,8 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -1698,19 +1437,6 @@
     "propositions": {
       "P": "la puerta se abre",
       "Q": "la tarjeta es válida"
-    },
-    "formula": "P ↔ Q",
-    "complexity": "simple",
-    "connectives": [
-      "↔"
-    ]
-  },
-  {
-    "id": 123,
-    "sentence": "El certificado aparece si y solo si el estudiante aprueba el curso.",
-    "propositions": {
-      "P": "el certificado aparece",
-      "Q": "el estudiante aprueba el curso"
     },
     "formula": "P ↔ Q",
     "complexity": "simple",
@@ -1875,19 +1601,6 @@
     ]
   },
   {
-    "id": 136,
-    "sentence": "La computadora inicia normalmente si y solo si el disco principal está conectado.",
-    "propositions": {
-      "P": "la computadora inicia normalmente",
-      "Q": "el disco principal está conectado"
-    },
-    "formula": "P ↔ Q",
-    "complexity": "simple",
-    "connectives": [
-      "↔"
-    ]
-  },
-  {
     "id": 137,
     "sentence": "El paciente recibe el alta si y solo si los resultados son favorables.",
     "propositions": {
@@ -1950,23 +1663,8 @@
     "formula": "P ↔ (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "↔",
-      "∧"
-    ]
-  },
-  {
-    "id": 142,
-    "sentence": "La alarma permanece desactivada si y solo si el guardia ingresa el código y cierra la puerta.",
-    "propositions": {
-      "P": "la alarma permanece desactivada",
-      "Q": "el guardia ingresa el código",
-      "R": "el guardia cierra la puerta"
-    },
-    "formula": "P ↔ (Q ∧ R)",
-    "complexity": "medium",
-    "connectives": [
-      "↔",
-      "∧"
+      "∧",
+      "↔"
     ]
   },
   {
@@ -1980,8 +1678,8 @@
     "formula": "P ↔ (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "↔",
-      "∧"
+      "∧",
+      "↔"
     ]
   },
   {
@@ -1995,8 +1693,8 @@
     "formula": "P ↔ (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "↔",
-      "∧"
+      "∧",
+      "↔"
     ]
   },
   {
@@ -2010,8 +1708,8 @@
     "formula": "P ↔ (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "↔",
-      "∧"
+      "∧",
+      "↔"
     ]
   },
   {
@@ -2025,8 +1723,8 @@
     "formula": "P ↔ (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "↔",
-      "∧"
+      "∧",
+      "↔"
     ]
   },
   {
@@ -2040,23 +1738,8 @@
     "formula": "P ↔ (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "↔",
-      "∧"
-    ]
-  },
-  {
-    "id": 148,
-    "sentence": "El restaurante acepta la reserva si y solo si hay mesas libres y el cliente confirma la hora.",
-    "propositions": {
-      "P": "el restaurante acepta la reserva",
-      "Q": "hay mesas libres",
-      "R": "el cliente confirma la hora"
-    },
-    "formula": "P ↔ (Q ∧ R)",
-    "complexity": "medium",
-    "connectives": [
-      "↔",
-      "∧"
+      "∧",
+      "↔"
     ]
   },
   {
@@ -2070,8 +1753,8 @@
     "formula": "P ↔ (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "↔",
-      "∧"
+      "∧",
+      "↔"
     ]
   },
   {
@@ -2085,8 +1768,8 @@
     "formula": "P ↔ (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "↔",
-      "∧"
+      "∧",
+      "↔"
     ]
   },
   {
@@ -2329,10 +2012,10 @@
       "Q": "el sistema mostrará un error"
     },
     "formula": "¬P → Q",
-    "complexity": "simple",
+    "complexity": "medium",
     "connectives": [
-      "→",
-      "¬"
+      "¬",
+      "→"
     ]
   },
   {
@@ -2346,9 +2029,9 @@
     "formula": "(P ∧ ¬Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
+      "¬",
       "∧",
-      "¬"
+      "→"
     ]
   },
   {
@@ -2362,22 +2045,8 @@
     "formula": "(P ∨ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∨"
-    ]
-  },
-  {
-    "id": 172,
-    "sentence": "No es posible que llueva y haga sol al mismo tiempo.",
-    "propositions": {
-      "P": "llueve",
-      "Q": "hace sol"
-    },
-    "formula": "¬(P ∧ Q)",
-    "complexity": "medium",
-    "connectives": [
-      "¬",
-      "∧"
+      "∨",
+      "→"
     ]
   },
   {
@@ -2391,9 +2060,9 @@
     "formula": "(¬P ∨ ¬Q) → ¬R",
     "complexity": "medium",
     "connectives": [
-      "→",
       "¬",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -2407,8 +2076,8 @@
     "formula": "P ↔ (Q ∨ R)",
     "complexity": "medium",
     "connectives": [
-      "↔",
-      "∨"
+      "∨",
+      "↔"
     ]
   },
   {
@@ -2422,9 +2091,9 @@
     "formula": "P ↔ (Q ∧ ¬R)",
     "complexity": "medium",
     "connectives": [
-      "↔",
+      "¬",
       "∧",
-      "¬"
+      "↔"
     ]
   },
   {
@@ -2438,9 +2107,9 @@
     "formula": "(P ∨ ¬Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
+      "¬",
       "∨",
-      "¬"
+      "→"
     ]
   },
   {
@@ -2454,9 +2123,9 @@
     "formula": "P ↔ (Q ∧ ¬R)",
     "complexity": "medium",
     "connectives": [
-      "↔",
+      "¬",
       "∧",
-      "¬"
+      "↔"
     ]
   },
   {
@@ -2470,8 +2139,8 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -2485,9 +2154,9 @@
     "formula": "(¬Q ∧ R) → P",
     "complexity": "medium",
     "connectives": [
-      "→",
       "¬",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -2501,9 +2170,9 @@
     "formula": "¬P → (¬Q ∧ ¬R)",
     "complexity": "medium",
     "connectives": [
-      "→",
       "¬",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -2518,9 +2187,9 @@
     "formula": "((P ∨ Q) ∧ R) → S",
     "complexity": "complex",
     "connectives": [
-      "→",
+      "∧",
       "∨",
-      "∧"
+      "→"
     ]
   },
   {
@@ -2535,10 +2204,10 @@
     "formula": "P ↔ (Q ∨ (R ∧ ¬S))",
     "complexity": "complex",
     "connectives": [
-      "↔",
-      "∨",
+      "¬",
       "∧",
-      "¬"
+      "∨",
+      "↔"
     ]
   },
   {
@@ -2550,11 +2219,11 @@
       "R": "el archivo está cifrado"
     },
     "formula": "P → (Q ∧ ¬R)",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
-      "→",
+      "¬",
       "∧",
-      "¬"
+      "→"
     ]
   },
   {
@@ -2569,9 +2238,9 @@
     "formula": "P → (Q ∧ R ∧ ¬S)",
     "complexity": "complex",
     "connectives": [
-      "→",
+      "¬",
       "∧",
-      "¬"
+      "→"
     ]
   },
   {
@@ -2586,9 +2255,9 @@
     "formula": "((P ∧ Q) ∧ R) → ¬S",
     "complexity": "complex",
     "connectives": [
-      "→",
+      "¬",
       "∧",
-      "¬"
+      "→"
     ]
   },
   {
@@ -2656,31 +2325,6 @@
     ]
   },
   {
-    "id": 191,
-    "sentence": "No hay conexión a internet.",
-    "propositions": {
-      "P": "hay conexión a internet"
-    },
-    "formula": "¬P",
-    "complexity": "simple",
-    "connectives": [
-      "¬"
-    ]
-  },
-  {
-    "id": 192,
-    "sentence": "El estudiante aprobó el examen y entregó el proyecto.",
-    "propositions": {
-      "P": "el estudiante aprobó el examen",
-      "Q": "el estudiante entregó el proyecto"
-    },
-    "formula": "P ∧ Q",
-    "complexity": "simple",
-    "connectives": [
-      "∧"
-    ]
-  },
-  {
     "id": 193,
     "sentence": "Si el semáforo está en rojo, debes detenerte.",
     "propositions": {
@@ -2704,9 +2348,9 @@
     "formula": "(P ∧ ¬Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
+      "¬",
       "∧",
-      "¬"
+      "→"
     ]
   },
   {
@@ -2720,8 +2364,8 @@
     "formula": "P ↔ (Q ∨ R)",
     "complexity": "medium",
     "connectives": [
-      "↔",
-      "∨"
+      "∨",
+      "↔"
     ]
   },
   {
@@ -2749,8 +2393,8 @@
     "formula": "(P ∨ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -2764,25 +2408,8 @@
     "formula": "P → (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
-    ]
-  },
-  {
-    "id": 199,
-    "sentence": "Puedes abordar si tienes boleto y tu equipaje está listo, o si eres tripulación.",
-    "propositions": {
-      "S": "puedes abordar",
-      "P": "tienes boleto",
-      "Q": "tu equipaje está listo",
-      "R": "eres tripulación"
-    },
-    "formula": "((P ∧ Q) ∨ R) → S",
-    "complexity": "complex",
-    "connectives": [
-      "→",
       "∧",
-      "∨"
+      "→"
     ]
   },
   {
@@ -2795,8 +2422,8 @@
     "formula": "P ↔ ¬Q",
     "complexity": "medium",
     "connectives": [
-      "↔",
-      "¬"
+      "¬",
+      "↔"
     ]
   },
   {
@@ -2810,9 +2437,9 @@
     "formula": "(¬P ∨ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
       "¬",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -2841,8 +2468,8 @@
     "formula": "P ∨ (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -2886,9 +2513,9 @@
     "formula": "((P ∨ Q) ∧ R) → S",
     "complexity": "complex",
     "connectives": [
-      "→",
+      "∧",
       "∨",
-      "∧"
+      "→"
     ]
   },
   {
@@ -2903,8 +2530,8 @@
     "formula": "(P ∧ (Q → R)) ∨ S",
     "complexity": "complex",
     "connectives": [
-      "∨",
       "∧",
+      "∨",
       "→"
     ]
   },
@@ -2917,11 +2544,11 @@
       "R": "la calefacción funciona"
     },
     "formula": "(¬P ∨ ¬Q) → ¬R",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
-      "→",
       "¬",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -2933,11 +2560,11 @@
       "R": "se mezcla con alcohol"
     },
     "formula": "P ↔ (Q ∧ ¬R)",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
-      "↔",
+      "¬",
       "∧",
-      "¬"
+      "↔"
     ]
   },
   {
@@ -2952,26 +2579,9 @@
     "formula": "(P → Q) ∧ (¬R → S)",
     "complexity": "complex",
     "connectives": [
-      "∧",
-      "→",
-      "¬"
-    ]
-  },
-  {
-    "id": 211,
-    "sentence": "No es verdad que llueva y haga viento, o que no haga frío y nieve.",
-    "propositions": {
-      "P": "llueve",
-      "Q": "hace viento",
-      "R": "hace frío",
-      "S": "nieva"
-    },
-    "formula": "¬((P ∧ Q) ∨ (¬R ∧ S))",
-    "complexity": "complex",
-    "connectives": [
       "¬",
       "∧",
-      "∨"
+      "→"
     ]
   },
   {
@@ -2986,10 +2596,10 @@
     "formula": "((P ∧ Q) ∨ (R ∧ S)) → ¬P",
     "complexity": "complex",
     "connectives": [
-      "→",
+      "¬",
       "∧",
       "∨",
-      "¬"
+      "→"
     ]
   },
   {
@@ -3004,9 +2614,9 @@
     "formula": "(P ∨ (Q ∧ R)) ↔ S",
     "complexity": "complex",
     "connectives": [
-      "↔",
+      "∧",
       "∨",
-      "∧"
+      "↔"
     ]
   },
   {
@@ -3021,10 +2631,10 @@
     "formula": "¬(P → Q) ∧ (R ∨ S)",
     "complexity": "complex",
     "connectives": [
-      "∧",
       "¬",
-      "→",
-      "∨"
+      "∧",
+      "∨",
+      "→"
     ]
   },
   {
@@ -3039,10 +2649,10 @@
     "formula": "(P ↔ ¬Q) → (R ∧ S)",
     "complexity": "complex",
     "connectives": [
-      "→",
-      "↔",
       "¬",
-      "∧"
+      "∧",
+      "→",
+      "↔"
     ]
   },
   {
@@ -3094,19 +2704,6 @@
     "complexity": "simple",
     "connectives": [
       "→"
-    ]
-  },
-  {
-    "id": 220,
-    "sentence": "El puerto se abre si y solo si la autenticación es correcta.",
-    "propositions": {
-      "P": "el puerto se abre",
-      "Q": "la autenticación es correcta"
-    },
-    "formula": "P ↔ Q",
-    "complexity": "simple",
-    "connectives": [
-      "↔"
     ]
   },
   {
@@ -3172,8 +2769,8 @@
     "formula": "¬P → Q",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "¬"
+      "¬",
+      "→"
     ]
   },
   {
@@ -3187,8 +2784,8 @@
     "formula": "P ↔ (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "↔",
-      "∧"
+      "∧",
+      "↔"
     ]
   },
   {
@@ -3202,8 +2799,8 @@
     "formula": "P → (Q ∨ R)",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -3214,10 +2811,10 @@
       "Q": "el autobús pasa"
     },
     "formula": "P ∨ ¬Q",
-    "complexity": "medium",
+    "complexity": "simple",
     "connectives": [
-      "∨",
-      "¬"
+      "¬",
+      "∨"
     ]
   },
   {
@@ -3230,8 +2827,8 @@
     "formula": "P ↔ ¬Q",
     "complexity": "medium",
     "connectives": [
-      "↔",
-      "¬"
+      "¬",
+      "↔"
     ]
   },
   {
@@ -3245,8 +2842,8 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -3260,8 +2857,8 @@
     "formula": "(P ∨ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -3272,25 +2869,10 @@
       "Q": "el archivo se puede recuperar"
     },
     "formula": "P ∧ ¬Q",
-    "complexity": "medium",
+    "complexity": "simple",
     "connectives": [
-      "∧",
-      "¬"
-    ]
-  },
-  {
-    "id": 233,
-    "sentence": "Si la alarma suena, entonces hay fuego o humo.",
-    "propositions": {
-      "P": "la alarma suena",
-      "Q": "hay fuego",
-      "R": "hay humo"
-    },
-    "formula": "P → (Q ∨ R)",
-    "complexity": "medium",
-    "connectives": [
-      "→",
-      "∨"
+      "¬",
+      "∧"
     ]
   },
   {
@@ -3301,10 +2883,10 @@
       "Q": "el sistema está saturado"
     },
     "formula": "¬P ∨ Q",
-    "complexity": "medium",
+    "complexity": "simple",
     "connectives": [
-      "∨",
-      "¬"
+      "¬",
+      "∨"
     ]
   },
   {
@@ -3319,9 +2901,9 @@
     "formula": "(P ∧ Q) → (R ∨ S)",
     "complexity": "complex",
     "connectives": [
-      "→",
       "∧",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -3336,9 +2918,9 @@
     "formula": "(¬P ∧ ¬Q) → (R ∧ S)",
     "complexity": "complex",
     "connectives": [
-      "→",
       "¬",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -3353,10 +2935,10 @@
     "formula": "P ↔ ((Q ∧ ¬R) ∨ S)",
     "complexity": "complex",
     "connectives": [
-      "↔",
-      "∧",
       "¬",
-      "∨"
+      "∧",
+      "∨",
+      "↔"
     ]
   },
   {
@@ -3371,10 +2953,10 @@
     "formula": "((P ∧ Q) → R) ↔ ¬S",
     "complexity": "complex",
     "connectives": [
-      "↔",
+      "¬",
       "∧",
       "→",
-      "¬"
+      "↔"
     ]
   },
   {
@@ -3389,10 +2971,10 @@
     "formula": "((P ∨ Q) ∧ ¬R) → S",
     "complexity": "complex",
     "connectives": [
-      "→",
-      "∨",
+      "¬",
       "∧",
-      "¬"
+      "∨",
+      "→"
     ]
   },
   {
@@ -3408,8 +2990,8 @@
     "complexity": "complex",
     "connectives": [
       "¬",
-      "→",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -3424,10 +3006,10 @@
     "formula": "(P ∧ Q) → (R ↔ ¬S)",
     "complexity": "complex",
     "connectives": [
-      "→",
+      "¬",
       "∧",
-      "↔",
-      "¬"
+      "→",
+      "↔"
     ]
   },
   {
@@ -3442,27 +3024,10 @@
     "formula": "(¬P ∨ Q) → (R ∧ S)",
     "complexity": "complex",
     "connectives": [
-      "→",
       "¬",
-      "∨",
-      "∧"
-    ]
-  },
-  {
-    "id": 243,
-    "sentence": "La transferencia se completa si y solo si la red es estable, el servidor responde y no hay pérdida de paquetes.",
-    "propositions": {
-      "P": "la transferencia se completa",
-      "Q": "la red es estable",
-      "R": "el servidor responde",
-      "S": "hay pérdida de paquetes"
-    },
-    "formula": "P ↔ ((Q ∧ R) ∧ ¬S)",
-    "complexity": "complex",
-    "connectives": [
-      "↔",
       "∧",
-      "¬"
+      "∨",
+      "→"
     ]
   },
   {
@@ -3477,10 +3042,10 @@
     "formula": "(P ∧ ¬Q) → (R ∨ S)",
     "complexity": "complex",
     "connectives": [
-      "→",
-      "∧",
       "¬",
-      "∨"
+      "∧",
+      "∨",
+      "→"
     ]
   },
   {
@@ -3560,20 +3125,6 @@
     ]
   },
   {
-    "id": 251,
-    "sentence": "Si no hay internet, el sistema trabaja offline.",
-    "propositions": {
-      "P": "hay internet",
-      "Q": "el sistema trabaja offline"
-    },
-    "formula": "¬P → Q",
-    "complexity": "medium",
-    "connectives": [
-      "→",
-      "¬"
-    ]
-  },
-  {
     "id": 252,
     "sentence": "El contenedor se detiene si se agota la memoria.",
     "propositions": {
@@ -3581,23 +3132,9 @@
       "Q": "se agota la memoria"
     },
     "formula": "Q → P",
-    "complexity": "medium",
+    "complexity": "simple",
     "connectives": [
       "→"
-    ]
-  },
-  {
-    "id": 253,
-    "sentence": "No ocurre que el microservicio falle y el clúster caiga.",
-    "propositions": {
-      "P": "el microservicio falla",
-      "Q": "el clúster cae"
-    },
-    "formula": "¬(P ∧ Q)",
-    "complexity": "medium",
-    "connectives": [
-      "¬",
-      "∧"
     ]
   },
   {
@@ -3618,15 +3155,15 @@
     "id": 255,
     "sentence": "Si la API responde y el estado es 200, los datos se muestran.",
     "propositions": {
-      "P": "la API responde",
+      "P": "la api responde",
       "Q": "el estado es 200",
       "R": "los datos se muestran"
     },
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -3640,8 +3177,8 @@
     "formula": "(P ∨ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -3654,8 +3191,8 @@
     "formula": "¬Q → P",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "¬"
+      "¬",
+      "→"
     ]
   },
   {
@@ -3669,34 +3206,19 @@
     "formula": "(Q ∧ R) → P",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
-    ]
-  },
-  {
-    "id": 259,
-    "sentence": "Actualizas la aplicación si y solo si estás en Wi-Fi y tienes almacenamiento.",
-    "propositions": {
-      "P": "actualizas la aplicación",
-      "Q": "estás en Wi-Fi",
-      "R": "tienes almacenamiento"
-    },
-    "formula": "P ↔ (Q ∧ R)",
-    "complexity": "medium",
-    "connectives": [
-      "↔",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
     "id": 260,
     "sentence": "No es verdad que si estudias Python vayas a reprobar.",
     "propositions": {
-      "P": "estudias Python",
+      "P": "estudias python",
       "Q": "vas a reprobar"
     },
     "formula": "¬(P → Q)",
-    "complexity": "medium",
+    "complexity": "complex",
     "connectives": [
       "¬",
       "→"
@@ -3713,8 +3235,8 @@
     "formula": "P → (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -3728,8 +3250,8 @@
     "formula": "P → (Q ∨ R)",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -3743,9 +3265,9 @@
     "formula": "P → (Q ∧ ¬R)",
     "complexity": "medium",
     "connectives": [
-      "→",
+      "¬",
       "∧",
-      "¬"
+      "→"
     ]
   },
   {
@@ -3758,8 +3280,8 @@
     "formula": "¬Q → ¬P",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "¬"
+      "¬",
+      "→"
     ]
   },
   {
@@ -3773,9 +3295,9 @@
     "formula": "(P ∧ ¬Q) → ¬R",
     "complexity": "medium",
     "connectives": [
-      "→",
+      "¬",
       "∧",
-      "¬"
+      "→"
     ]
   },
   {
@@ -3789,8 +3311,8 @@
     "formula": "(Q ∨ R) → P",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -3804,24 +3326,9 @@
     "formula": "¬P → (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "→",
       "¬",
-      "∧"
-    ]
-  },
-  {
-    "id": 268,
-    "sentence": "El programa termina cuando se presiona Esc o se cierra la ventana.",
-    "propositions": {
-      "P": "el programa termina",
-      "Q": "se presiona Esc",
-      "R": "se cierra la ventana"
-    },
-    "formula": "(Q ∨ R) → P",
-    "complexity": "medium",
-    "connectives": [
-      "→",
-      "∨"
+      "∧",
+      "→"
     ]
   },
   {
@@ -3835,9 +3342,9 @@
     "formula": "P ↔ (Q ∧ ¬R)",
     "complexity": "medium",
     "connectives": [
-      "↔",
+      "¬",
       "∧",
-      "¬"
+      "↔"
     ]
   },
   {
@@ -3851,9 +3358,9 @@
     "formula": "(P ∧ ¬Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
+      "¬",
       "∧",
-      "¬"
+      "→"
     ]
   },
   {
@@ -3867,8 +3374,8 @@
     "formula": "(P ∨ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -3894,7 +3401,7 @@
       "R": "registras el producto"
     },
     "formula": "P → (Q ↔ R)",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
       "→",
       "↔"
@@ -3912,34 +3419,17 @@
     "formula": "(¬P ∧ Q) → (R ∨ S)",
     "complexity": "complex",
     "connectives": [
-      "→",
       "¬",
       "∧",
-      "∨"
-    ]
-  },
-  {
-    "id": 275,
-    "sentence": "Si configuras Docker y usas Linux, entonces el despliegue es rápido si no hay errores de red.",
-    "propositions": {
-      "P": "configuras Docker",
-      "Q": "usas Linux",
-      "R": "el despliegue es rápido",
-      "S": "hay errores de red"
-    },
-    "formula": "(P ∧ Q) → (¬S → R)",
-    "complexity": "complex",
-    "connectives": [
-      "→",
-      "∧",
-      "¬"
+      "∨",
+      "→"
     ]
   },
   {
     "id": 276,
     "sentence": "Si vienes a la UCI y apruebas el taller, obtendrás el diploma si y solo si tienes asistencia completa.",
     "propositions": {
-      "P": "vienes a la UCI",
+      "P": "vienes a la uci",
       "Q": "apruebas el taller",
       "R": "obtendrás el diploma",
       "S": "tienes asistencia completa"
@@ -3947,8 +3437,8 @@
     "formula": "(P ∧ Q) → (R ↔ S)",
     "complexity": "complex",
     "connectives": [
-      "→",
       "∧",
+      "→",
       "↔"
     ]
   },
@@ -3964,17 +3454,17 @@
     "formula": "(¬P ∨ Q) → (R ∧ S)",
     "complexity": "complex",
     "connectives": [
-      "→",
       "¬",
+      "∧",
       "∨",
-      "∧"
+      "→"
     ]
   },
   {
     "id": 278,
     "sentence": "La consulta SQL se optimiza si y solo si el índice está creado, la tabla no está bloqueada y usas llaves primarias.",
     "propositions": {
-      "P": "la consulta SQL se optimiza",
+      "P": "la consulta sql se optimiza",
       "Q": "el índice está creado",
       "R": "la tabla está bloqueada",
       "S": "usas llaves primarias"
@@ -3982,9 +3472,9 @@
     "formula": "P ↔ ((Q ∧ ¬R) ∧ S)",
     "complexity": "complex",
     "connectives": [
-      "↔",
+      "¬",
       "∧",
-      "¬"
+      "↔"
     ]
   },
   {
@@ -3999,10 +3489,10 @@
     "formula": "(P ∨ Q) → (R ∧ ¬S)",
     "complexity": "complex",
     "connectives": [
-      "→",
-      "∨",
+      "¬",
       "∧",
-      "¬"
+      "∨",
+      "→"
     ]
   },
   {
@@ -4017,9 +3507,9 @@
     "formula": "(P ∧ ¬Q) → (S → R)",
     "complexity": "complex",
     "connectives": [
-      "→",
+      "¬",
       "∧",
-      "¬"
+      "→"
     ]
   },
   {
@@ -4034,8 +3524,8 @@
     "complexity": "complex",
     "connectives": [
       "¬",
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -4049,23 +3539,8 @@
     "formula": "(Q ∧ R) → P",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
-    ]
-  },
-  {
-    "id": 283,
-    "sentence": "Si la encriptación es débil y el atacante intercepta el tráfico, la privacidad se pierde.",
-    "propositions": {
-      "P": "la encriptación es débil",
-      "Q": "el atacante intercepta el tráfico",
-      "R": "la privacidad se pierde"
-    },
-    "formula": "(P ∧ Q) → R",
-    "complexity": "medium",
-    "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -4092,8 +3567,8 @@
     "formula": "¬P → (R → Q)",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "¬"
+      "¬",
+      "→"
     ]
   },
   {
@@ -4108,38 +3583,23 @@
     "complexity": "complex",
     "connectives": [
       "¬",
-      "→",
-      "∧"
-    ]
-  },
-  {
-    "id": 287,
-    "sentence": "Si la contraseña expira o el token es revocado, la sesión termina de inmediato.",
-    "propositions": {
-      "P": "la contraseña expira",
-      "Q": "el token es revocado",
-      "R": "la sesión termina de inmediato"
-    },
-    "formula": "(P ∨ Q) → R",
-    "complexity": "medium",
-    "connectives": [
-      "→",
-      "∨"
+      "∧",
+      "→"
     ]
   },
   {
     "id": 288,
     "sentence": "Si la GPU está fría y el algoritmo paraleliza bien, el renderizado termina rápido.",
     "propositions": {
-      "P": "la GPU está fría",
+      "P": "la gpu está fría",
       "Q": "el algoritmo paraleliza bien",
       "R": "el renderizado termina rápido"
     },
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -4147,31 +3607,15 @@
     "sentence": "La transacción es segura si el protocolo TLS está forzado y no se aceptan certificados inválidos.",
     "propositions": {
       "P": "la transacción es segura",
-      "Q": "el protocolo TLS está forzado",
+      "Q": "el protocolo tls está forzado",
       "R": "se aceptan certificados inválidos"
     },
     "formula": "(Q ∧ ¬R) → P",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧",
-      "¬"
-    ]
-  },
-  {
-    "id": 290,
-    "sentence": "Si la versión de Node es antigua, el paquete no se instala y arroja un error crítico.",
-    "propositions": {
-      "P": "la versión de Node es antigua",
-      "Q": "el paquete se instala",
-      "R": "arroja un error crítico"
-    },
-    "formula": "P → (¬Q ∧ R)",
-    "complexity": "medium",
-    "connectives": [
-      "→",
       "¬",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -4185,22 +3629,8 @@
     "formula": "(¬P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
       "¬",
-      "∧"
-    ]
-  },
-  {
-    "id": 292,
-    "sentence": "No ocurre que la petición retorne un error si el backend está activo.",
-    "propositions": {
-      "P": "la petición retorna un error",
-      "Q": "el backend está activo"
-    },
-    "formula": "¬(Q → P)",
-    "complexity": "medium",
-    "connectives": [
-      "¬",
+      "∧",
       "→"
     ]
   },
@@ -4208,17 +3638,17 @@
     "id": 293,
     "sentence": "Si configuras Git correctamente y usas SSH, las subidas al repositorio son seguras si el servidor no tiene fallas.",
     "propositions": {
-      "P": "configuras Git correctamente",
-      "Q": "usas SSH",
+      "P": "configuras git correctamente",
+      "Q": "usas ssh",
       "R": "las subidas al repositorio son seguras",
       "S": "el servidor tiene fallas"
     },
     "formula": "(P ∧ Q) → (¬S → R)",
     "complexity": "complex",
     "connectives": [
-      "→",
+      "¬",
       "∧",
-      "¬"
+      "→"
     ]
   },
   {
@@ -4233,8 +3663,8 @@
     "formula": "(P ∨ Q) → (S → R)",
     "complexity": "complex",
     "connectives": [
-      "→",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -4250,19 +3680,6 @@
     ]
   },
   {
-    "id": 296,
-    "sentence": "La luz está encendida y la puerta está abierta.",
-    "propositions": {
-      "P": "la luz está encendida",
-      "Q": "la puerta está abierta"
-    },
-    "formula": "P ∧ Q",
-    "complexity": "simple",
-    "connectives": [
-      "∧"
-    ]
-  },
-  {
     "id": 297,
     "sentence": "El usuario guarda el archivo o lo descarta.",
     "propositions": {
@@ -4273,32 +3690,6 @@
     "complexity": "simple",
     "connectives": [
       "∨"
-    ]
-  },
-  {
-    "id": 298,
-    "sentence": "Si hay un error, el programa se detiene.",
-    "propositions": {
-      "P": "hay un error",
-      "Q": "el programa se detiene"
-    },
-    "formula": "P → Q",
-    "complexity": "simple",
-    "connectives": [
-      "→"
-    ]
-  },
-  {
-    "id": 299,
-    "sentence": "El acceso es permitido si y solo si la tarjeta es válida.",
-    "propositions": {
-      "P": "el acceso es permitido",
-      "Q": "la tarjeta es válida"
-    },
-    "formula": "P ↔ Q",
-    "complexity": "simple",
-    "connectives": [
-      "↔"
     ]
   },
   {
@@ -4430,18 +3821,6 @@
     ]
   },
   {
-    "id": 310,
-    "sentence": "No es de noche.",
-    "propositions": {
-      "P": "es de noche"
-    },
-    "formula": "¬P",
-    "complexity": "simple",
-    "connectives": [
-      "¬"
-    ]
-  },
-  {
     "id": 311,
     "sentence": "Estudiamos la lección y hacemos los ejercicios.",
     "propositions": {
@@ -4481,19 +3860,6 @@
     ]
   },
   {
-    "id": 314,
-    "sentence": "El agua hierve si y solo si alcanza los cien grados.",
-    "propositions": {
-      "P": "el agua hierve",
-      "Q": "el agua alcanza los cien grados"
-    },
-    "formula": "P ↔ Q",
-    "complexity": "simple",
-    "connectives": [
-      "↔"
-    ]
-  },
-  {
     "id": 315,
     "sentence": "Si no tienes la contraseña, el acceso es denegado.",
     "propositions": {
@@ -4503,8 +3869,8 @@
     "formula": "¬P → Q",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "¬"
+      "¬",
+      "→"
     ]
   },
   {
@@ -4518,8 +3884,8 @@
     "formula": "(P ∨ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -4547,24 +3913,8 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
-    ]
-  },
-  {
-    "id": 319,
-    "sentence": "El empleado recibe el bono si y solo si cumple la meta y no tiene faltas.",
-    "propositions": {
-      "P": "el empleado recibe el bono",
-      "Q": "el empleado cumple la meta",
-      "R": "el empleado tiene faltas"
-    },
-    "formula": "P ↔ (Q ∧ ¬R)",
-    "complexity": "medium",
-    "connectives": [
-      "↔",
       "∧",
-      "¬"
+      "→"
     ]
   },
   {
@@ -4578,9 +3928,9 @@
     "formula": "(P ∨ ¬Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
+      "¬",
       "∨",
-      "¬"
+      "→"
     ]
   },
   {
@@ -4608,8 +3958,8 @@
     "formula": "P → (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -4623,8 +3973,8 @@
     "formula": "(P ∨ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -4638,24 +3988,8 @@
     "formula": "P ↔ (Q ∨ R)",
     "complexity": "medium",
     "connectives": [
-      "↔",
-      "∨"
-    ]
-  },
-  {
-    "id": 325,
-    "sentence": "Si no haces ejercicio, subes de peso y pierdes resistencia.",
-    "propositions": {
-      "P": "haces ejercicio",
-      "Q": "subes de peso",
-      "R": "pierdes resistencia"
-    },
-    "formula": "¬P → (Q ∧ R)",
-    "complexity": "medium",
-    "connectives": [
-      "→",
-      "¬",
-      "∧"
+      "∨",
+      "↔"
     ]
   },
   {
@@ -4669,9 +4003,9 @@
     "formula": "(P ∧ ¬Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
+      "¬",
       "∧",
-      "¬"
+      "→"
     ]
   },
   {
@@ -4682,7 +4016,7 @@
       "Q": "la piscina está abierta"
     },
     "formula": "¬(P → Q)",
-    "complexity": "medium",
+    "complexity": "complex",
     "connectives": [
       "¬",
       "→"
@@ -4699,9 +4033,9 @@
     "formula": "(¬P ∨ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
       "¬",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -4715,8 +4049,8 @@
     "formula": "P ↔ (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "↔",
-      "∧"
+      "∧",
+      "↔"
     ]
   },
   {
@@ -4730,8 +4064,8 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -4745,9 +4079,9 @@
     "formula": "(¬P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
       "¬",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -4775,8 +4109,8 @@
     "formula": "(P ∨ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -4790,9 +4124,9 @@
     "formula": "P ↔ (Q ∧ ¬R)",
     "complexity": "medium",
     "connectives": [
-      "↔",
+      "¬",
       "∧",
-      "¬"
+      "↔"
     ]
   },
   {
@@ -4806,8 +4140,8 @@
     "formula": "(P ∨ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -4821,9 +4155,9 @@
     "formula": "(¬P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
       "¬",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -4851,8 +4185,8 @@
     "formula": "P → (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -4866,8 +4200,8 @@
     "formula": "P ↔ (Q ∨ R)",
     "complexity": "medium",
     "connectives": [
-      "↔",
-      "∨"
+      "∨",
+      "↔"
     ]
   },
   {
@@ -4881,8 +4215,8 @@
     "formula": "(P ∨ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -4893,7 +4227,7 @@
       "Q": "vas a fracasar"
     },
     "formula": "¬(P → Q)",
-    "complexity": "medium",
+    "complexity": "complex",
     "connectives": [
       "¬",
       "→"
@@ -4910,9 +4244,9 @@
     "formula": "(P ∧ ¬Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
+      "¬",
       "∧",
-      "¬"
+      "→"
     ]
   },
   {
@@ -4926,8 +4260,8 @@
     "formula": "(P ∧ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -4941,8 +4275,8 @@
     "formula": "P ↔ (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "↔",
-      "∧"
+      "∧",
+      "↔"
     ]
   },
   {
@@ -4957,10 +4291,10 @@
     "formula": "(P ∧ Q) → (R ↔ ¬S)",
     "complexity": "complex",
     "connectives": [
-      "→",
+      "¬",
       "∧",
-      "↔",
-      "¬"
+      "→",
+      "↔"
     ]
   },
   {
@@ -4975,27 +4309,10 @@
     "formula": "(¬P ∨ Q) → (R ∧ S)",
     "complexity": "complex",
     "connectives": [
-      "→",
       "¬",
+      "∧",
       "∨",
-      "∧"
-    ]
-  },
-  {
-    "id": 347,
-    "sentence": "El sistema entra en reposo si y solo si no hay actividad en la red, la temperatura es baja y el usuario está desconectado.",
-    "propositions": {
-      "P": "el sistema entra en reposo",
-      "Q": "hay actividad en la red",
-      "R": "la temperatura es baja",
-      "S": "el usuario está desconectado"
-    },
-    "formula": "P ↔ (¬Q ∧ R ∧ S)",
-    "complexity": "complex",
-    "connectives": [
-      "↔",
-      "¬",
-      "∧"
+      "→"
     ]
   },
   {
@@ -5011,8 +4328,8 @@
     "complexity": "complex",
     "connectives": [
       "¬",
-      "→",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -5027,9 +4344,9 @@
     "formula": "(P ∧ Q) → (R ∨ S)",
     "complexity": "complex",
     "connectives": [
-      "→",
       "∧",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -5044,10 +4361,10 @@
     "formula": "((P ∨ Q) ∧ ¬R) → S",
     "complexity": "complex",
     "connectives": [
-      "→",
-      "∨",
+      "¬",
       "∧",
-      "¬"
+      "∨",
+      "→"
     ]
   },
   {
@@ -5062,9 +4379,9 @@
     "formula": "P ↔ (Q ∧ ¬R ∧ S)",
     "complexity": "complex",
     "connectives": [
-      "↔",
+      "¬",
       "∧",
-      "¬"
+      "↔"
     ]
   },
   {
@@ -5079,9 +4396,9 @@
     "formula": "(P ∧ Q) → (R ∧ ¬S)",
     "complexity": "complex",
     "connectives": [
-      "→",
+      "¬",
       "∧",
-      "¬"
+      "→"
     ]
   },
   {
@@ -5102,24 +4419,6 @@
     ]
   },
   {
-    "id": 354,
-    "sentence": "Si tomas la medicina y descansas, o haces dieta y ejercicio, entonces mejorarás rápidamente.",
-    "propositions": {
-      "P": "tomas la medicina",
-      "Q": "descansas",
-      "R": "haces dieta",
-      "S": "haces ejercicio",
-      "T": "mejorarás rápidamente"
-    },
-    "formula": "((P ∧ Q) ∨ (R ∧ S)) → T",
-    "complexity": "complex",
-    "connectives": [
-      "→",
-      "∧",
-      "∨"
-    ]
-  },
-  {
     "id": 355,
     "sentence": "La puerta se abre si y solo si pasas la tarjeta, introduces el pin correcto y el sistema de seguridad no está bloqueado.",
     "propositions": {
@@ -5131,9 +4430,9 @@
     "formula": "P ↔ (Q ∧ R ∧ ¬S)",
     "complexity": "complex",
     "connectives": [
-      "↔",
+      "¬",
       "∧",
-      "¬"
+      "↔"
     ]
   },
   {
@@ -5148,9 +4447,9 @@
     "formula": "(¬P ∧ Q) → (R ↔ S)",
     "complexity": "complex",
     "connectives": [
-      "→",
       "¬",
       "∧",
+      "→",
       "↔"
     ]
   },
@@ -5166,9 +4465,9 @@
     "formula": "((P ∨ Q) ∧ R) → S",
     "complexity": "complex",
     "connectives": [
-      "→",
+      "∧",
       "∨",
-      "∧"
+      "→"
     ]
   },
   {
@@ -5185,8 +4484,8 @@
     "connectives": [
       "¬",
       "∧",
-      "→",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -5201,9 +4500,9 @@
     "formula": "(P ∧ Q) → (R ∧ ¬S)",
     "complexity": "complex",
     "connectives": [
-      "→",
+      "¬",
       "∧",
-      "¬"
+      "→"
     ]
   },
   {
@@ -5218,44 +4517,9 @@
     "formula": "P ↔ (¬Q ∧ R ∧ ¬S)",
     "complexity": "complex",
     "connectives": [
-      "↔",
       "¬",
-      "∧"
-    ]
-  },
-  {
-    "id": 361,
-    "sentence": "Si tienes los ingredientes y sigues la receta, entonces el plato quedará bien o al menos será comestible.",
-    "propositions": {
-      "P": "tienes los ingredientes",
-      "Q": "sigues la receta",
-      "R": "el plato quedará bien",
-      "S": "el plato será comestible"
-    },
-    "formula": "(P ∧ Q) → (R ∨ S)",
-    "complexity": "complex",
-    "connectives": [
-      "→",
       "∧",
-      "∨"
-    ]
-  },
-  {
-    "id": 362,
-    "sentence": "Si el vuelo se retrasa o se cancela, y no tienes seguro de viaje, entonces pierdes tu dinero.",
-    "propositions": {
-      "P": "el vuelo se retrasa",
-      "Q": "el vuelo se cancela",
-      "R": "tienes seguro de viaje",
-      "S": "pierdes tu dinero"
-    },
-    "formula": "((P ∨ Q) ∧ ¬R) → S",
-    "complexity": "complex",
-    "connectives": [
-      "→",
-      "∨",
-      "∧",
-      "¬"
+      "↔"
     ]
   },
   {
@@ -5287,8 +4551,8 @@
     "formula": "(P ∧ Q) → (R ↔ S)",
     "complexity": "complex",
     "connectives": [
-      "→",
       "∧",
+      "→",
       "↔"
     ]
   },
@@ -5304,9 +4568,9 @@
     "formula": "P ↔ (Q ∧ R ∧ ¬S)",
     "complexity": "complex",
     "connectives": [
-      "↔",
+      "¬",
       "∧",
-      "¬"
+      "↔"
     ]
   },
   {
@@ -5321,10 +4585,10 @@
     "formula": "(¬P ∨ Q) → (R ∧ S)",
     "complexity": "complex",
     "connectives": [
-      "→",
       "¬",
+      "∧",
       "∨",
-      "∧"
+      "→"
     ]
   },
   {
@@ -5339,9 +4603,9 @@
     "formula": "(P ∧ Q) → (R ∨ S)",
     "complexity": "complex",
     "connectives": [
-      "→",
       "∧",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -5357,8 +4621,8 @@
     "complexity": "complex",
     "connectives": [
       "¬",
-      "→",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -5374,9 +4638,9 @@
     "formula": "((P ∧ Q) ∨ (R ∧ S)) → T",
     "complexity": "complex",
     "connectives": [
-      "→",
       "∧",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -5391,9 +4655,9 @@
     "formula": "P ↔ (Q ∧ R ∧ ¬S)",
     "complexity": "complex",
     "connectives": [
-      "↔",
+      "¬",
       "∧",
-      "¬"
+      "↔"
     ]
   },
   {
@@ -5408,10 +4672,10 @@
     "formula": "(P ∧ Q) → (R ↔ ¬S)",
     "complexity": "complex",
     "connectives": [
-      "→",
+      "¬",
       "∧",
-      "↔",
-      "¬"
+      "→",
+      "↔"
     ]
   },
   {
@@ -5426,10 +4690,10 @@
     "formula": "(¬P ∨ Q) → (R ∧ S)",
     "complexity": "complex",
     "connectives": [
-      "→",
       "¬",
+      "∧",
       "∨",
-      "∧"
+      "→"
     ]
   },
   {
@@ -5461,10 +4725,10 @@
     "formula": "((P ∨ Q) ∧ ¬R) → S",
     "complexity": "complex",
     "connectives": [
-      "→",
-      "∨",
+      "¬",
       "∧",
-      "¬"
+      "∨",
+      "→"
     ]
   },
   {
@@ -5488,10 +4752,10 @@
       "Q": "el puerto de escucha está ocupado por otro microservicio"
     },
     "formula": "¬P ∨ Q",
-    "complexity": "complex",
+    "complexity": "simple",
     "connectives": [
-      "∨",
-      "¬"
+      "¬",
+      "∨"
     ]
   },
   {
@@ -5503,11 +4767,11 @@
       "R": "el balanceador de carga está redirigiendo el tráfico de red"
     },
     "formula": "(P ∧ Q) ∨ ¬R",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
-      "∨",
+      "¬",
       "∧",
-      "¬"
+      "∨"
     ]
   },
   {
@@ -5519,7 +4783,7 @@
       "R": "el usuario deberá responder las preguntas de seguridad"
     },
     "formula": "P ∨ (Q → R)",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
       "∨",
       "→"
@@ -5542,15 +4806,15 @@
     "id": 380,
     "sentence": "O la API externa devuelve un código de estado doscientos, o se captura una excepción crítica y se registra en el log de errores.",
     "propositions": {
-      "P": "la API externa devuelve un código de estado doscientos",
+      "P": "la api externa devuelve un código de estado doscientos",
       "Q": "se captura una excepción crítica",
       "R": "se registra en el log de errores"
     },
     "formula": "P ∨ (Q ∧ R)",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -5561,10 +4825,10 @@
       "Q": "se recopilarán las métricas de rendimiento del servidor"
     },
     "formula": "P ∨ ¬Q",
-    "complexity": "complex",
+    "complexity": "simple",
     "connectives": [
-      "∨",
-      "¬"
+      "¬",
+      "∨"
     ]
   },
   {
@@ -5584,16 +4848,16 @@
     "id": 383,
     "sentence": "O bien el certificado SSL ha expirado y el navegador web muestra una advertencia, o el dominio no apunta a la dirección IP correcta.",
     "propositions": {
-      "P": "el certificado SSL ha expirado",
+      "P": "el certificado ssl ha expirado",
       "Q": "el navegador web muestra una advertencia",
-      "R": "el dominio apunta a la dirección IP correcta"
+      "R": "el dominio apunta a la dirección ip correcta"
     },
     "formula": "(P ∧ Q) ∨ ¬R",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
-      "∨",
+      "¬",
       "∧",
-      "¬"
+      "∨"
     ]
   },
   {
@@ -5605,11 +4869,11 @@
       "R": "el usuario podrá modificar los archivos de configuración"
     },
     "formula": "P ∨ (Q → ¬R)",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
+      "¬",
       "∨",
-      "→",
-      "¬"
+      "→"
     ]
   },
   {
@@ -5631,13 +4895,13 @@
     "propositions": {
       "P": "la autenticación de doble factor resulta exitosa",
       "Q": "el acceso a la plataforma es denegado",
-      "R": "se bloquea temporalmente la dirección IP"
+      "R": "se bloquea temporalmente la dirección ip"
     },
     "formula": "P ∨ (Q ∧ R)",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -5648,10 +4912,10 @@
       "Q": "el despliegue automático en el entorno de producción será rechazado"
     },
     "formula": "¬P ∨ Q",
-    "complexity": "complex",
+    "complexity": "simple",
     "connectives": [
-      "∨",
-      "¬"
+      "¬",
+      "∨"
     ]
   },
   {
@@ -5666,8 +4930,8 @@
     "complexity": "complex",
     "connectives": [
       "¬",
-      "→",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -5692,14 +4956,14 @@
     "sentence": "El sistema realiza un respaldo en la nube cuando se presiona F5 o la carga del procesador es inferior al diez por ciento.",
     "propositions": {
       "P": "el sistema realiza un respaldo en la nube",
-      "Q": "se presiona F5",
+      "Q": "se presiona f5",
       "R": "la carga del procesador es inferior al diez por ciento"
     },
     "formula": "(Q ∨ R) → P",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -5713,9 +4977,9 @@
     "formula": "¬(Q ∧ R) → P",
     "complexity": "complex",
     "connectives": [
-      "→",
       "¬",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -5727,7 +4991,7 @@
       "R": "se configuran los puertos adecuadamente"
     },
     "formula": "P → (R → Q)",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
       "→"
     ]
@@ -5741,7 +5005,7 @@
       "R": "el backup de emergencia está corrupto"
     },
     "formula": "¬(P ∧ (¬Q ∨ R))",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
       "¬",
       "∧",
@@ -5760,9 +5024,9 @@
     "formula": "(R ∨ S) → (P ∧ Q)",
     "complexity": "complex",
     "connectives": [
-      "→",
+      "∧",
       "∨",
-      "∧"
+      "→"
     ]
   },
   {
@@ -5779,8 +5043,8 @@
     "connectives": [
       "¬",
       "∧",
-      "→",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -5795,9 +5059,9 @@
     "formula": "P ↔ ((Q ∧ R) ∨ S)",
     "complexity": "complex",
     "connectives": [
-      "↔",
       "∧",
-      "∨"
+      "∨",
+      "↔"
     ]
   },
   {
@@ -5811,9 +5075,9 @@
     "formula": "¬(Q ∨ R) → ¬P",
     "complexity": "complex",
     "connectives": [
-      "→",
       "¬",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -5826,23 +5090,6 @@
       "S": "la infección es viral"
     },
     "formula": "P → ((R ∧ ¬S) → Q)",
-    "complexity": "complex",
-    "connectives": [
-      "→",
-      "∧",
-      "¬"
-    ]
-  },
-  {
-    "id": 399,
-    "sentence": "Es mentira que si compilas el kernel de Linux y optimizas las banderas, el sistema sea más lento y consuma más memoria ram.",
-    "propositions": {
-      "P": "compilas el kernel de Linux",
-      "Q": "optimizas las banderas",
-      "R": "el sistema es más lento",
-      "S": "el sistema consume más memoria ram"
-    },
-    "formula": "¬((P ∧ Q) → (R ∧ S))",
     "complexity": "complex",
     "connectives": [
       "¬",
@@ -5861,8 +5108,8 @@
     "formula": "(Q ∨ R) → P",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -5871,15 +5118,15 @@
     "propositions": {
       "P": "el dron despega",
       "Q": "los sensores están calibrados",
-      "R": "el GPS tiene señal",
+      "R": "el gps tiene señal",
       "S": "hay viento fuerte"
     },
     "formula": "¬(Q ∧ R ∧ ¬S) → ¬P",
     "complexity": "complex",
     "connectives": [
-      "→",
       "¬",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -5894,9 +5141,9 @@
     "formula": "P → ((R ∧ S) → ¬Q)",
     "complexity": "complex",
     "connectives": [
-      "→",
+      "¬",
       "∧",
-      "¬"
+      "→"
     ]
   },
   {
@@ -5908,7 +5155,7 @@
       "R": "el sistema operativo muestra una pantalla azul"
     },
     "formula": "¬(P ∧ (¬Q ∨ R))",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
       "¬",
       "∧",
@@ -5927,9 +5174,9 @@
     "formula": "P ↔ ((Q ∨ R) ∧ S)",
     "complexity": "complex",
     "connectives": [
-      "↔",
+      "∧",
       "∨",
-      "∧"
+      "↔"
     ]
   },
   {
@@ -5944,8 +5191,8 @@
     "complexity": "complex",
     "connectives": [
       "¬",
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -5960,9 +5207,9 @@
     "formula": "(R ∨ S) → (P ∧ Q)",
     "complexity": "complex",
     "connectives": [
-      "→",
+      "∧",
       "∨",
-      "∧"
+      "→"
     ]
   },
   {
@@ -5976,9 +5223,9 @@
     "formula": "¬(Q ∧ R) → ¬P",
     "complexity": "complex",
     "connectives": [
-      "→",
       "¬",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -5993,9 +5240,9 @@
     "formula": "P → ((R ∧ ¬S) → ¬Q)",
     "complexity": "complex",
     "connectives": [
-      "→",
+      "¬",
       "∧",
-      "¬"
+      "→"
     ]
   },
   {
@@ -6007,11 +5254,11 @@
       "R": "el usuario deja rastro en el log de auditoría"
     },
     "formula": "¬(P ∨ (Q ∧ ¬R))",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
       "¬",
-      "∨",
-      "∧"
+      "∧",
+      "∨"
     ]
   },
   {
@@ -6026,8 +5273,8 @@
     "complexity": "complex",
     "connectives": [
       "¬",
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -6039,11 +5286,11 @@
       "R": "el dispositivo móvil está conectado a una fuente de poder"
     },
     "formula": "(Q ∧ ¬R) → P",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
-      "→",
+      "¬",
       "∧",
-      "¬"
+      "→"
     ]
   },
   {
@@ -6057,9 +5304,9 @@
     "formula": "¬(Q ∨ R) → P",
     "complexity": "complex",
     "connectives": [
-      "→",
       "¬",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -6074,9 +5321,9 @@
     "formula": "P ↔ (Q ∧ R ∧ ¬S)",
     "complexity": "complex",
     "connectives": [
-      "↔",
+      "¬",
       "∧",
-      "¬"
+      "↔"
     ]
   },
   {
@@ -6091,15 +5338,15 @@
     "complexity": "complex",
     "connectives": [
       "¬",
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
     "id": 415,
     "sentence": "Si el ataque es un ataque de inyección SQL, el sistema es vulnerado si los datos de entrada no están sanitizados y el orm está desactualizado.",
     "propositions": {
-      "P": "el ataque es un ataque de inyección SQL",
+      "P": "el ataque es un ataque de inyección sql",
       "Q": "el sistema es vulnerado",
       "R": "los datos de entrada están sanitizados",
       "S": "el orm está desactualizado"
@@ -6107,9 +5354,9 @@
     "formula": "P → ((¬R ∧ S) → Q)",
     "complexity": "complex",
     "connectives": [
-      "→",
       "¬",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -6125,9 +5372,9 @@
     "complexity": "complex",
     "connectives": [
       "¬",
+      "∧",
       "∨",
-      "→",
-      "∧"
+      "→"
     ]
   },
   {
@@ -6139,11 +5386,11 @@
       "R": "se aplica una técnica de regularización"
     },
     "formula": "(Q ∧ ¬R) → P",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
-      "→",
+      "¬",
       "∧",
-      "¬"
+      "→"
     ]
   },
   {
@@ -6157,9 +5404,9 @@
     "formula": "¬(Q ∨ R) → ¬P",
     "complexity": "complex",
     "connectives": [
-      "→",
       "¬",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -6174,8 +5421,8 @@
     "complexity": "complex",
     "connectives": [
       "¬",
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -6190,9 +5437,9 @@
     "formula": "P ↔ ((Q ∧ R) ∨ S)",
     "complexity": "complex",
     "connectives": [
-      "↔",
       "∧",
-      "∨"
+      "∨",
+      "↔"
     ]
   },
   {
@@ -6207,9 +5454,9 @@
     "formula": "(¬P ∨ Q) → (S → R)",
     "complexity": "complex",
     "connectives": [
-      "→",
       "¬",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -6221,7 +5468,7 @@
       "R": "la aplicación roba tus datos de contacto"
     },
     "formula": "¬((P ∧ Q) ∨ R)",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
       "¬",
       "∧",
@@ -6237,11 +5484,11 @@
       "R": "existe un conflicto de fusión no resuelto"
     },
     "formula": "(Q ∨ R) → ¬P",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
-      "→",
+      "¬",
       "∨",
-      "¬"
+      "→"
     ]
   },
   {
@@ -6255,9 +5502,9 @@
     "formula": "¬(Q ∧ R) → P",
     "complexity": "complex",
     "connectives": [
-      "→",
       "¬",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -6272,8 +5519,8 @@
     "complexity": "complex",
     "connectives": [
       "¬",
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -6288,9 +5535,9 @@
     "formula": "P → ((¬R ∧ ¬S) → Q)",
     "complexity": "complex",
     "connectives": [
-      "→",
       "¬",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -6318,11 +5565,11 @@
       "R": "el disco duro mecánico alcanza el cien por ciento de uso durante más de diez segundos"
     },
     "formula": "R → (P ∧ ¬Q)",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
-      "→",
+      "¬",
       "∧",
-      "¬"
+      "→"
     ]
   },
   {
@@ -6336,9 +5583,9 @@
     "formula": "¬(Q ∧ R) → ¬P",
     "complexity": "complex",
     "connectives": [
-      "→",
       "¬",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -6350,11 +5597,11 @@
       "R": "el paciente recibe inmunosupresores"
     },
     "formula": "P ↔ (Q ∨ ¬R)",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
-      "↔",
+      "¬",
       "∨",
-      "¬"
+      "↔"
     ]
   },
   {
@@ -6371,8 +5618,8 @@
     "connectives": [
       "¬",
       "∧",
-      "→",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -6398,7 +5645,7 @@
       "R": "el software está bien documentado"
     },
     "formula": "¬((P ∧ Q) ∨ R)",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
       "¬",
       "∧",
@@ -6410,14 +5657,14 @@
     "sentence": "Las alertas de intrusión se disparan en el centro de monitoreo cuando una dirección IP externa escanea múltiples puertos cerrados o se detectan inicios de sesión anómalos.",
     "propositions": {
       "P": "las alertas de intrusión se disparan en el centro de monitoreo",
-      "Q": "una dirección IP externa escanea múltiples puertos cerrados",
+      "Q": "una dirección ip externa escanea múltiples puertos cerrados",
       "R": "se detectan inicios de sesión anómalos"
     },
     "formula": "(Q ∨ R) → P",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -6431,25 +5678,9 @@
     "formula": "¬(Q ∨ R) → ¬P",
     "complexity": "complex",
     "connectives": [
-      "→",
       "¬",
-      "∨"
-    ]
-  },
-  {
-    "id": 436,
-    "sentence": "Es mentira que si el desarrollador escribe pruebas exhaustivas, el código final esté completamente libre de bugs técnicos y lógicos.",
-    "propositions": {
-      "P": "el desarrollador escribe pruebas exhaustivas",
-      "Q": "el código final está completamente libre de bugs técnicos",
-      "R": "el código final está completamente libre de bugs lógicos"
-    },
-    "formula": "¬(P → (Q ∧ R))",
-    "complexity": "complex",
-    "connectives": [
-      "¬",
-      "→",
-      "∧"
+      "∨",
+      "→"
     ]
   },
   {
@@ -6461,7 +5692,7 @@
       "R": "el precio del producto es competitivo"
     },
     "formula": "P → (Q ↔ R)",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
       "→",
       "↔"
@@ -6476,11 +5707,11 @@
       "R": "el sistema de refrigeración de emergencia arranca a tiempo"
     },
     "formula": "(Q ∧ ¬R) → P",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
-      "→",
+      "¬",
       "∧",
-      "¬"
+      "→"
     ]
   },
   {
@@ -6494,9 +5725,9 @@
     "formula": "¬(Q ∧ R) → ¬P",
     "complexity": "complex",
     "connectives": [
-      "→",
       "¬",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -6511,8 +5742,8 @@
     "complexity": "complex",
     "connectives": [
       "¬",
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -6526,8 +5757,8 @@
     "formula": "P ↔ (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "↔",
-      "∧"
+      "∧",
+      "↔"
     ]
   },
   {
@@ -6542,9 +5773,9 @@
     "formula": "P → ((R ∧ ¬S) → Q)",
     "complexity": "complex",
     "connectives": [
-      "→",
+      "¬",
       "∧",
-      "¬"
+      "→"
     ]
   },
   {
@@ -6562,22 +5793,6 @@
     ]
   },
   {
-    "id": 444,
-    "sentence": "No es cierto que si el puente colgante sufre daños estructurales por corrosión, entonces se derrumbe y provoque víctimas fatales.",
-    "propositions": {
-      "P": "el puente colgante sufre daños estructurales por corrosión",
-      "Q": "el puente colgante se derrumba",
-      "R": "el puente colgante provoca víctimas fatales"
-    },
-    "formula": "¬(P → (Q ∧ R))",
-    "complexity": "complex",
-    "connectives": [
-      "¬",
-      "→",
-      "∧"
-    ]
-  },
-  {
     "id": 445,
     "sentence": "Se aplica una penalidad económica a la aerolínea cuando el vuelo nacional se retrasa por más de tres horas o el vuelo es cancelado sin previo aviso.",
     "propositions": {
@@ -6588,8 +5803,8 @@
     "formula": "(Q ∨ R) → P",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -6603,9 +5818,9 @@
     "formula": "¬(Q ∧ R) → ¬P",
     "complexity": "complex",
     "connectives": [
-      "→",
       "¬",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -6617,10 +5832,10 @@
       "R": "se reducen las emisiones de gases de efecto invernadero"
     },
     "formula": "P → (¬R → Q)",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
-      "→",
-      "¬"
+      "¬",
+      "→"
     ]
   },
   {
@@ -6632,7 +5847,7 @@
       "R": "el virus mutante se propaga fácilmente a través de superficies contaminadas"
     },
     "formula": "¬(P ∧ (Q ∨ R))",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
       "¬",
       "∧",
@@ -6651,9 +5866,9 @@
     "formula": "P ↔ (Q ∧ R ∧ ¬S)",
     "complexity": "complex",
     "connectives": [
-      "↔",
+      "¬",
       "∧",
-      "¬"
+      "↔"
     ]
   },
   {
@@ -6668,8 +5883,8 @@
     "complexity": "complex",
     "connectives": [
       "¬",
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -6683,8 +5898,8 @@
     "formula": "(Q ∧ R) → P",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -6698,9 +5913,9 @@
     "formula": "¬(Q ∨ R) → ¬P",
     "complexity": "complex",
     "connectives": [
-      "→",
       "¬",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -6726,7 +5941,7 @@
       "R": "su director de tesis valida las pruebas estadísticas"
     },
     "formula": "¬(P ∧ (Q ∨ R))",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
       "¬",
       "∧",
@@ -6744,8 +5959,8 @@
     "formula": "P ↔ (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "↔",
-      "∧"
+      "∧",
+      "↔"
     ]
   },
   {
@@ -6760,8 +5975,8 @@
     "complexity": "complex",
     "connectives": [
       "¬",
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -6773,11 +5988,11 @@
       "R": "el dispositivo cuenta con una mica protectora instalada"
     },
     "formula": "(Q ∧ ¬R) → P",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
-      "→",
+      "¬",
       "∧",
-      "¬"
+      "→"
     ]
   },
   {
@@ -6791,9 +6006,9 @@
     "formula": "¬(Q ∧ R) → ¬P",
     "complexity": "complex",
     "connectives": [
-      "→",
       "¬",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -6811,22 +6026,6 @@
     ]
   },
   {
-    "id": 460,
-    "sentence": "Es falso que el investigador logre clonar células madre adultas y el comité de bioética internacional apruebe el experimento o le asigne fondos públicos.",
-    "propositions": {
-      "P": "el investigador logra clonar células madre adultas",
-      "Q": "el comité de bioética internacional aprueba el experimento",
-      "R": "el comité de bioética internacional le asigna fondos públicos"
-    },
-    "formula": "¬(P ∧ (Q ∨ R))",
-    "complexity": "complex",
-    "connectives": [
-      "¬",
-      "∧",
-      "∨"
-    ]
-  },
-  {
     "id": 461,
     "sentence": "La teoría de cuerdas se valida experimentalmente si y solo si se construyen aceleradores de partículas inmensamente poderosos y se descubren dimensiones espaciales adicionales ocultas.",
     "propositions": {
@@ -6837,26 +6036,8 @@
     "formula": "P ↔ (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "↔",
-      "∧"
-    ]
-  },
-  {
-    "id": 462,
-    "sentence": "No es cierto que si ingieres alimentos caducados y no los cocinas apropiadamente, sufrirás una intoxicación severa o desarrollarás gastritis crónica en el futuro cercano.",
-    "propositions": {
-      "P": "ingieres alimentos caducados",
-      "Q": "cocinas los alimentos apropiadamente",
-      "R": "sufrirás una intoxicación severa",
-      "S": "desarrollarás gastritis crónica en el futuro cercano"
-    },
-    "formula": "¬((P ∧ ¬Q) → (R ∨ S))",
-    "complexity": "complex",
-    "connectives": [
-      "¬",
       "∧",
-      "→",
-      "∨"
+      "↔"
     ]
   },
   {
@@ -6870,8 +6051,8 @@
     "formula": "(Q ∧ R) → P",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -6885,9 +6066,9 @@
     "formula": "¬(Q ∨ R) → ¬P",
     "complexity": "complex",
     "connectives": [
-      "→",
       "¬",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -6902,8 +6083,8 @@
     "formula": "P → ((R ∧ S) → Q)",
     "complexity": "complex",
     "connectives": [
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -6915,7 +6096,7 @@
       "R": "el volcán altera drásticamente el clima mundial durante décadas"
     },
     "formula": "¬(P ∧ (Q ∨ R))",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
       "¬",
       "∧",
@@ -6933,8 +6114,8 @@
     "formula": "P ↔ (Q ∧ R)",
     "complexity": "medium",
     "connectives": [
-      "↔",
-      "∧"
+      "∧",
+      "↔"
     ]
   },
   {
@@ -6949,8 +6130,8 @@
     "complexity": "complex",
     "connectives": [
       "¬",
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -6964,8 +6145,8 @@
     "formula": "(Q ∨ R) → P",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -6979,9 +6160,9 @@
     "formula": "¬(Q ∧ R) → ¬P",
     "complexity": "complex",
     "connectives": [
-      "→",
       "¬",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -6993,10 +6174,10 @@
       "R": "el pasajero justifica la presencia de objetos prohibidos rápidamente"
     },
     "formula": "P → (¬R → Q)",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
-      "→",
-      "¬"
+      "¬",
+      "→"
     ]
   },
   {
@@ -7008,7 +6189,7 @@
       "R": "el agujero negro encoje misteriosamente su propio tamaño"
     },
     "formula": "¬(P ∧ (Q ∨ R))",
-    "complexity": "complex",
+    "complexity": "medium",
     "connectives": [
       "¬",
       "∧",
@@ -7027,9 +6208,9 @@
     "formula": "P ↔ (Q ∧ R ∧ ¬S)",
     "complexity": "complex",
     "connectives": [
-      "↔",
+      "¬",
       "∧",
-      "¬"
+      "↔"
     ]
   },
   {
@@ -7044,20 +6225,8 @@
     "complexity": "complex",
     "connectives": [
       "¬",
-      "→",
-      "∧"
-    ]
-  },
-  {
-    "id": 475,
-    "sentence": "El museo no está abierto hoy.",
-    "propositions": {
-      "P": "el museo está abierto hoy"
-    },
-    "formula": "¬P",
-    "complexity": "simple",
-    "connectives": [
-      "¬"
+      "∧",
+      "→"
     ]
   },
   {
@@ -7075,31 +6244,17 @@
     ]
   },
   {
-    "id": 477,
-    "sentence": "Si no hay energía eléctrica, los ascensores no funcionan.",
-    "propositions": {
-      "P": "hay energía eléctrica",
-      "Q": "los ascensores funcionan"
-    },
-    "formula": "¬P → ¬Q",
-    "complexity": "medium",
-    "connectives": [
-      "→",
-      "¬"
-    ]
-  },
-  {
     "id": 478,
     "sentence": "Carlos no llegó tarde ni olvidó la reunión.",
     "propositions": {
-      "P": "Carlos llegó tarde",
-      "Q": "Carlos olvidó la reunión"
+      "P": "carlos llegó tarde",
+      "Q": "carlos olvidó la reunión"
     },
     "formula": "¬P ∧ ¬Q",
-    "complexity": "medium",
+    "complexity": "simple",
     "connectives": [
-      "∧",
-      "¬"
+      "¬",
+      "∧"
     ]
   },
   {
@@ -7113,8 +6268,8 @@
     "formula": "(P ∨ Q) → R",
     "complexity": "medium",
     "connectives": [
-      "→",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -7128,8 +6283,8 @@
     "formula": "P ↔ (Q ∨ R)",
     "complexity": "medium",
     "connectives": [
-      "↔",
-      "∨"
+      "∨",
+      "↔"
     ]
   },
   {
@@ -7144,8 +6299,8 @@
     "complexity": "complex",
     "connectives": [
       "¬",
-      "→",
-      "∧"
+      "∧",
+      "→"
     ]
   },
   {
@@ -7160,25 +6315,9 @@
     "formula": "(P ∧ Q) → (R ∨ S)",
     "complexity": "complex",
     "connectives": [
-      "→",
       "∧",
-      "∨"
-    ]
-  },
-  {
-    "id": 483,
-    "sentence": "El contrato se renueva si y solo si ambas partes están satisfechas y no hay incumplimientos pendientes.",
-    "propositions": {
-      "P": "el contrato se renueva",
-      "Q": "ambas partes están satisfechas",
-      "R": "hay incumplimientos pendientes"
-    },
-    "formula": "P ↔ (Q ∧ ¬R)",
-    "complexity": "medium",
-    "connectives": [
-      "↔",
-      "∧",
-      "¬"
+      "∨",
+      "→"
     ]
   },
   {
@@ -7193,9 +6332,9 @@
     "formula": "((P ∨ Q) ∧ R) → S",
     "complexity": "complex",
     "connectives": [
-      "→",
+      "∧",
       "∨",
-      "∧"
+      "→"
     ]
   },
   {
@@ -7337,9 +6476,9 @@
     "formula": "(¬P ∨ Q) → ¬R",
     "complexity": "medium",
     "connectives": [
-      "→",
       "¬",
-      "∨"
+      "∨",
+      "→"
     ]
   },
   {
@@ -7353,43 +6492,9 @@
     "formula": "P ↔ (Q ∧ ¬R)",
     "complexity": "medium",
     "connectives": [
-      "↔",
-      "∧",
-      "¬"
-    ]
-  },
-  {
-    "id": 497,
-    "sentence": "Si el semáforo está en verde y no hay peatones cruzando, el conductor puede avanzar.",
-    "propositions": {
-      "P": "el semáforo está en verde",
-      "Q": "hay peatones cruzando",
-      "R": "el conductor puede avanzar"
-    },
-    "formula": "(P ∧ ¬Q) → R",
-    "complexity": "medium",
-    "connectives": [
-      "→",
-      "∧",
-      "¬"
-    ]
-  },
-  {
-    "id": 498,
-    "sentence": "Si el empleado cumple las metas y no acumula faltas, recibirá el bono o una promoción.",
-    "propositions": {
-      "P": "el empleado cumple las metas",
-      "Q": "el empleado acumula faltas",
-      "R": "el empleado recibirá el bono",
-      "S": "el empleado recibirá una promoción"
-    },
-    "formula": "(P ∧ ¬Q) → (R ∨ S)",
-    "complexity": "complex",
-    "connectives": [
-      "→",
-      "∧",
       "¬",
-      "∨"
+      "∧",
+      "↔"
     ]
   },
   {
@@ -7404,10 +6509,10 @@
     "formula": "P ↔ ((Q ∨ R) ∧ ¬S)",
     "complexity": "complex",
     "connectives": [
-      "↔",
-      "∨",
+      "¬",
       "∧",
-      "¬"
+      "∨",
+      "↔"
     ]
   },
   {
@@ -7424,8 +6529,212 @@
     "connectives": [
       "¬",
       "∧",
-      "→",
+      "∨",
+      "→"
+    ]
+  },
+  {
+    "id": 501,
+    "sentence": "Llueve.",
+    "propositions": {
+      "P": "llueve"
+    },
+    "formula": "P",
+    "complexity": "simple",
+    "connectives": []
+  },
+  {
+    "id": 502,
+    "sentence": "El servidor responde.",
+    "propositions": {
+      "P": "el servidor responde"
+    },
+    "formula": "P",
+    "complexity": "simple",
+    "connectives": []
+  },
+  {
+    "id": 503,
+    "sentence": "Hace frío.",
+    "propositions": {
+      "P": "hace frío"
+    },
+    "formula": "P",
+    "complexity": "simple",
+    "connectives": []
+  },
+  {
+    "id": 504,
+    "sentence": "María llegó.",
+    "propositions": {
+      "P": "maría llegó"
+    },
+    "formula": "P",
+    "complexity": "simple",
+    "connectives": []
+  },
+  {
+    "id": 505,
+    "sentence": "Llueve aunque hace frío.",
+    "propositions": {
+      "P": "llueve",
+      "Q": "hace frío"
+    },
+    "formula": "P ∧ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∧"
+    ]
+  },
+  {
+    "id": 506,
+    "sentence": "El sistema arranca aunque hay errores menores.",
+    "propositions": {
+      "P": "el sistema arranca",
+      "Q": "hay errores menores"
+    },
+    "formula": "P ∧ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∧"
+    ]
+  },
+  {
+    "id": 507,
+    "sentence": "El puente se sostiene aunque el río crece.",
+    "propositions": {
+      "P": "el puente se sostiene",
+      "Q": "el río crece"
+    },
+    "formula": "P ∧ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∧"
+    ]
+  },
+  {
+    "id": 508,
+    "sentence": "El tren salió a pesar de que había huelga.",
+    "propositions": {
+      "P": "el tren salió",
+      "Q": "había huelga"
+    },
+    "formula": "P ∧ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∧"
+    ]
+  },
+  {
+    "id": 509,
+    "sentence": "No solo el servidor responde sino la aplicación funciona.",
+    "propositions": {
+      "P": "el servidor responde",
+      "Q": "la aplicación funciona"
+    },
+    "formula": "P ∧ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∧"
+    ]
+  },
+  {
+    "id": 510,
+    "sentence": "No solo estudia sino también trabaja.",
+    "propositions": {
+      "P": "estudia",
+      "Q": "trabaja"
+    },
+    "formula": "P ∧ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∧"
+    ]
+  },
+  {
+    "id": 511,
+    "sentence": "O bien cierras la ventana o bien enciendes la calefacción, no ambas cosas.",
+    "propositions": {
+      "P": "cierras la ventana",
+      "Q": "enciendes la calefacción"
+    },
+    "formula": "(P ∨ Q) ∧ ¬(P ∧ Q)",
+    "complexity": "complex",
+    "connectives": [
+      "¬",
+      "∧",
       "∨"
+    ]
+  },
+  {
+    "id": 512,
+    "sentence": "El archivo se sube o se descarta, pero no ambos.",
+    "propositions": {
+      "P": "el archivo se sube",
+      "Q": "el archivo se descarta"
+    },
+    "formula": "(P ∨ Q) ∧ ¬(P ∧ Q)",
+    "complexity": "complex",
+    "connectives": [
+      "¬",
+      "∧",
+      "∨"
+    ]
+  },
+  {
+    "id": 513,
+    "sentence": "O apruebas o suspendes, no las dos.",
+    "propositions": {
+      "P": "apruebas",
+      "Q": "suspendes"
+    },
+    "formula": "(P ∨ Q) ∧ ¬(P ∧ Q)",
+    "complexity": "complex",
+    "connectives": [
+      "¬",
+      "∧",
+      "∨"
+    ]
+  },
+  {
+    "id": 514,
+    "sentence": "Ni llueve ni nieva.",
+    "propositions": {
+      "P": "llueve",
+      "Q": "nieva"
+    },
+    "formula": "¬P ∧ ¬Q",
+    "complexity": "simple",
+    "connectives": [
+      "¬",
+      "∧"
+    ]
+  },
+  {
+    "id": 515,
+    "sentence": "El alumno no copió ni pidió ayuda.",
+    "propositions": {
+      "P": "el alumno copió",
+      "Q": "el alumno pidió ayuda"
+    },
+    "formula": "¬P ∧ ¬Q",
+    "complexity": "simple",
+    "connectives": [
+      "¬",
+      "∧"
+    ]
+  },
+  {
+    "id": 516,
+    "sentence": "Solo si el disco tiene espacio, la copia terminará.",
+    "propositions": {
+      "P": "la copia terminará",
+      "Q": "el disco tiene espacio"
+    },
+    "formula": "P → Q",
+    "complexity": "simple",
+    "connectives": [
+      "→"
     ]
   }
 ]

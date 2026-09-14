@@ -23,12 +23,17 @@ def main():
     model_path = 'model/n2lpi_model_cache.joblib'
 
     if trainer.load_models(model_path):
-        logger.info("Saltando entrenamiento: utilizando modelos cacheados.")
+        logger.info("Modelos cacheados cargados.")
+        if trainer.boundary is None:
+            logger.info("Falta clasificador de fronteras; entrenando...")
+            trainer.train_boundary_classifier()
+            trainer.save_models(model_path)
     else:
         logger.info("No se encontró caché válida. Iniciando entrenamiento...")
         trainer.train_sub_connectors()
         trainer.train_main_connector()
         trainer.cross_validate_main()
+        trainer.train_boundary_classifier()
         trainer.save_models(model_path)
 
     if len(sys.argv) > 1:
