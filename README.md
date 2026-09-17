@@ -63,24 +63,64 @@ Trained weights are written to `model/n2lpi_model_cache.joblib` (gitignored). Fi
 
 ## Usage
 
+Run every command from the **repo root**, with the venv activated (`source env/bin/activate`). The entry point is always `python main.py`. On the first run (no `model/n2lpi_model_cache.joblib`), it trains from `data/training_dataset.json` and writes the cache; later runs just load it.
+
+### Interactive (demo + REPL)
+
 ```bash
 python main.py
 ```
 
-Interactive REPL: type a Spanish sentence, get formula + atoms. Optional 2–3 beam candidates and feedback.
+1. Prints one **demo** (last training sentence): cues, atoms, generated formula vs gold.
+2. Opens the REPL. Type a Spanish sentence and press Enter.
+
+```
+>> Si el semáforo está en rojo y no hay una ambulancia, el conductor se detiene.
+```
+
+You get 2–3 beam candidates, each with a formula and grounded atoms (`P = "…"`, `Q = "…"`). Then:
+
+| You type | What it does |
+|---|---|
+| `Enter` or `1` | Keep candidate 1 (and learn its clause boundaries if learning is on) |
+| `2` or `3` | Keep that candidate instead |
+| `ninguna` / `n` / `0` | Do not update the model |
+| `aprender off` / `aprender no` | Stop writing feedback into the cache |
+| `aprender on` / `aprender si` | Turn learning back on (default) |
+| `salir` / `exit` / `q` | Quit |
+
+Learning appends boundary labels to `data/feedback.jsonl` and refreshes `model/n2lpi_model_cache.joblib`. Leave it off if you only want to try sentences.
+
+### Evaluate a JSON file
+
+Same schema as train/test (`sentence`, `formula`, `propositions`, …):
 
 ```bash
 python main.py data/test_dataset.json
 ```
 
-Evaluate an external JSON file (same schema as train/test).
+Prints each item (generated vs gold) and two scores:
+
+- **top-1** — first beam candidate matches the gold formula (logical equivalence)
+- **beam** — gold appears in any of the 2–3 candidates
+
+If the gold is in the beam, those items are also used as oracle feedback and the cache may be rewritten. Use any other JSON list with the same fields.
+
+### Checks and extra scripts
 
 ```bash
+# Schema, complexity rubric, no train/test sentence overlap
 python scripts/validate_dataset.py
+# expect: train=522 test=70  then  OK
+
+# 101 held-out real-style sentences (needs the cache already built)
 PYTHONPATH=. python scripts/stress_real100.py
-python eval_models.py          # needs local Ollama
-python hybrid_parser.py "Si llueve, me quedo en casa."
+
+# Optional bake-off vs a local Ollama model (default qwen2.5:3b on :11434)
+python eval_models.py
 ```
+
+`stress_real100.py` and `eval_models.py` load `model/n2lpi_model_cache.joblib`. If that file is missing, run `python main.py` once first (Ctrl+C after the demo if you do not need the REPL).
 
 ## Data format
 
@@ -187,12 +227,64 @@ Hay ~522 oraciones de train y 70 de test en `data/`. La caché del modelo se gua
 
 ## Uso
 
+Todo se corre **desde la raíz del repo**, con el venv activo (`source env/bin/activate`). El punto de entrada es `python main.py`. La primera vez (si no existe `model/n2lpi_model_cache.joblib`) entrena con `data/training_dataset.json` y guarda la caché; las siguientes solo la cargan.
+
+### Interactivo (demo + REPL)
+
 ```bash
 python main.py
-python main.py data/test_dataset.json
-python scripts/validate_dataset.py
-PYTHONPATH=. python scripts/stress_real100.py
 ```
+
+1. Imprime una **demo** (última oración del train): cues, átomos, fórmula generada vs gold.
+2. Abre el REPL. Escribe una oración en español y pulsa Enter.
+
+```
+>> Si el semáforo está en rojo y no hay una ambulancia, el conductor se detiene.
+```
+
+Salen 2–3 candidatos del beam, cada uno con fórmula y átomos (`P = "…"`, `Q = "…"`). Después:
+
+| Escribes | Qué hace |
+|---|---|
+| `Enter` o `1` | Deja el candidato 1 (y aprende fronteras si el aprendizaje está on) |
+| `2` o `3` | Elige ese candidato |
+| `ninguna` / `n` / `0` | No actualiza el modelo |
+| `aprender off` / `aprender no` | Deja de escribir feedback en la caché |
+| `aprender on` / `aprender si` | Vuelve a aprender (es el default) |
+| `salir` / `exit` / `q` | Cierra |
+
+El aprendizaje escribe en `data/feedback.jsonl` y refresca `model/n2lpi_model_cache.joblib`. Apágalo si solo quieres probar oraciones.
+
+### Evaluar un JSON
+
+Mismo esquema que train/test (`sentence`, `formula`, `propositions`, …):
+
+```bash
+python main.py data/test_dataset.json
+```
+
+Imprime cada ítem (generada vs gold) y dos métricas:
+
+- **top-1** — el primer candidato equivale a la fórmula gold
+- **beam** — el gold aparece en alguno de los 2–3 candidatos
+
+Si el gold está en el beam, esas oraciones se usan como feedback oráculo y se puede reescribir la caché. Sirve cualquier otra lista JSON con los mismos campos.
+
+### Comprobaciones y scripts extra
+
+```bash
+# Esquema, rúbrica de complexity, train y test sin la misma oración
+python scripts/validate_dataset.py
+# esperado: train=522 test=70  y luego  OK
+
+# 101 oraciones held-out de estilo real (hace falta la caché)
+PYTHONPATH=. python scripts/stress_real100.py
+
+# Comparación opcional contra Ollama local (qwen2.5:3b en :11434)
+python eval_models.py
+```
+
+`stress_real100.py` y `eval_models.py` cargan `model/n2lpi_model_cache.joblib`. Si no está, corre primero `python main.py` una vez (Ctrl+C después de la demo si no quieres el REPL).
 
 ## Cómo funciona
 
