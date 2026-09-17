@@ -63,6 +63,13 @@ _CLAUSE_PREV = {
     "y", "e", "o", "u", "si", "cuando", "entonces", "que", "sino", "ni",
     "pero", "aunque",
 }
+# Adjective-internal *no* (no nulo, no inicializada): keep inside the atom.
+_LEXICAL_NO_NEXT = {
+    "nulo", "nula", "nulos", "nulas",
+    "inicializado", "inicializada", "inicializados", "inicializadas",
+    "forzado", "forzada", "forzados", "forzadas",
+    "resuelto", "resuelta", "resueltos", "resueltas",
+}
 _GLUE_WORDS = {
     "y", "e", "o", "u", "si", "ni", "aunque", "pero", "sino", "entonces",
     "solo", "cuando", "tampoco", "no",
@@ -385,6 +392,8 @@ def _peel_neg(tokens, labs: List[str]) -> None:
             continue
         if i + 1 < len(tokens) and _norm_token(tokens[i + 1].group()) in {"ambos", "ambas", "las", "es", "ocurre", "se", "ser"}:
             continue
+        if i + 1 < len(tokens) and _norm_token(tokens[i + 1].group()) in _LEXICAL_NO_NEXT:
+            continue
         labs[i] = "B-NEG"
         if i + 1 < len(labs) and labs[i + 1].startswith("I-PROP"):
             labs[i + 1] = "B-PROP"
@@ -678,7 +687,10 @@ def _bio_to_cues(sentence: str, tokens, labels: List[str], confs: List[float]) -
                     ps.append(confs[i])
                     i += 1
                     continue
-                if kind == "IFF" and w2 in {"necesario", "suficiente", "para", "equivalente", "equivale", "a"}:
+                if kind == "IFF" and w2 in {
+                    "necesario", "suficiente", "para", "equivalente", "equivale",
+                    "a", "cuando", "y", "si", "siempre",
+                }:
                     end = tokens[i].end()
                     ps.append(confs[i])
                     i += 1
@@ -890,15 +902,18 @@ class JointSpanTagger:
             elif w == "no" and (_neg_block_context(tokens, i) or nxt in {"ser", "obstante"}):
                 pass
             elif w == "no":
-                clause = i == 0 or prev in _CLAUSE_PREV or bool(_PUNCT.match(prev_raw))
-                verbish = nxt in {"se", "hay", "esta", "estan", "fue", "era", "son"}
-                if clause or verbish:
-                    lab = "B-NEG"
-                    p = max(p, 0.6)
-                elif lab.endswith("NEG"):
+                if nxt in _LEXICAL_NO_NEXT:
                     lab = "I-PROP" if labels and labels[-1].endswith("PROP") else "B-PROP"
-                elif lab.endswith(("AND", "OR", "AUNQUE", "THEN", "IF", "IFF", "SINO", "NOR")):
-                    lab = "I-PROP" if labels and labels[-1].endswith("PROP") else "B-PROP"
+                else:
+                    clause = i == 0 or prev in _CLAUSE_PREV or bool(_PUNCT.match(prev_raw))
+                    verbish = nxt in {"se", "hay", "esta", "estan", "fue", "era", "son"}
+                    if clause or verbish:
+                        lab = "B-NEG"
+                        p = max(p, 0.6)
+                    elif lab.endswith("NEG"):
+                        lab = "I-PROP" if labels and labels[-1].endswith("PROP") else "B-PROP"
+                    elif lab.endswith(("AND", "OR", "AUNQUE", "THEN", "IF", "IFF", "SINO", "NOR")):
+                        lab = "I-PROP" if labels and labels[-1].endswith("PROP") else "B-PROP"
             elif w in {"jamas", "nunca"}:
                 lab = "B-NEG_BLOCK"
                 p = max(p, 0.75)
@@ -923,6 +938,14 @@ class JointSpanTagger:
                 p = max(p, 0.75)
             elif w == "siempre" and nxt in {"y", "cuando"}:
                 lab = "B-IFF"
+                p = max(p, 0.8)
+            elif w == "cuando" and (
+                (prev == "y" and prev2 == "siempre") or prev == "siempre"
+            ):
+                lab = "I-IFF" if labels and labels[-1].endswith("IFF") else "B-IFF"
+                p = max(p, 0.8)
+            elif w == "a" and nxt == "poco":
+                lab = "B-IF"
                 p = max(p, 0.8)
             elif w in {"salvo", "excepto"}:
                 lab = "B-UNLESS"
@@ -1040,7 +1063,7 @@ class JointSpanTagger:
                     p = max(p, 0.7)
             elif w in _HARD_GLUE and not (
                 w in {"y", "e"} and (_iff_context(tokens, i) or _nec_suf_context(tokens, i))
-            ):
+            ) and not (w == "no" and nxt in _LEXICAL_NO_NEXT):
                 forced = _HARD_GLUE[w]
                 if not lab.endswith(forced.split("-", 1)[-1]):
                     lab = forced

@@ -97,11 +97,12 @@
     "sentence": "La pantalla está congelada o el teclado no responde.",
     "propositions": {
       "P": "la pantalla está congelada",
-      "Q": "el teclado no responde"
+      "Q": "el teclado responde"
     },
-    "formula": "P ∨ Q",
+    "formula": "P ∨ ¬Q",
     "complexity": "simple",
     "connectives": [
+      "¬",
       "∨"
     ]
   },

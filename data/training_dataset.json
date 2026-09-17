@@ -323,12 +323,13 @@
     "id": 44,
     "sentence": "La impresora no tiene tinta o el cable está desconectado.",
     "propositions": {
-      "P": "la impresora no tiene tinta",
+      "P": "la impresora tiene tinta",
       "Q": "el cable está desconectado"
     },
-    "formula": "P ∨ Q",
+    "formula": "¬P ∨ Q",
     "complexity": "simple",
     "connectives": [
+      "¬",
       "∨"
     ]
   },
@@ -6378,7 +6379,7 @@
     "sentence": "Si el proxy responde y la caché no está llena, entonces el panel carga si y solo si el usuario inicia sesión.",
     "propositions": {
       "P": "el proxy responde",
-      "Q": "está llena",
+      "Q": "la caché está llena",
       "R": "el panel carga",
       "S": "el usuario inicia sesión"
     },

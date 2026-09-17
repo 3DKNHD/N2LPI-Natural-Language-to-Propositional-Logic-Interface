@@ -17,6 +17,12 @@ import string
 from typing import Dict, Optional, Tuple
 from config import logger
 
+# Adjective-internal *no* stays inside the atom (no nulo, no inicializada, …).
+_LEXICAL_NO_NEXT = re.compile(
+    r"^(nulo|nula|nulos|nulas|inicializad[oa]s?|forzad[oa]s?|resuelt[oa]s?)\b",
+    re.IGNORECASE,
+)
+
 try:
     from config import NLP_SPANISH
 except Exception:
@@ -181,11 +187,15 @@ class PropositionRegistry:
         neg_pattern = r'^(no es cierto que|no es verdad que|es falso que|es mentira que|no se cumple que|no)\s+(.+)'
         match = re.match(neg_pattern, clean_text, re.IGNORECASE)
         if match:
-            clean_text = match.group(2).strip()
-            is_negated = True
-        else:
-            if re.search(r'\bno\s+', clean_text, re.IGNORECASE):
-                clean_text = re.sub(r'\bno\s+', '', clean_text, count=1, flags=re.IGNORECASE).strip()
+            prefix, rest = match.group(1), match.group(2).strip()
+            if not (prefix.lower() == "no" and _LEXICAL_NO_NEXT.match(rest)):
+                clean_text = rest
+                is_negated = True
+        if not is_negated:
+            mid = re.search(r'\bno\s+', clean_text, re.IGNORECASE)
+            if mid and not _LEXICAL_NO_NEXT.match(clean_text[mid.end():].lstrip()):
+                clean_text = (clean_text[:mid.start()] + clean_text[mid.end():]).strip()
+                clean_text = re.sub(r'\s+', ' ', clean_text)
                 is_negated = True
         if not clean_text:
             return "∅"
