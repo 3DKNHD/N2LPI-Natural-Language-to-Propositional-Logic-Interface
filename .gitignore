@@ -6,3 +6,6 @@ __pycache__/
 
 #Modelo No es necesario para la ejecucion
 model/
+
+#Feedback de aprendizaje (runtime)
+data/feedback.jsonl

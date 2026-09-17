@@ -18,8 +18,7 @@ from typing import Dict, Optional, Tuple
 from config import logger
 
 try:
-    import spacy
-    NLP_SPANISH = spacy.load("es_core_news_sm")
+    from config import NLP_SPANISH
 except Exception:
     NLP_SPANISH = None
 
@@ -635,34 +634,26 @@ def get_main_connective_from_template(template: str) -> str:
     return 'ATOMIC'
 
 class HybridLogicParser:
-    """Orchestrator that selects parser based on ML confidence.
-    
-    Uses GuidedParser when ML confidence >= threshold, otherwise
-    falls back to FullRecursiveParser for full pattern coverage.
-    """
+    """Public parser API: staged pipeline with beam, FullRecursive as fallback."""
+
     def __init__(self, ml_pipeline=None, confidence_threshold=0.6):
         self.ml_pipeline = ml_pipeline
         self.threshold = confidence_threshold
         self.guided_parser = GuidedParser()
         self.full_parser = FullRecursiveParser()
+        self._pipeline = None
+
+    def _get_pipeline(self):
+        if self._pipeline is None:
+            from pipeline_parser import PipelineParser
+            self._pipeline = PipelineParser(boundary_clf=self.ml_pipeline, fallback=False)
+        return self._pipeline
 
     def parse(self, sentence: str) -> dict:
-        if self.ml_pipeline is None:
-            return self.full_parser.parse(sentence)
-        try:
-            template, confidence, _ = self.ml_pipeline.predict_with_confidence(sentence)
-        except Exception:
-            return self.full_parser.parse(sentence)
-        if confidence < self.threshold:
-            return self.full_parser.parse(sentence)
-        main_conn = get_main_connective_from_template(template)
-        try:
-            result = self.guided_parser.parse(sentence, main_conn)
-        except Exception:
-            return self.full_parser.parse(sentence)
-        if not self._is_structure_compatible(result["formula"], main_conn):
-            return self.full_parser.parse(sentence)
-        return result
+        return self._get_pipeline().parse(sentence)
+
+    def parse_candidates(self, sentence: str, max_k: int = 3) -> list:
+        return self._get_pipeline().parse_candidates(sentence, max_k=max_k)
 
     def parse_to_semantics(self, sentence: str, main_conn: Optional[str] = None) -> dict:
         """Parse with an explicit main connector override (bypasses ML prediction)."""
@@ -673,9 +664,7 @@ class HybridLogicParser:
                 logger.info("DEBUG: La estructura no es compatible, cayendo a parser recursivo.")
                 return self.full_parser.parse(sentence)
             return result
-        else:
-            logger.info("DEBUG: Usando parser recursivo por defecto (sin ML).")
-            return self.parse(sentence)
+        return self.parse(sentence)
 
     @staticmethod
     def _is_structure_compatible(formula: str, expected_conn: str) -> bool:
