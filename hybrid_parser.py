@@ -646,7 +646,7 @@ class HybridLogicParser:
     def _get_pipeline(self):
         if self._pipeline is None:
             from pipeline_parser import PipelineParser
-            self._pipeline = PipelineParser(boundary_clf=self.ml_pipeline, fallback=True)
+            self._pipeline = PipelineParser(boundary_clf=self.ml_pipeline, fallback=False)
         return self._pipeline
 
     def parse(self, sentence: str) -> dict:

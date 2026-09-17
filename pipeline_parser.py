@@ -70,15 +70,40 @@ PREC = {
     "NOR": 70,
     "IF": 65,
     "THEN": 65,
+    "UNLESS": 82,
+    "AUNQUE": 55,
     "SINO": 50,
     "OR": 40,
     "AND": 30,
+    "NEG": 25,
 }
 
 KIND_KEYS = [
-    "NEG_BLOCK", "IFF", "ONLY_IF", "IF", "THEN", "OR", "AND", "NOR",
-    "XOR_TAIL", "NO_SOLO", "SINO",
+    "NEG_BLOCK", "IFF", "ONLY_IF", "UNLESS", "IF", "THEN", "OR", "AND", "NOR",
+    "XOR_TAIL", "NO_SOLO", "SINO", "NEG", "AUNQUE",
 ]
+
+KIND_TO_OP = {
+    "NEG_BLOCK": "¬",
+    "IFF": "↔",
+    "ONLY_IF": "→",
+    "UNLESS": "→",
+    "IF": "→",
+    "THEN": "→",
+    "OR": "∨",
+    "AND": "∧",
+    "NOR": "∧",
+    "XOR_TAIL": "xor",
+    "NO_SOLO": "∧",
+    "SINO": "∧",
+    "NEG": "¬",
+    "AUNQUE": "∧",
+}
+
+ML_FORCE_KINDS = {
+    "NEG_BLOCK", "IFF", "ONLY_IF", "UNLESS", "IF", "THEN", "NOR", "XOR_TAIL",
+    "NO_SOLO", "NEG", "AUNQUE",
+}
 
 _COMMON_VERBS = {
     "es", "son", "fue", "era", "está", "están", "hay", "tiene", "tienen",
@@ -117,6 +142,41 @@ def detect_cues(sentence: str) -> List[Cue]:
             found.append(Cue(start, end, kind, op, match.group(0), force))
     found.sort(key=lambda c: (c.start, -(c.end - c.start)))
     return found
+
+
+def iter_ngram_spans(sentence: str, max_n: int = 6) -> List[Tuple[int, int, str]]:
+    """Word n-grams (1..max_n) as candidate connective spans."""
+    tokens = list(re.finditer(r"\S+", sentence))
+    spans = []
+    for n in range(1, max_n + 1):
+        for i in range(len(tokens) - n + 1):
+            start = tokens[i].start()
+            end = tokens[i + n - 1].end()
+            text = sentence[start:end]
+            if re.fullmatch(r"[\W_]+", text or ""):
+                continue
+            spans.append((start, end, text))
+    return spans
+
+
+def nms_cues(cues: Sequence[Cue]) -> List[Cue]:
+    """Drop overlaps. Kind precedence first (IFF beats IF), then confidence, then length."""
+    ordered = sorted(
+        cues,
+        key=lambda c: (-PREC.get(c.kind, 0), -c.prob, -(c.end - c.start), c.start),
+    )
+    if not ordered:
+        return []
+    occupied = [False] * (max(c.end for c in ordered) + 1)
+    kept: List[Cue] = []
+    for cue in ordered:
+        if any(occupied[cue.start:cue.end]):
+            continue
+        for i in range(cue.start, cue.end):
+            occupied[i] = True
+        kept.append(cue)
+    kept.sort(key=lambda c: (c.start, -(c.end - c.start)))
+    return kept
 
 
 _EXTRA_ENDINGS = ("e", "a", "an", "en", "ó", "ió", "aba", "ía")
@@ -253,7 +313,37 @@ def _strip_span(s: str, i: int, j: int) -> Tuple[int, int]:
 
 
 def _cues_in(cues: Sequence[Cue], i: int, j: int) -> List[Cue]:
-    return [c for c in cues if c.is_boundary and c.start >= i and c.end <= j]
+    return [c for c in cues if c.is_boundary and c.start >= i and c.start < j]
+
+
+_COORD_NEXT = {"y", "e", "o", "u", "entonces", "si", "cuando", "pero", "ni", "sino", "por", "de"}
+
+
+def _comma_and_cues(s: str, i: int, j: int, existing: Sequence[Cue]) -> List[Cue]:
+    """Treat a comma between two verbal clauses as AND, unless a coordinator follows."""
+    extra: List[Cue] = []
+    k = s.find(",", i, j)
+    while k != -1:
+        if any(c.start <= k < c.end for c in existing):
+            k = s.find(",", k + 1, j)
+            continue
+        rest = s[k + 1:j].lstrip()
+        first = re.match(r"\w+", rest, flags=re.UNICODE)
+        if first and first.group(0).lower() in _COORD_NEXT:
+            k = s.find(",", k + 1, j)
+            continue
+        left, right = s[i:k], s[k + 1:j]
+        if looks_verbal(left) and looks_verbal(right):
+            extra.append(Cue(k, k + 1, "AND", "∧", ",", True, prob=0.7, is_boundary=True))
+        k = s.find(",", k + 1, j)
+    return extra
+
+
+def _eff_prec(s: str, i: int, cue: Cue) -> int:
+    p = PREC.get(cue.kind, 0)
+    if cue.kind == "AND" and s[i:cue.start].rstrip().endswith(","):
+        return max(p, 45)
+    return p
 
 
 def parse_range(s: str, i: int, j: int, cues: Sequence[Cue], registry: PropositionRegistry) -> LogicNode:
@@ -262,6 +352,7 @@ def parse_range(s: str, i: int, j: int, cues: Sequence[Cue], registry: Propositi
     if i >= j:
         return AtomicNode("∅")
     local = _cues_in(cues, i, j)
+    local = sorted(local + _comma_and_cues(s, i, j, local), key=lambda c: (c.start, c.end))
     if not local:
         return _atomic(s[i:j], registry)
 
@@ -271,6 +362,16 @@ def parse_range(s: str, i: int, j: int, cues: Sequence[Cue], registry: Propositi
         rest = [c for c in local if c is not lead[0]]
         if any(c.kind == "OR" for c in rest):
             return parse_range(s, lead[0].end, j, cues, registry)
+
+    if lead and lead[0].kind == "AND":
+        rest = [c for c in local if c is not lead[0]]
+        head = re.sub(r"[^\wñ]+", "", (lead[0].text or "").lower())
+        if any(c.kind == "AND" for c in rest) and head in {"tanto", "asi"}:
+            return parse_range(s, lead[0].end, j, cues, registry)
+
+    # Leading "entonces" after a comma split: drop it and parse the consequent.
+    if lead and lead[0].kind == "THEN":
+        return parse_range(s, lead[0].end, j, cues, registry)
 
     # Block negation wrapping the rest.
     for c in local:
@@ -312,6 +413,63 @@ def parse_range(s: str, i: int, j: int, cues: Sequence[Cue], registry: Propositi
         right = parse_range(s, nors[0].end, j, cues, registry)
         return BinaryOpNode("∧", UnaryOpNode("¬", left), UnaryOpNode("¬", right))
 
+    # aunque A, B  →  A ∧ B (comma marks the main clause)
+    aunque = [c for c in local if c.kind == "AUNQUE"]
+    if aunque:
+        c = aunque[0]
+        body_i = c.end if s[i:c.start].strip() == "" else i
+        comma = s.find(",", max(c.end, body_i), j)
+        if s[i:c.start].strip() == "" and comma != -1:
+            return BinaryOpNode(
+                "∧",
+                parse_range(s, c.end, comma, cues, registry),
+                parse_range(s, comma + 1, j, cues, registry),
+            )
+        if s[i:c.start].strip() == "":
+            return parse_range(s, c.end, j, cues, registry)
+        return BinaryOpNode(
+            "∧",
+            parse_range(s, i, c.start, cues, registry),
+            parse_range(s, c.end, j, cues, registry),
+        )
+
+    # Outer si … entonces / si …, …  before any inner IFF.
+    ifs = [c for c in local if c.kind == "IF"]
+    thens = [c for c in local if c.kind == "THEN"]
+    if ifs and s[i:ifs[0].start].strip() == "":
+        head = ifs[0]
+        inner_iff = [c for c in local if c.kind == "IFF" and c.start > head.end]
+        wrapping = bool(thens and thens[0].start > head.end) or (s.find(",", head.end, j) != -1)
+        if wrapping:
+            if thens and thens[0].start > head.end:
+                t = thens[0]
+                return BinaryOpNode(
+                    "→",
+                    parse_range(s, head.end, t.start, cues, registry),
+                    parse_range(s, t.end, j, cues, registry),
+                )
+            comma = s.find(",", head.end, j)
+            if comma != -1:
+                return BinaryOpNode(
+                    "→",
+                    parse_range(s, head.end, comma, cues, registry),
+                    parse_range(s, comma + 1, j, cues, registry),
+                )
+        elif not inner_iff:
+            para = re.search(r"\bpara que\b", s[head.end:j], flags=re.IGNORECASE)
+            if para:
+                mid = head.end + para.start()
+                return BinaryOpNode(
+                    "→",
+                    parse_range(s, head.end, mid, cues, registry),
+                    parse_range(s, head.end + para.end(), j, cues, registry),
+                )
+            rest_cues = [
+                replace(c, is_boundary=False) if (c.start == head.start and c.end == head.end and c.kind == "IF") else c
+                for c in cues
+            ]
+            return parse_range(s, head.end, j, rest_cues, registry)
+
     # si y solo si / equivalente
     iffs = [c for c in local if c.kind == "IFF"]
     if iffs:
@@ -345,7 +503,36 @@ def parse_range(s: str, i: int, j: int, cues: Sequence[Cue], registry: Propositi
             parse_range(s, c.end, j, cues, registry),
         )
 
-    # si ... entonces ...   or   si ..., ...
+    # P a menos que Q  →  ¬Q → P
+    unless = [c for c in local if c.kind == "UNLESS"]
+    if unless:
+        c = unless[0]
+        if s[i:c.start].strip() == "":
+            comma = s.find(",", c.end, j)
+            if comma != -1:
+                return BinaryOpNode(
+                    "→",
+                    UnaryOpNode("¬", parse_range(s, c.end, comma, cues, registry)),
+                    parse_range(s, comma + 1, j, cues, registry),
+                )
+            return UnaryOpNode("¬", parse_range(s, c.end, j, cues, registry))
+        return BinaryOpNode(
+            "→",
+            UnaryOpNode("¬", parse_range(s, c.end, j, cues, registry)),
+            parse_range(s, i, c.start, cues, registry),
+        )
+
+    # P, por lo tanto Q
+    mid_then = [c for c in local if c.kind == "THEN" and s[i:c.start].strip()]
+    if mid_then:
+        c = mid_then[0]
+        return BinaryOpNode(
+            "→",
+            parse_range(s, i, c.start, cues, registry),
+            parse_range(s, c.end, j, cues, registry),
+        )
+
+    # si ... entonces ...   or   si ..., ...  (non-wrapping leftover)
     ifs = [c for c in local if c.kind == "IF"]
     thens = [c for c in local if c.kind == "THEN"]
     if ifs and s[i:ifs[0].start].strip() == "":
@@ -370,20 +557,70 @@ def parse_range(s: str, i: int, j: int, cues: Sequence[Cue], registry: Propositi
         ]
         return parse_range(s, head.end, j, rest_cues, registry)
 
-    # "X si Y" inverted
+    # P, de lo contrario Q  →  ¬P → Q
+    otherwise = [
+        c for c in local
+        if c.kind == "IF" and "contrario" in (c.text or "").lower()
+    ]
+    if otherwise and s[i:otherwise[0].start].strip():
+        c = otherwise[0]
+        return BinaryOpNode(
+            "→",
+            UnaryOpNode("¬", parse_range(s, i, c.start, cues, registry)),
+            parse_range(s, c.end, j, cues, registry),
+        )
+
+    # "X si Y" inverted, except dummy "o si" / "y si" after a coordinator.
     if ifs and s[i:ifs[0].start].strip() != "":
         c = ifs[0]
+        glued = [
+            x for x in local
+            if x.kind in {"OR", "AND"} and x.end <= c.start
+            and s[x.end:c.start].strip() == ""
+        ]
+        if glued:
+            rest_cues = [
+                replace(x, is_boundary=False)
+                if (x.start == c.start and x.end == c.end and x.kind == "IF")
+                else x
+                for x in cues
+            ]
+            return parse_range(s, i, j, rest_cues, registry)
         return BinaryOpNode(
             "→",
             parse_range(s, c.end, j, cues, registry),
             parse_range(s, i, c.start, cues, registry),
         )
 
+    # Clause-level "no" (A y no B) wraps the next atom, not the whole rest.
+    lead_neg = [
+        c for c in local
+        if c.kind == "NEG" and (c.start == i or s[i:c.start].strip() == "")
+    ]
+    if lead_neg:
+        c = lead_neg[0]
+        nxt = [
+            x for x in local
+            if x.start >= c.end and x.kind in {"AND", "OR", "IF", "THEN", "IFF", "SINO", "AUNQUE"}
+        ]
+        if nxt:
+            return BinaryOpNode(
+                nxt[0].op,
+                UnaryOpNode("¬", parse_range(s, c.end, nxt[0].start, cues, registry)),
+                parse_range(s, nxt[0].end, j, cues, registry),
+            )
+        return UnaryOpNode("¬", parse_range(s, c.end, j, cues, registry))
+
     # Generic binary: highest precedence, but clause-level AND/OR beats NP coordination.
-    ranked = sorted(local, key=lambda c: (-PREC.get(c.kind, 0), c.start))
-    chosen = None
+    # Leftover NEG_BLOCK / XOR_TAIL / THEN in the middle must not freeze the span.
+    ranked = sorted(
+        [c for c in local if c.kind not in {"NEG_BLOCK", "XOR_TAIL", "THEN", "NO_SOLO", "UNLESS"}],
+        key=lambda c: (-_eff_prec(s, i, c), c.start),
+    )
     for cand in ranked:
         left_txt, right_txt = s[i:cand.start], s[cand.end:j]
+        if not left_txt.strip() or not right_txt.strip():
+            continue
         if cand.kind in {"AND", "OR"} and is_np_coordination(left_txt, right_txt):
             clause_ops = [
                 x for x in local
@@ -394,17 +631,12 @@ def parse_range(s: str, i: int, j: int, cues: Sequence[Cue], registry: Propositi
             ]
             if clause_ops:
                 continue
-        chosen = cand
-        break
-    if chosen is None and ranked:
-        chosen = ranked[0]
-    c = chosen
-    if c.kind in {"AND", "OR", "SINO"} and s[i:c.start].strip() and s[c.end:j].strip():
-        return BinaryOpNode(
-            c.op,
-            parse_range(s, i, c.start, cues, registry),
-            parse_range(s, c.end, j, cues, registry),
-        )
+        if cand.kind in {"AND", "OR", "SINO", "AUNQUE"}:
+            return BinaryOpNode(
+                cand.op,
+                parse_range(s, i, cand.start, cues, registry),
+                parse_range(s, cand.end, j, cues, registry),
+            )
 
     return _atomic(s[i:j], registry)
 
@@ -470,8 +702,14 @@ class PipelineParser:
         self.fallback = fallback
 
     def annotate_cues(self, sentence: str) -> List[Cue]:
-        cues = detect_cues(sentence)
         clf = self.boundary_clf
+        if clf is not None and hasattr(clf, "predict_cues"):
+            try:
+                cues = list(clf.predict_cues(sentence) or [])
+            except Exception:
+                cues = []
+        else:
+            cues = []
         for cue in cues:
             if clf is not None and hasattr(clf, "predict_boundary_proba"):
                 cue.prob = float(clf.predict_boundary_proba(sentence, cue))
@@ -500,11 +738,15 @@ class PipelineParser:
             logger.info(f"Pipeline parse fallback: {exc}")
             if self.fallback:
                 return FullRecursiveParser().parse(sentence)
-            raise
+            registry = PropositionRegistry()
+            return node_to_result(_atomic(sentence, registry), registry)
 
     def parse(self, sentence: str) -> dict:
         candidates = self.parse_candidates(sentence)
-        return candidates[0] if candidates else FullRecursiveParser().parse(sentence)
+        if candidates:
+            return candidates[0]
+        registry = PropositionRegistry()
+        return node_to_result(_atomic(sentence, registry), registry)
 
     def parse_candidates(self, sentence: str, max_k: int = 3) -> List[dict]:
         """Stage-2 beam: default / aggressive / conservative / flipped uncertain cue."""
@@ -543,7 +785,10 @@ class PipelineParser:
             if len(scored) >= max_k:
                 break
         scored.sort(key=lambda r: r.get("score", 0.0), reverse=True)
-        return scored or [FullRecursiveParser().parse(sentence)]
+        if scored:
+            return scored
+        registry = PropositionRegistry()
+        return [node_to_result(_atomic(sentence, registry), registry)]
 
 
 def credit_labels(sentence: str, winner: dict, losers: Iterable[dict]) -> List[dict]:

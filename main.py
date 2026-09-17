@@ -24,8 +24,9 @@ def main():
 
     if trainer.load_models(model_path):
         logger.info("Modelos cacheados cargados.")
-        if trainer.boundary is None:
-            logger.info("Falta clasificador de fronteras; entrenando...")
+        tagger_ready = bool(getattr(trainer.tagger, "_ready", False))
+        if trainer.boundary is None or not tagger_ready:
+            logger.info("Falta etiquetador de piezas/conectores; entrenando...")
             trainer.train_boundary_classifier()
             trainer.save_models(model_path)
     else:

@@ -186,7 +186,7 @@ def _normalize_formula_variables(formula_str: str) -> str:
                 dfs(t[2])
         dfs(arbol)
         
-        vars_ordenadas = sorted(list(set(vars_todas)))
+        vars_ordenadas = list(vars_todas)
         mapeo = {var: string.ascii_uppercase[i] for i, var in enumerate(vars_ordenadas)}
         
         arbol_norm = _renombrar_variables(arbol, mapeo)
