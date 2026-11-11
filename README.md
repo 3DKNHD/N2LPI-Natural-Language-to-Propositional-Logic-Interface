@@ -1,6 +1,6 @@
 # N2LPI — Natural Language to Propositional Logic Interface
 
-Translate Spanish sentences into classical propositional logic formulas.
+Translate Spanish sentences into classical propositional logic formulas. On the held-out test, kept separate from training, SymPy scores equivalence at **69/70**.
 
 > **Note:** The output is an **approximation**. Nested scope and AND/OR grouping without parentheses can still disagree with a gold tree. Sentential *no* is `¬` over a positive atom; adjective-internal *no* (*no nulo*, *no inicializada*) stays inside the atom.
 
@@ -21,7 +21,7 @@ This version:
 |---|---|
 | Held-out JSON test (`data/test_dataset.json`) | **69/70** |
 | Mixed 30-item stress set | **30/30** |
-| 101 real-style sentences (`scripts/stress_real100.py`) | **101/101** |
+| Exercise file, 101 sentences. Not a substitute for the held-out test | 101/101 |
 
 Known JSON miss: item 460 (AND/OR grouping: gold `¬(P ∧ (Q ∨ R))` vs parser `¬((P ∧ Q) ∨ R)`).
 
