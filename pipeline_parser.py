@@ -4,6 +4,7 @@
 
 from __future__ import annotations
 
+import contextvars
 import re
 from dataclasses import dataclass, replace
 from typing import Dict, Iterable, List, Optional, Sequence, Tuple
@@ -60,6 +61,10 @@ CUE_PATTERNS: Sequence[Tuple[str, str, str, bool]] = (
     (r"\bo\b", "OR", "∨", False),
     (r"\bu\b", "OR", "∨", False),
 )
+
+# Second reading when «y» and «o» are both clause boundaries.
+# The default tree still splits on «o» first. This only builds the other grouping.
+_AND_WIDER = contextvars.ContextVar("n2lpi_and_wider", default=False)
 
 PREC = {
     "NEG_BLOCK": 100,
@@ -341,6 +346,8 @@ def _comma_and_cues(s: str, i: int, j: int, existing: Sequence[Cue]) -> List[Cue
 
 def _eff_prec(s: str, i: int, cue: Cue) -> int:
     p = PREC.get(cue.kind, 0)
+    if _AND_WIDER.get() and cue.kind == "AND":
+        p = max(p, PREC["OR"] + 1)
     if cue.kind == "AND" and s[i:cue.start].rstrip().endswith(","):
         return max(p, 45)
     return p
@@ -784,11 +791,37 @@ class PipelineParser:
             scored.append(result)
             if len(scored) >= max_k:
                 break
+        self._append_and_wider(sentence, apply_threshold(base, 0.5), scored, seen)
         scored.sort(key=lambda r: r.get("score", 0.0), reverse=True)
         if scored:
             return scored
         registry = PropositionRegistry()
         return [node_to_result(_atomic(sentence, registry), registry)]
+
+    def _append_and_wider(self, sentence: str, cues: Sequence[Cue], scored: List[dict], seen: List[str]) -> None:
+        """Keep the written precedence as the first tree, and add the other «y»/«o» grouping."""
+        bounds = [c for c in cues if c.is_boundary]
+        if not any(c.kind == "AND" for c in bounds) or not any(c.kind == "OR" for c in bounds):
+            return
+        token = _AND_WIDER.set(True)
+        try:
+            result = self.parse_with_cues(sentence, cues)
+        finally:
+            _AND_WIDER.reset(token)
+        result = dict(result)
+        result["cues"] = cues
+        result["score"] = score_tree(cues)
+        result["scope"] = "y_sobre_o"
+        formula = result.get("formula", "")
+        for prev in seen:
+            try:
+                if son_formulas_equivalentes(prev, formula):
+                    return
+            except Exception:
+                if prev == formula:
+                    return
+        seen.append(formula)
+        scored.append(result)
 
 
 def credit_labels(sentence: str, winner: dict, losers: Iterable[dict]) -> List[dict]:
