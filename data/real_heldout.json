@@ -1,0 +1,2375 @@
+[
+  {
+    "id": 8001,
+    "sentence": "No vi la película, pero leí la novela.",
+    "propositions": {
+      "P": "vi la película",
+      "Q": "leí la novela"
+    },
+    "formula": "¬P ∧ Q",
+    "complexity": "simple",
+    "connectives": [
+      "¬",
+      "∧"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8002,
+    "sentence": "Ni vi la película ni leí la novela.",
+    "propositions": {
+      "P": "vi la película",
+      "Q": "leí la novela"
+    },
+    "formula": "¬P ∧ ¬Q",
+    "complexity": "simple",
+    "connectives": [
+      "¬",
+      "∧"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8003,
+    "sentence": "No es cierto que viese la película y leyese la novela.",
+    "propositions": {
+      "P": "vi la película",
+      "Q": "leí la novela"
+    },
+    "formula": "¬(P ∧ Q)",
+    "complexity": "medium",
+    "connectives": [
+      "¬",
+      "∧"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8004,
+    "sentence": "Vi la película aunque no leí la novela.",
+    "propositions": {
+      "P": "vi la película",
+      "Q": "leí la novela"
+    },
+    "formula": "P ∧ ¬Q",
+    "complexity": "simple",
+    "connectives": [
+      "¬",
+      "∧"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8005,
+    "sentence": "No me gusta trasnochar ni madrugar.",
+    "propositions": {
+      "P": "me gusta trasnochar",
+      "Q": "me gusta madrugar"
+    },
+    "formula": "¬P ∧ ¬Q",
+    "complexity": "simple",
+    "connectives": [
+      "¬",
+      "∧"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8006,
+    "sentence": "O tú estás equivocado o es falsa la noticia que has leído.",
+    "propositions": {
+      "P": "tú estás equivocado",
+      "Q": "es falsa la noticia que has leído"
+    },
+    "formula": "P ∨ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∨"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8007,
+    "sentence": "Si no estuvieras loca, no habrías venido aquí.",
+    "propositions": {
+      "P": "estuvieras loca",
+      "Q": "habrías venido aquí"
+    },
+    "formula": "¬P → ¬Q",
+    "complexity": "medium",
+    "connectives": [
+      "¬",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8008,
+    "sentence": "Llueve y o bien nieva o sopla el viento.",
+    "propositions": {
+      "P": "llueve",
+      "Q": "nieva",
+      "R": "sopla el viento"
+    },
+    "formula": "P ∧ (Q ∨ R)",
+    "complexity": "medium",
+    "connectives": [
+      "∧",
+      "∨"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8009,
+    "sentence": "O está lloviendo y nevando o está soplando el viento.",
+    "propositions": {
+      "P": "está lloviendo",
+      "Q": "está nevando",
+      "R": "está soplando el viento"
+    },
+    "formula": "(P ∧ Q) ∨ R",
+    "complexity": "medium",
+    "connectives": [
+      "∧",
+      "∨"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8010,
+    "sentence": "Si hay verdadera democracia, entonces no hay detenciones arbitrarias ni otras violaciones de los derechos civiles.",
+    "propositions": {
+      "P": "hay verdadera democracia",
+      "Q": "hay detenciones arbitrarias",
+      "R": "hay otras violaciones de los derechos civiles"
+    },
+    "formula": "P → (¬Q ∧ ¬R)",
+    "complexity": "medium",
+    "connectives": [
+      "¬",
+      "∧",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8011,
+    "sentence": "Roberto hará el doctorado cuando y solamente cuando obtenga la licenciatura.",
+    "propositions": {
+      "P": "roberto hará el doctorado",
+      "Q": "roberto obtenga la licenciatura"
+    },
+    "formula": "P ↔ Q",
+    "complexity": "simple",
+    "connectives": [
+      "↔"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8012,
+    "sentence": "No es cierto que no me guste bailar.",
+    "propositions": {
+      "P": "me gusta bailar"
+    },
+    "formula": "¬(¬P)",
+    "complexity": "medium",
+    "connectives": [
+      "¬"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8013,
+    "sentence": "Me gusta bailar y leer libros de ciencia ficción.",
+    "propositions": {
+      "P": "me gusta bailar",
+      "Q": "me gusta leer libros de ciencia ficción"
+    },
+    "formula": "P ∧ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∧"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8014,
+    "sentence": "Si los gatos de mi hermana no soltaran tanto pelo, me gustaría acariciarlos.",
+    "propositions": {
+      "P": "los gatos de mi hermana sueltan pelo",
+      "Q": "me gusta acariciar los gatos"
+    },
+    "formula": "¬P → Q",
+    "complexity": "medium",
+    "connectives": [
+      "¬",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8015,
+    "sentence": "Si y sólo si viera un marciano con mis propios ojos, creería que hay vida extraterrestre.",
+    "propositions": {
+      "P": "viera un marciano con mis propios ojos",
+      "Q": "creería que hay vida extraterrestre"
+    },
+    "formula": "P ↔ Q",
+    "complexity": "simple",
+    "connectives": [
+      "↔"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8016,
+    "sentence": "Una de dos: o salgo a dar un paseo, o me pongo a estudiar como un energúmeno.",
+    "propositions": {
+      "P": "salgo a dar un paseo",
+      "Q": "me pongo a estudiar como un energúmeno"
+    },
+    "formula": "P ∨ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∨"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8017,
+    "sentence": "Si los elefantes volaran o supieran tocar el acordeón, pensaría que estoy como una regadera y dejaría que me internaran en un psiquiátrico.",
+    "propositions": {
+      "P": "los elefantes vuelan",
+      "Q": "los elefantes tocan el acordeón",
+      "R": "estoy como una regadera",
+      "S": "dejo que me internen en un psiquiátrico"
+    },
+    "formula": "(P ∨ Q) → (R ∧ S)",
+    "complexity": "complex",
+    "connectives": [
+      "∧",
+      "∨",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8018,
+    "sentence": "Prefiero ir de vacaciones o estar sin hacer nada si tengo tiempo para ello y no tengo que ir a trabajar.",
+    "propositions": {
+      "P": "prefiero ir de vacaciones",
+      "Q": "prefiero estar sin hacer nada",
+      "R": "tengo tiempo para ello",
+      "S": "tengo que ir a trabajar"
+    },
+    "formula": "(R ∧ ¬S) → (P ∨ Q)",
+    "complexity": "complex",
+    "connectives": [
+      "¬",
+      "∧",
+      "∨",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8019,
+    "sentence": "Llueve y hace sol.",
+    "propositions": {
+      "P": "llueve",
+      "Q": "hace sol"
+    },
+    "formula": "P ∧ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∧"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8020,
+    "sentence": "Llueve y no hace sol.",
+    "propositions": {
+      "P": "llueve",
+      "Q": "hace sol"
+    },
+    "formula": "P ∧ ¬Q",
+    "complexity": "simple",
+    "connectives": [
+      "¬",
+      "∧"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8021,
+    "sentence": "Llueve o hace sol.",
+    "propositions": {
+      "P": "llueve",
+      "Q": "hace sol"
+    },
+    "formula": "P ∨ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∨"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8022,
+    "sentence": "Si no llueve, hace sol.",
+    "propositions": {
+      "P": "llueve",
+      "Q": "hace sol"
+    },
+    "formula": "¬P → Q",
+    "complexity": "medium",
+    "connectives": [
+      "¬",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8023,
+    "sentence": "No es cierto que llueva.",
+    "propositions": {
+      "P": "llueve"
+    },
+    "formula": "¬P",
+    "complexity": "simple",
+    "connectives": [
+      "¬"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8024,
+    "sentence": "No es cierto que no llueva.",
+    "propositions": {
+      "P": "llueve"
+    },
+    "formula": "¬(¬P)",
+    "complexity": "medium",
+    "connectives": [
+      "¬"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8025,
+    "sentence": "Hará sol si y sólo si no llueve.",
+    "propositions": {
+      "P": "llueve",
+      "Q": "hará sol"
+    },
+    "formula": "Q ↔ ¬P",
+    "complexity": "medium",
+    "connectives": [
+      "¬",
+      "↔"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8026,
+    "sentence": "No es cierto que si llueve y hace sol las brujas se peinan.",
+    "propositions": {
+      "P": "llueve",
+      "Q": "hace sol",
+      "R": "las brujas se peinan"
+    },
+    "formula": "¬((P ∧ Q) → R)",
+    "complexity": "complex",
+    "connectives": [
+      "¬",
+      "∧",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8027,
+    "sentence": "Cuando las brujas no se peinan, no llueve o no hace sol.",
+    "propositions": {
+      "P": "llueve",
+      "Q": "hace sol",
+      "R": "las brujas se peinan"
+    },
+    "formula": "¬R → (¬P ∨ ¬Q)",
+    "complexity": "medium",
+    "connectives": [
+      "¬",
+      "∨",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8028,
+    "sentence": "Llueve y las brujas no se peinan, o bien hace sol y las brujas no se peinan.",
+    "propositions": {
+      "P": "llueve",
+      "Q": "hace sol",
+      "R": "las brujas se peinan"
+    },
+    "formula": "(P ∧ ¬R) ∨ (Q ∧ ¬R)",
+    "complexity": "complex",
+    "connectives": [
+      "¬",
+      "∧",
+      "∨"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8029,
+    "sentence": "Si las estrellas emiten luz, entonces los planetas la reflejan y giran alrededor de ellas.",
+    "propositions": {
+      "P": "las estrellas emiten luz",
+      "Q": "los planetas reflejan la luz",
+      "R": "los planetas giran alrededor de las estrellas"
+    },
+    "formula": "P → (Q ∧ R)",
+    "complexity": "medium",
+    "connectives": [
+      "∧",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8030,
+    "sentence": "Las estrellas emiten luz o los planetas la reflejan y, por otra parte, los planetas giran alrededor de ellas.",
+    "propositions": {
+      "P": "las estrellas emiten luz",
+      "Q": "los planetas reflejan la luz",
+      "R": "los planetas giran alrededor de las estrellas"
+    },
+    "formula": "(P ∨ Q) ∧ R",
+    "complexity": "medium",
+    "connectives": [
+      "∧",
+      "∨"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8031,
+    "sentence": "Los planetas reflejan luz si y sólo si las estrellas la emiten y los planetas giran alrededor de ellas.",
+    "propositions": {
+      "P": "las estrellas emiten luz",
+      "Q": "los planetas reflejan la luz",
+      "R": "los planetas giran alrededor de las estrellas"
+    },
+    "formula": "Q ↔ (P ∧ R)",
+    "complexity": "medium",
+    "connectives": [
+      "∧",
+      "↔"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8032,
+    "sentence": "Si no es cierto que las estrellas emiten luz y que los planetas la reflejan, entonces éstos no giran alrededor de ellas.",
+    "propositions": {
+      "P": "las estrellas emiten luz",
+      "Q": "los planetas reflejan la luz",
+      "R": "los planetas giran alrededor de las estrellas"
+    },
+    "formula": "¬(P ∧ Q) → ¬R",
+    "complexity": "complex",
+    "connectives": [
+      "¬",
+      "∧",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8033,
+    "sentence": "Si Pablo no atiende en clase o no estudia en casa, fracasará en los exámenes y no será aplaudido.",
+    "propositions": {
+      "P": "pablo atiende en clase",
+      "Q": "pablo estudia en casa",
+      "R": "pablo fracasa en los exámenes",
+      "S": "pablo es aplaudido"
+    },
+    "formula": "(¬P ∨ ¬Q) → (R ∧ ¬S)",
+    "complexity": "complex",
+    "connectives": [
+      "¬",
+      "∧",
+      "∨",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8034,
+    "sentence": "Si no es el caso que Pablo atiende en clase y estudia en casa, entonces fracasará en los exámenes o no será aplaudido.",
+    "propositions": {
+      "P": "pablo atiende en clase",
+      "Q": "pablo estudia en casa",
+      "R": "pablo fracasa en los exámenes",
+      "S": "pablo es aplaudido"
+    },
+    "formula": "¬(P ∧ Q) → (R ∨ ¬S)",
+    "complexity": "complex",
+    "connectives": [
+      "¬",
+      "∧",
+      "∨",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8035,
+    "sentence": "Pablo atiende en clase y estudia en casa o, por otra parte, fracasa en los exámenes y no es aplaudido.",
+    "propositions": {
+      "P": "pablo atiende en clase",
+      "Q": "pablo estudia en casa",
+      "R": "pablo fracasa en los exámenes",
+      "S": "pablo es aplaudido"
+    },
+    "formula": "(P ∧ Q) ∨ (R ∧ ¬S)",
+    "complexity": "complex",
+    "connectives": [
+      "¬",
+      "∧",
+      "∨"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8036,
+    "sentence": "Si escoges tus deseos y tus miedos, no existirá para ti ningún tirano.",
+    "propositions": {
+      "P": "escoges tus deseos",
+      "Q": "escoges tus miedos",
+      "R": "existirá para ti un tirano"
+    },
+    "formula": "(P ∧ Q) → ¬R",
+    "complexity": "medium",
+    "connectives": [
+      "¬",
+      "∧",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8037,
+    "sentence": "Quien tiene un porqué para vivir puede soportar cualquier cómo.",
+    "propositions": {
+      "P": "tiene un porqué para vivir",
+      "Q": "puede soportar cualquier cómo"
+    },
+    "formula": "P → Q",
+    "complexity": "simple",
+    "connectives": [
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8038,
+    "sentence": "El mundo entero es un escenario y todos los humanos somos unos actores.",
+    "propositions": {
+      "P": "el mundo entero es un escenario",
+      "Q": "todos los humanos somos unos actores"
+    },
+    "formula": "P ∧ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∧"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8039,
+    "sentence": "Ojos que no ven, corazón que no siente.",
+    "propositions": {
+      "P": "los ojos ven",
+      "Q": "el corazón siente"
+    },
+    "formula": "¬P → ¬Q",
+    "complexity": "medium",
+    "connectives": [
+      "¬",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8040,
+    "sentence": "Pienso, luego soy.",
+    "propositions": {
+      "P": "pienso",
+      "Q": "soy"
+    },
+    "formula": "P → Q",
+    "complexity": "simple",
+    "connectives": [
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8041,
+    "sentence": "O estás seguro y lo que dices es cierto, o mientes como un bellaco.",
+    "propositions": {
+      "P": "estás seguro",
+      "Q": "lo que dices es cierto",
+      "R": "mientes como un bellaco"
+    },
+    "formula": "(P ∧ Q) ∨ R",
+    "complexity": "medium",
+    "connectives": [
+      "∧",
+      "∨"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8042,
+    "sentence": "Si no hay ruidos y no estás sordo, entonces debes oírme.",
+    "propositions": {
+      "P": "hay ruidos",
+      "Q": "estás sordo",
+      "R": "debes oírme"
+    },
+    "formula": "(¬P ∧ ¬Q) → R",
+    "complexity": "medium",
+    "connectives": [
+      "¬",
+      "∧",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8043,
+    "sentence": "Iré al cine o al teatro si me invitas.",
+    "propositions": {
+      "P": "iré al cine",
+      "Q": "iré al teatro",
+      "R": "me invitas"
+    },
+    "formula": "R → (P ∨ Q)",
+    "complexity": "medium",
+    "connectives": [
+      "∨",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8044,
+    "sentence": "En el caso de que venga Cipriano, vendrán Fulgencia y Eustaquia.",
+    "propositions": {
+      "P": "viene cipriano",
+      "Q": "vendrá fulgencia",
+      "R": "vendrá eustaquia"
+    },
+    "formula": "P → (Q ∧ R)",
+    "complexity": "medium",
+    "connectives": [
+      "∧",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8045,
+    "sentence": "Si hay guerra, no crecerá el paro ni la inflación.",
+    "propositions": {
+      "P": "hay guerra",
+      "Q": "crecerá el paro",
+      "R": "crecerá la inflación"
+    },
+    "formula": "P → (¬Q ∧ ¬R)",
+    "complexity": "medium",
+    "connectives": [
+      "¬",
+      "∧",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8046,
+    "sentence": "Juan debe declarar y ser sincero, o no debe declarar.",
+    "propositions": {
+      "P": "juan debe declarar",
+      "Q": "juan debe ser sincero"
+    },
+    "formula": "(P ∧ Q) ∨ ¬P",
+    "complexity": "medium",
+    "connectives": [
+      "¬",
+      "∧",
+      "∨"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8047,
+    "sentence": "Federico se irá a las Fiji o a las Seychelles si y sólo si le toca la lotería y no se arruina en la ruleta.",
+    "propositions": {
+      "P": "federico se irá a las fiji",
+      "Q": "federico se irá a las seychelles",
+      "R": "le toca la lotería",
+      "S": "se arruina en la ruleta"
+    },
+    "formula": "(P ∨ Q) ↔ (R ∧ ¬S)",
+    "complexity": "complex",
+    "connectives": [
+      "¬",
+      "∧",
+      "∨",
+      "↔"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8048,
+    "sentence": "El Hombre Lobo es un invento, y si lo mismo ocurre con Papá Noel, entonces los niños son engañados.",
+    "propositions": {
+      "P": "el hombre lobo es un invento",
+      "Q": "papá noel es un invento",
+      "R": "los niños son engañados"
+    },
+    "formula": "P ∧ (Q → R)",
+    "complexity": "medium",
+    "connectives": [
+      "∧",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8049,
+    "sentence": "Cuando la bolsa baja mucho, es conveniente comprar, y cuando la bolsa sube mucho, también es conveniente comprar.",
+    "propositions": {
+      "P": "la bolsa baja mucho",
+      "Q": "es conveniente comprar",
+      "R": "la bolsa sube mucho"
+    },
+    "formula": "(P → Q) ∧ (R → Q)",
+    "complexity": "complex",
+    "connectives": [
+      "∧",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8050,
+    "sentence": "Si el aumento de la inflación implica la disminución de la balanza de pagos, entonces, si no disminuye la balanza de pagos, no aumenta la inflación.",
+    "propositions": {
+      "P": "aumenta la inflación",
+      "Q": "disminuye la balanza de pagos"
+    },
+    "formula": "(P → Q) → (¬Q → ¬P)",
+    "complexity": "complex",
+    "connectives": [
+      "¬",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8051,
+    "sentence": "Dejaré de beber cuando suba el alcohol, pero voy a dejar de fumar tanto si sube el tabaco como si no.",
+    "propositions": {
+      "P": "dejaré de beber",
+      "Q": "suba el alcohol",
+      "R": "voy a dejar de fumar",
+      "S": "suba el tabaco"
+    },
+    "formula": "(Q → P) ∧ ((S ∨ ¬S) → R)",
+    "complexity": "complex",
+    "connectives": [
+      "¬",
+      "∧",
+      "∨",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8052,
+    "sentence": "Si no sabes inglés ni francés, te contrato en mi empresa si y sólo si sabes informática o contabilidad.",
+    "propositions": {
+      "P": "sabes inglés",
+      "Q": "sabes francés",
+      "R": "te contrato en mi empresa",
+      "S": "sabes informática",
+      "T": "sabes contabilidad"
+    },
+    "formula": "(¬P ∧ ¬Q) → (R ↔ (S ∨ T))",
+    "complexity": "complex",
+    "connectives": [
+      "¬",
+      "∧",
+      "∨",
+      "→",
+      "↔"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8053,
+    "sentence": "Si acepto este trabajo o dejo de pintar por falta de tiempo, entonces no realizaré mis sueños.",
+    "propositions": {
+      "P": "acepto este trabajo",
+      "Q": "dejo de pintar por falta de tiempo",
+      "R": "realizaré mis sueños"
+    },
+    "formula": "(P ∨ Q) → ¬R",
+    "complexity": "medium",
+    "connectives": [
+      "¬",
+      "∨",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8054,
+    "sentence": "He aceptado el trabajo y he dejado de pintar.",
+    "propositions": {
+      "P": "he aceptado el trabajo",
+      "Q": "he dejado de pintar"
+    },
+    "formula": "P ∧ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∧"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8055,
+    "sentence": "Si la tormenta continúa o anochece, nos quedaremos a cenar o a dormir.",
+    "propositions": {
+      "P": "la tormenta continúa",
+      "Q": "anochece",
+      "R": "nos quedaremos a cenar",
+      "S": "nos quedaremos a dormir"
+    },
+    "formula": "(P ∨ Q) → (R ∨ S)",
+    "complexity": "complex",
+    "connectives": [
+      "∨",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8056,
+    "sentence": "Si nos quedamos a cenar o a dormir, no iremos mañana al concierto.",
+    "propositions": {
+      "P": "nos quedamos a cenar",
+      "Q": "nos quedamos a dormir",
+      "R": "iremos mañana al concierto"
+    },
+    "formula": "(P ∨ Q) → ¬R",
+    "complexity": "medium",
+    "connectives": [
+      "¬",
+      "∨",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8057,
+    "sentence": "Iremos mañana al concierto.",
+    "propositions": {
+      "P": "iremos mañana al concierto"
+    },
+    "formula": "P",
+    "complexity": "simple",
+    "connectives": [],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8058,
+    "sentence": "La tormenta no continúa.",
+    "propositions": {
+      "P": "la tormenta continúa"
+    },
+    "formula": "¬P",
+    "complexity": "simple",
+    "connectives": [
+      "¬"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8059,
+    "sentence": "Aprobaré lógica si Dios quiere.",
+    "propositions": {
+      "P": "aprobaré lógica",
+      "Q": "dios quiere que apruebe lógica"
+    },
+    "formula": "Q → P",
+    "complexity": "simple",
+    "connectives": [
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8060,
+    "sentence": "Aprobaré lógica si y sólo si estudio y hago todos los ejercicios.",
+    "propositions": {
+      "P": "aprobaré lógica",
+      "Q": "estudio",
+      "R": "hago todos los ejercicios"
+    },
+    "formula": "P ↔ (Q ∧ R)",
+    "complexity": "medium",
+    "connectives": [
+      "∧",
+      "↔"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8061,
+    "sentence": "No he hecho los ejercicios.",
+    "propositions": {
+      "P": "he hecho los ejercicios"
+    },
+    "formula": "¬P",
+    "complexity": "simple",
+    "connectives": [
+      "¬"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8062,
+    "sentence": "Si el euro está fuerte, el petróleo está barato pero las exportaciones resultan caras.",
+    "propositions": {
+      "P": "el euro está fuerte",
+      "Q": "el petróleo está barato",
+      "R": "las exportaciones resultan caras"
+    },
+    "formula": "P → (Q ∧ R)",
+    "complexity": "medium",
+    "connectives": [
+      "∧",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8063,
+    "sentence": "Si Europa se endeuda o la economía no crece, el petróleo no estará barato.",
+    "propositions": {
+      "P": "europa se endeuda",
+      "Q": "la economía crece",
+      "R": "el petróleo está barato"
+    },
+    "formula": "(P ∨ ¬Q) → ¬R",
+    "complexity": "medium",
+    "connectives": [
+      "¬",
+      "∨",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8064,
+    "sentence": "Habrá inflación a menos que se moderen los precios y los salarios.",
+    "propositions": {
+      "P": "habrá inflación",
+      "Q": "se moderan los precios",
+      "R": "se moderan los salarios"
+    },
+    "formula": "¬(Q ∧ R) → P",
+    "complexity": "complex",
+    "connectives": [
+      "¬",
+      "∧",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8065,
+    "sentence": "Siempre que se moderan los salarios pero no los precios, si el Gobierno no interviene, el consumo interno disminuye y la economía se ralentiza.",
+    "propositions": {
+      "P": "se moderan los salarios",
+      "Q": "se moderan los precios",
+      "R": "el gobierno interviene",
+      "S": "el consumo interno disminuye",
+      "T": "la economía se ralentiza"
+    },
+    "formula": "(P ∧ ¬Q) → (¬R → (S ∧ T))",
+    "complexity": "complex",
+    "connectives": [
+      "¬",
+      "∧",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8066,
+    "sentence": "Cuando no se moderan los precios, es necesario que el Gobierno intervenga para que la economía no se ralentice.",
+    "propositions": {
+      "P": "se moderan los precios",
+      "Q": "el gobierno interviene",
+      "R": "la economía se ralentiza"
+    },
+    "formula": "¬P → (¬R → Q)",
+    "complexity": "medium",
+    "connectives": [
+      "¬",
+      "→"
+    ],
+    "source": "Filosofía y Ciudadanía. Lógica proposicional. Ejercicios resueltos. https://raposa.es/wp-content/uploads/2024/04/ejer_logica_resueltos.pdf"
+  },
+  {
+    "id": 8067,
+    "sentence": "Sólo si un servidor web es seguro, las comunicaciones que se establecen desde los navegadores garantizan la confidencialidad y también permiten al usuario garantizar la identidad de ese servidor.",
+    "propositions": {
+      "P": "un servidor web es seguro",
+      "Q": "las comunicaciones garantizan la confidencialidad",
+      "R": "las comunicaciones permiten garantizar la identidad de ese servidor"
+    },
+    "formula": "(Q ∧ R) → P",
+    "complexity": "medium",
+    "connectives": [
+      "∧",
+      "→"
+    ],
+    "source": "Lógica para el Grado en Ingeniería de la Ciberseguridad. Universidad Rey Juan Carlos. https://burjcdigital.urjc.es/server/api/core/bitstreams/5c6464c1-a35e-49b0-ad41-3b3596e36c2c/content"
+  },
+  {
+    "id": 8068,
+    "sentence": "A menos que sufra un ataque por denegación de servicio, el servidor de la URJC estará operativo el lunes por la mañana.",
+    "propositions": {
+      "P": "el servidor sufre un ataque por denegación de servicio",
+      "Q": "el servidor de la urjc estará operativo el lunes por la mañana"
+    },
+    "formula": "¬P → Q",
+    "complexity": "medium",
+    "connectives": [
+      "¬",
+      "→"
+    ],
+    "source": "Lógica para el Grado en Ingeniería de la Ciberseguridad. Universidad Rey Juan Carlos. https://burjcdigital.urjc.es/server/api/core/bitstreams/5c6464c1-a35e-49b0-ad41-3b3596e36c2c/content"
+  },
+  {
+    "id": 8069,
+    "sentence": "Marco estudia y Laura lee.",
+    "propositions": {
+      "P": "marco estudia",
+      "Q": "laura lee"
+    },
+    "formula": "P ∧ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∧"
+    ],
+    "source": "https://pimath.es/logica-proposicional-20-ejercicios-resueltos-paso-paso"
+  },
+  {
+    "id": 8070,
+    "sentence": "Si llueve, entonces me quedo en casa.",
+    "propositions": {
+      "P": "llueve",
+      "Q": "me quedo en casa"
+    },
+    "formula": "P → Q",
+    "complexity": "simple",
+    "connectives": [
+      "→"
+    ],
+    "source": "https://pimath.es/logica-proposicional-20-ejercicios-resueltos-paso-paso"
+  },
+  {
+    "id": 8071,
+    "sentence": "El sol brilla y hace calor.",
+    "propositions": {
+      "P": "el sol brilla",
+      "Q": "hace calor"
+    },
+    "formula": "P ∧ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∧"
+    ],
+    "source": "https://tutoriales.com/filosofia/logica/logica-proposicional-construyendo-argumentos-irrefutables-con-conectores-y-tablas"
+  },
+  {
+    "id": 8072,
+    "sentence": "Si el sol no brilla, entonces no vamos a la playa.",
+    "propositions": {
+      "P": "el sol brilla",
+      "Q": "vamos a la playa"
+    },
+    "formula": "¬P → ¬Q",
+    "complexity": "medium",
+    "connectives": [
+      "¬",
+      "→"
+    ],
+    "source": "https://tutoriales.com/filosofia/logica/logica-proposicional-construyendo-argumentos-irrefutables-con-conectores-y-tablas"
+  },
+  {
+    "id": 8073,
+    "sentence": "Hace calor o no vamos a la playa.",
+    "propositions": {
+      "P": "hace calor",
+      "Q": "vamos a la playa"
+    },
+    "formula": "P ∨ ¬Q",
+    "complexity": "simple",
+    "connectives": [
+      "¬",
+      "∨"
+    ],
+    "source": "https://tutoriales.com/filosofia/logica/logica-proposicional-construyendo-argumentos-irrefutables-con-conectores-y-tablas"
+  },
+  {
+    "id": 8074,
+    "sentence": "Vamos a la playa si y solo si el sol brilla y hace calor.",
+    "propositions": {
+      "P": "el sol brilla",
+      "Q": "hace calor",
+      "R": "vamos a la playa"
+    },
+    "formula": "R ↔ (P ∧ Q)",
+    "complexity": "medium",
+    "connectives": [
+      "∧",
+      "↔"
+    ],
+    "source": "https://tutoriales.com/filosofia/logica/logica-proposicional-construyendo-argumentos-irrefutables-con-conectores-y-tablas"
+  },
+  {
+    "id": 8075,
+    "sentence": "Ana es alta.",
+    "propositions": {
+      "P": "ana es alta"
+    },
+    "formula": "P",
+    "complexity": "simple",
+    "connectives": [],
+    "source": "IES Sánchez Cantón. Ejercicios de formalización resueltos. https://centros.edu.xunta.gal/iessanchezcanton/aulavirtual/pluginfile.php/141227/mod_resource/content/2/Ejercicios%20de%20formalizaci%C3%B3n%20resueltos.pdf"
+  },
+  {
+    "id": 8076,
+    "sentence": "La manzana es roja o verde.",
+    "propositions": {
+      "P": "la manzana es roja",
+      "Q": "la manzana es verde"
+    },
+    "formula": "P ∨ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∨"
+    ],
+    "source": "IES Sánchez Cantón. Ejercicios de formalización resueltos. https://centros.edu.xunta.gal/iessanchezcanton/aulavirtual/pluginfile.php/141227/mod_resource/content/2/Ejercicios%20de%20formalizaci%C3%B3n%20resueltos.pdf"
+  },
+  {
+    "id": 8077,
+    "sentence": "Si llueve, la calle estará mojada.",
+    "propositions": {
+      "P": "llueve",
+      "Q": "la calle estará mojada"
+    },
+    "formula": "P → Q",
+    "complexity": "simple",
+    "connectives": [
+      "→"
+    ],
+    "source": "IES Sánchez Cantón. Ejercicios de formalización resueltos. https://centros.edu.xunta.gal/iessanchezcanton/aulavirtual/pluginfile.php/141227/mod_resource/content/2/Ejercicios%20de%20formalizaci%C3%B3n%20resueltos.pdf"
+  },
+  {
+    "id": 8078,
+    "sentence": "Si hoy es lunes, entonces mañana será martes.",
+    "propositions": {
+      "P": "hoy es lunes",
+      "Q": "mañana será martes"
+    },
+    "formula": "P → Q",
+    "complexity": "simple",
+    "connectives": [
+      "→"
+    ],
+    "source": "IES Sánchez Cantón. Ejercicios de formalización resueltos. https://centros.edu.xunta.gal/iessanchezcanton/aulavirtual/pluginfile.php/141227/mod_resource/content/2/Ejercicios%20de%20formalizaci%C3%B3n%20resueltos.pdf"
+  },
+  {
+    "id": 8079,
+    "sentence": "Si Ana estudia, entonces aprueba.",
+    "propositions": {
+      "P": "ana estudia",
+      "Q": "ana aprueba"
+    },
+    "formula": "P → Q",
+    "complexity": "simple",
+    "connectives": [
+      "→"
+    ],
+    "source": "IES Sánchez Cantón. Ejercicios de formalización resueltos. https://centros.edu.xunta.gal/iessanchezcanton/aulavirtual/pluginfile.php/141227/mod_resource/content/2/Ejercicios%20de%20formalizaci%C3%B3n%20resueltos.pdf"
+  },
+  {
+    "id": 8080,
+    "sentence": "Si llueve, la calle estará mojada y el paraguas será necesario.",
+    "propositions": {
+      "P": "llueve",
+      "Q": "la calle estará mojada",
+      "R": "el paraguas será necesario"
+    },
+    "formula": "P → (Q ∧ R)",
+    "complexity": "medium",
+    "connectives": [
+      "∧",
+      "→"
+    ],
+    "source": "IES Sánchez Cantón. Ejercicios de formalización resueltos. https://centros.edu.xunta.gal/iessanchezcanton/aulavirtual/pluginfile.php/141227/mod_resource/content/2/Ejercicios%20de%20formalizaci%C3%B3n%20resueltos.pdf"
+  },
+  {
+    "id": 8081,
+    "sentence": "Si hoy es lunes, entonces mañana será martes o miércoles.",
+    "propositions": {
+      "P": "hoy es lunes",
+      "Q": "mañana será martes",
+      "R": "mañana será miércoles"
+    },
+    "formula": "P → (Q ∨ R)",
+    "complexity": "medium",
+    "connectives": [
+      "∨",
+      "→"
+    ],
+    "source": "IES Sánchez Cantón. Ejercicios de formalización resueltos. https://centros.edu.xunta.gal/iessanchezcanton/aulavirtual/pluginfile.php/141227/mod_resource/content/2/Ejercicios%20de%20formalizaci%C3%B3n%20resueltos.pdf"
+  },
+  {
+    "id": 8082,
+    "sentence": "Si Ana estudia, entonces aprueba, y si no estudia, no aprueba.",
+    "propositions": {
+      "P": "ana estudia",
+      "Q": "ana aprueba"
+    },
+    "formula": "(P → Q) ∧ (¬P → ¬Q)",
+    "complexity": "complex",
+    "connectives": [
+      "¬",
+      "∧",
+      "→"
+    ],
+    "source": "IES Sánchez Cantón. Ejercicios de formalización resueltos. https://centros.edu.xunta.gal/iessanchezcanton/aulavirtual/pluginfile.php/141227/mod_resource/content/2/Ejercicios%20de%20formalizaci%C3%B3n%20resueltos.pdf"
+  },
+  {
+    "id": 8083,
+    "sentence": "Si Ana estudia o hace ejercicio, entonces está en forma.",
+    "propositions": {
+      "P": "ana estudia",
+      "Q": "ana hace ejercicio",
+      "R": "ana está en forma"
+    },
+    "formula": "(P ∨ Q) → R",
+    "complexity": "medium",
+    "connectives": [
+      "∨",
+      "→"
+    ],
+    "source": "IES Sánchez Cantón. Ejercicios de formalización resueltos. https://centros.edu.xunta.gal/iessanchezcanton/aulavirtual/pluginfile.php/141227/mod_resource/content/2/Ejercicios%20de%20formalizaci%C3%B3n%20resueltos.pdf"
+  },
+  {
+    "id": 8084,
+    "sentence": "Ana estudia si y solo si María trabaja.",
+    "propositions": {
+      "P": "ana estudia",
+      "Q": "maría trabaja"
+    },
+    "formula": "P ↔ Q",
+    "complexity": "simple",
+    "connectives": [
+      "↔"
+    ],
+    "source": "IES Sánchez Cantón. Ejercicios de formalización resueltos. https://centros.edu.xunta.gal/iessanchezcanton/aulavirtual/pluginfile.php/141227/mod_resource/content/2/Ejercicios%20de%20formalizaci%C3%B3n%20resueltos.pdf"
+  },
+  {
+    "id": 8085,
+    "sentence": "Si Ana estudia, entonces aprueba, y si aprueba, su madre está contenta.",
+    "propositions": {
+      "P": "ana estudia",
+      "Q": "ana aprueba",
+      "R": "la madre de ana está contenta"
+    },
+    "formula": "(P → Q) ∧ (Q → R)",
+    "complexity": "complex",
+    "connectives": [
+      "∧",
+      "→"
+    ],
+    "source": "IES Sánchez Cantón. Ejercicios de formalización resueltos. https://centros.edu.xunta.gal/iessanchezcanton/aulavirtual/pluginfile.php/141227/mod_resource/content/2/Ejercicios%20de%20formalizaci%C3%B3n%20resueltos.pdf"
+  },
+  {
+    "id": 8086,
+    "sentence": "Si Ana estudia, entonces aprueba, y si no aprueba, su padre está triste.",
+    "propositions": {
+      "P": "ana estudia",
+      "Q": "ana aprueba",
+      "R": "el padre de ana está triste"
+    },
+    "formula": "(P → Q) ∧ (¬Q → R)",
+    "complexity": "complex",
+    "connectives": [
+      "¬",
+      "∧",
+      "→"
+    ],
+    "source": "IES Sánchez Cantón. Ejercicios de formalización resueltos. https://centros.edu.xunta.gal/iessanchezcanton/aulavirtual/pluginfile.php/141227/mod_resource/content/2/Ejercicios%20de%20formalizaci%C3%B3n%20resueltos.pdf"
+  },
+  {
+    "id": 8087,
+    "sentence": "Si Ana estudia o María trabaja, entonces el examen será fácil.",
+    "propositions": {
+      "P": "ana estudia",
+      "Q": "maría trabaja",
+      "R": "el examen será fácil"
+    },
+    "formula": "(P ∨ Q) → R",
+    "complexity": "medium",
+    "connectives": [
+      "∨",
+      "→"
+    ],
+    "source": "IES Sánchez Cantón. Ejercicios de formalización resueltos. https://centros.edu.xunta.gal/iessanchezcanton/aulavirtual/pluginfile.php/141227/mod_resource/content/2/Ejercicios%20de%20formalizaci%C3%B3n%20resueltos.pdf"
+  },
+  {
+    "id": 8088,
+    "sentence": "Madrid es la capital de España.",
+    "propositions": {
+      "P": "madrid es la capital de españa"
+    },
+    "formula": "P",
+    "complexity": "simple",
+    "connectives": [],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8089,
+    "sentence": "Lisboa es la capital de Portugal.",
+    "propositions": {
+      "P": "lisboa es la capital de portugal"
+    },
+    "formula": "P",
+    "complexity": "simple",
+    "connectives": [],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8090,
+    "sentence": "París está en Italia.",
+    "propositions": {
+      "P": "parís está en italia"
+    },
+    "formula": "P",
+    "complexity": "simple",
+    "connectives": [],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8091,
+    "sentence": "7 es un número primo.",
+    "propositions": {
+      "P": "7 es un número primo"
+    },
+    "formula": "P",
+    "complexity": "simple",
+    "connectives": [],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8092,
+    "sentence": "2 + 2 = 5.",
+    "propositions": {
+      "P": "2 + 2 = 5"
+    },
+    "formula": "P",
+    "complexity": "simple",
+    "connectives": [],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8093,
+    "sentence": "15 es divisible entre 4.",
+    "propositions": {
+      "P": "15 es divisible entre 4"
+    },
+    "formula": "P",
+    "complexity": "simple",
+    "connectives": [],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8094,
+    "sentence": "Un triángulo tiene cuatro lados.",
+    "propositions": {
+      "P": "un triángulo tiene cuatro lados"
+    },
+    "formula": "P",
+    "complexity": "simple",
+    "connectives": [],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8095,
+    "sentence": "El Sol es una estrella.",
+    "propositions": {
+      "P": "el sol es una estrella"
+    },
+    "formula": "P",
+    "complexity": "simple",
+    "connectives": [],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8096,
+    "sentence": "La Luna es un satélite natural de la Tierra.",
+    "propositions": {
+      "P": "la luna es un satélite natural de la tierra"
+    },
+    "formula": "P",
+    "complexity": "simple",
+    "connectives": [],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8097,
+    "sentence": "Marte tiene dos satélites.",
+    "propositions": {
+      "P": "marte tiene dos satélites"
+    },
+    "formula": "P",
+    "complexity": "simple",
+    "connectives": [],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8098,
+    "sentence": "El agua hierve a 100 °C a nivel del mar.",
+    "propositions": {
+      "P": "el agua hierve a 100 °c a nivel del mar"
+    },
+    "formula": "P",
+    "complexity": "simple",
+    "connectives": [],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8099,
+    "sentence": "El oxígeno es un gas a temperatura ambiente.",
+    "propositions": {
+      "P": "el oxígeno es un gas a temperatura ambiente"
+    },
+    "formula": "P",
+    "complexity": "simple",
+    "connectives": [],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8100,
+    "sentence": "El hierro es un metal.",
+    "propositions": {
+      "P": "el hierro es un metal"
+    },
+    "formula": "P",
+    "complexity": "simple",
+    "connectives": [],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8101,
+    "sentence": "La ballena azul es un pez.",
+    "propositions": {
+      "P": "la ballena azul es un pez"
+    },
+    "formula": "P",
+    "complexity": "simple",
+    "connectives": [],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8102,
+    "sentence": "El esqueleto humano adulto tiene 206 huesos.",
+    "propositions": {
+      "P": "el esqueleto humano adulto tiene 206 huesos"
+    },
+    "formula": "P",
+    "complexity": "simple",
+    "connectives": [],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8103,
+    "sentence": "El Teide es la montaña más alta de España.",
+    "propositions": {
+      "P": "el teide es la montaña más alta de españa"
+    },
+    "formula": "P",
+    "complexity": "simple",
+    "connectives": [],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8104,
+    "sentence": "El Ebro desemboca en el Mediterráneo.",
+    "propositions": {
+      "P": "el ebro desemboca en el mediterráneo"
+    },
+    "formula": "P",
+    "complexity": "simple",
+    "connectives": [],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8105,
+    "sentence": "Cervantes escribió el Quijote.",
+    "propositions": {
+      "P": "cervantes escribió el quijote"
+    },
+    "formula": "P",
+    "complexity": "simple",
+    "connectives": [],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8106,
+    "sentence": "Velázquez pintó Las meninas.",
+    "propositions": {
+      "P": "velázquez pintó las meninas"
+    },
+    "formula": "P",
+    "complexity": "simple",
+    "connectives": [],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8107,
+    "sentence": "La Segunda Guerra Mundial terminó en 1945.",
+    "propositions": {
+      "P": "la segunda guerra mundial terminó en 1945"
+    },
+    "formula": "P",
+    "complexity": "simple",
+    "connectives": [],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8108,
+    "sentence": "Valencia es una ciudad española.",
+    "propositions": {
+      "P": "valencia es una ciudad española"
+    },
+    "formula": "P",
+    "complexity": "simple",
+    "connectives": [],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8109,
+    "sentence": "Madrid es la capital de España y París es la capital de Francia.",
+    "propositions": {
+      "P": "madrid es la capital de españa",
+      "Q": "parís es la capital de francia"
+    },
+    "formula": "P ∧ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∧"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8110,
+    "sentence": "4 es par y 9 es primo.",
+    "propositions": {
+      "P": "4 es par",
+      "Q": "9 es primo"
+    },
+    "formula": "P ∧ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∧"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8111,
+    "sentence": "El Sol es una estrella y la Luna es un planeta.",
+    "propositions": {
+      "P": "el sol es una estrella",
+      "Q": "la luna es un planeta"
+    },
+    "formula": "P ∧ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∧"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8112,
+    "sentence": "Mercurio es el planeta más cercano al Sol y Neptuno es el más lejano.",
+    "propositions": {
+      "P": "mercurio es el planeta más cercano al sol",
+      "Q": "neptuno es el planeta más lejano"
+    },
+    "formula": "P ∧ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∧"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8113,
+    "sentence": "El cobre conduce la electricidad, pero el plástico no.",
+    "propositions": {
+      "P": "el cobre conduce la electricidad",
+      "Q": "el plástico conduce la electricidad"
+    },
+    "formula": "P ∧ ¬Q",
+    "complexity": "simple",
+    "connectives": [
+      "¬",
+      "∧"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8114,
+    "sentence": "3 es menor que 5 y 5 es menor que 2.",
+    "propositions": {
+      "P": "3 es menor que 5",
+      "Q": "5 es menor que 2"
+    },
+    "formula": "P ∧ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∧"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8115,
+    "sentence": "La primera parte del Quijote se publicó en 1605 y su autor fue Lope de Vega.",
+    "propositions": {
+      "P": "la primera parte del quijote se publicó en 1605",
+      "Q": "su autor fue lope de vega"
+    },
+    "formula": "P ∧ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∧"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8116,
+    "sentence": "Los delfines son mamíferos, aunque viven en el mar.",
+    "propositions": {
+      "P": "los delfines son mamíferos",
+      "Q": "los delfines viven en el mar"
+    },
+    "formula": "P ∧ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∧"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8117,
+    "sentence": "7 es primo y 8 es par.",
+    "propositions": {
+      "P": "7 es primo",
+      "Q": "8 es par"
+    },
+    "formula": "P ∧ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∧"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8118,
+    "sentence": "Juan estudia y trabaja.",
+    "propositions": {
+      "P": "juan estudia",
+      "Q": "juan trabaja"
+    },
+    "formula": "P ∧ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∧"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8119,
+    "sentence": "Juan no estudia o no trabaja.",
+    "propositions": {
+      "P": "juan estudia",
+      "Q": "juan trabaja"
+    },
+    "formula": "¬P ∨ ¬Q",
+    "complexity": "simple",
+    "connectives": [
+      "¬",
+      "∨"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8120,
+    "sentence": "Ana y Luis son altos.",
+    "propositions": {
+      "P": "ana es alta",
+      "Q": "luis es alto"
+    },
+    "formula": "P ∧ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∧"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8121,
+    "sentence": "Ana y Luis son hermanos.",
+    "propositions": {
+      "P": "ana y luis son hermanos"
+    },
+    "formula": "P",
+    "complexity": "simple",
+    "connectives": [],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8122,
+    "sentence": "6 es par o 6 es múltiplo de 3.",
+    "propositions": {
+      "P": "6 es par",
+      "Q": "6 es múltiplo de 3"
+    },
+    "formula": "P ∨ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∨"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8123,
+    "sentence": "Roma está en Grecia o Atenas está en Grecia.",
+    "propositions": {
+      "P": "roma está en grecia",
+      "Q": "atenas está en grecia"
+    },
+    "formula": "P ∨ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∨"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8124,
+    "sentence": "10 es primo o 10 es impar.",
+    "propositions": {
+      "P": "10 es primo",
+      "Q": "10 es impar"
+    },
+    "formula": "P ∨ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∨"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8125,
+    "sentence": "El Amazonas está en África o el Nilo está en Europa.",
+    "propositions": {
+      "P": "el amazonas está en áfrica",
+      "Q": "el nilo está en europa"
+    },
+    "formula": "P ∨ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∨"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8126,
+    "sentence": "El agua es un elemento químico o el oro es un compuesto.",
+    "propositions": {
+      "P": "el agua es un elemento químico",
+      "Q": "el oro es un compuesto"
+    },
+    "formula": "P ∨ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∨"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8127,
+    "sentence": "Picasso nació en Málaga o nació en Barcelona.",
+    "propositions": {
+      "P": "picasso nació en málaga",
+      "Q": "picasso nació en barcelona"
+    },
+    "formula": "P ∨ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∨"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8128,
+    "sentence": "La Tierra gira alrededor del Sol o el Sol gira alrededor de la Tierra.",
+    "propositions": {
+      "P": "la tierra gira alrededor del sol",
+      "Q": "el sol gira alrededor de la tierra"
+    },
+    "formula": "P ∨ Q",
+    "complexity": "simple",
+    "connectives": [
+      "∨"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8129,
+    "sentence": "O bien 13 es par, o bien 13 es impar.",
+    "propositions": {
+      "P": "13 es par",
+      "Q": "13 es impar"
+    },
+    "formula": "(P ∨ Q) ∧ ¬(P ∧ Q)",
+    "complexity": "complex",
+    "connectives": [
+      "¬",
+      "∧",
+      "∨"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8130,
+    "sentence": "O bien 2 es primo, o bien 2 es par.",
+    "propositions": {
+      "P": "2 es primo",
+      "Q": "2 es par"
+    },
+    "formula": "(P ∨ Q) ∧ ¬(P ∧ Q)",
+    "complexity": "complex",
+    "connectives": [
+      "¬",
+      "∧",
+      "∨"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8131,
+    "sentence": "O bien Lisboa es la capital de España, o bien lo es Madrid.",
+    "propositions": {
+      "P": "lisboa es la capital de españa",
+      "Q": "madrid es la capital de españa"
+    },
+    "formula": "(P ∨ Q) ∧ ¬(P ∧ Q)",
+    "complexity": "complex",
+    "connectives": [
+      "¬",
+      "∧",
+      "∨"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8132,
+    "sentence": "O bien España ganó el Mundial de 2010, o bien lo ganó Países Bajos.",
+    "propositions": {
+      "P": "españa ganó el mundial de 2010",
+      "Q": "países bajos ganó el mundial de 2010"
+    },
+    "formula": "(P ∨ Q) ∧ ¬(P ∧ Q)",
+    "complexity": "complex",
+    "connectives": [
+      "¬",
+      "∧",
+      "∨"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8133,
+    "sentence": "El menú incluye postre o café, no ambos.",
+    "propositions": {
+      "P": "el menú incluye postre",
+      "Q": "el menú incluye café"
+    },
+    "formula": "(P ∨ Q) ∧ ¬(P ∧ Q)",
+    "complexity": "complex",
+    "connectives": [
+      "¬",
+      "∧",
+      "∨"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8134,
+    "sentence": "Si 12 es divisible entre 4, entonces 12 es par.",
+    "propositions": {
+      "P": "12 es divisible entre 4",
+      "Q": "12 es par"
+    },
+    "formula": "P → Q",
+    "complexity": "simple",
+    "connectives": [
+      "→"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8135,
+    "sentence": "Si 7 es par, entonces 7 es divisible entre 2.",
+    "propositions": {
+      "P": "7 es par",
+      "Q": "7 es divisible entre 2"
+    },
+    "formula": "P → Q",
+    "complexity": "simple",
+    "connectives": [
+      "→"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8136,
+    "sentence": "Si París está en Francia, entonces París está en Europa.",
+    "propositions": {
+      "P": "parís está en francia",
+      "Q": "parís está en europa"
+    },
+    "formula": "P → Q",
+    "complexity": "simple",
+    "connectives": [
+      "→"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8137,
+    "sentence": "Si Madrid es la capital de España, entonces 2 + 2 = 5.",
+    "propositions": {
+      "P": "madrid es la capital de españa",
+      "Q": "2 + 2 = 5"
+    },
+    "formula": "P → Q",
+    "complexity": "simple",
+    "connectives": [
+      "→"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8138,
+    "sentence": "Si la Luna es de queso, entonces el Sol es una estrella.",
+    "propositions": {
+      "P": "la luna es de queso",
+      "Q": "el sol es una estrella"
+    },
+    "formula": "P → Q",
+    "complexity": "simple",
+    "connectives": [
+      "→"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8139,
+    "sentence": "Si llueve, el suelo se moja.",
+    "propositions": {
+      "P": "llueve",
+      "Q": "el suelo se moja"
+    },
+    "formula": "P → Q",
+    "complexity": "simple",
+    "connectives": [
+      "→"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8140,
+    "sentence": "Si el agua pura se enfría por debajo de 0 °C a presión normal, se congela.",
+    "propositions": {
+      "P": "el agua pura se enfría por debajo de 0 °c a presión normal",
+      "Q": "el agua pura se congela"
+    },
+    "formula": "P → Q",
+    "complexity": "simple",
+    "connectives": [
+      "→"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8141,
+    "sentence": "Cuando el semáforo está en rojo, los coches deben detenerse.",
+    "propositions": {
+      "P": "el semáforo está en rojo",
+      "Q": "los coches deben detenerse"
+    },
+    "formula": "P → Q",
+    "complexity": "simple",
+    "connectives": [
+      "→"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8142,
+    "sentence": "Aprobarás solo si estudias.",
+    "propositions": {
+      "P": "aprobarás",
+      "Q": "estudias"
+    },
+    "formula": "P → Q",
+    "complexity": "simple",
+    "connectives": [
+      "→"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8143,
+    "sentence": "Basta con pulsar el interruptor para que se encienda la luz.",
+    "propositions": {
+      "P": "pulsas el interruptor",
+      "Q": "se enciende la luz"
+    },
+    "formula": "P → Q",
+    "complexity": "simple",
+    "connectives": [
+      "→"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8144,
+    "sentence": "Si no estudio, no apruebo.",
+    "propositions": {
+      "P": "estudio",
+      "Q": "apruebo"
+    },
+    "formula": "¬P → ¬Q",
+    "complexity": "medium",
+    "connectives": [
+      "¬",
+      "→"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8145,
+    "sentence": "8 es par si y solo si 8 es divisible entre 2.",
+    "propositions": {
+      "P": "8 es par",
+      "Q": "8 es divisible entre 2"
+    },
+    "formula": "P ↔ Q",
+    "complexity": "simple",
+    "connectives": [
+      "↔"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8146,
+    "sentence": "5 es par si y solo si 5 es divisible entre 2.",
+    "propositions": {
+      "P": "5 es par",
+      "Q": "5 es divisible entre 2"
+    },
+    "formula": "P ↔ Q",
+    "complexity": "simple",
+    "connectives": [
+      "↔"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8147,
+    "sentence": "Madrid es la capital de España si y solo si París es la capital de Alemania.",
+    "propositions": {
+      "P": "madrid es la capital de españa",
+      "Q": "parís es la capital de alemania"
+    },
+    "formula": "P ↔ Q",
+    "complexity": "simple",
+    "connectives": [
+      "↔"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8148,
+    "sentence": "Un triángulo es equilátero si y solo si tiene sus tres lados iguales.",
+    "propositions": {
+      "P": "un triángulo es equilátero",
+      "Q": "un triángulo tiene sus tres lados iguales"
+    },
+    "formula": "P ↔ Q",
+    "complexity": "simple",
+    "connectives": [
+      "↔"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8149,
+    "sentence": "Un ángulo es recto si y solo si mide 90°.",
+    "propositions": {
+      "P": "un ángulo es recto",
+      "Q": "un ángulo mide 90°"
+    },
+    "formula": "P ↔ Q",
+    "complexity": "simple",
+    "connectives": [
+      "↔"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8150,
+    "sentence": "Un número natural es primo si y solo si tiene exactamente dos divisores.",
+    "propositions": {
+      "P": "un número natural es primo",
+      "Q": "un número natural tiene exactamente dos divisores"
+    },
+    "formula": "P ↔ Q",
+    "complexity": "simple",
+    "connectives": [
+      "↔"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8151,
+    "sentence": "No es cierto que Madrid sea la capital de Portugal.",
+    "propositions": {
+      "P": "madrid es la capital de portugal"
+    },
+    "formula": "¬P",
+    "complexity": "simple",
+    "connectives": [
+      "¬"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8152,
+    "sentence": "9 no es un número primo.",
+    "propositions": {
+      "P": "9 es un número primo"
+    },
+    "formula": "¬P",
+    "complexity": "simple",
+    "connectives": [
+      "¬"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8153,
+    "sentence": "El Sol no es una estrella.",
+    "propositions": {
+      "P": "el sol es una estrella"
+    },
+    "formula": "¬P",
+    "complexity": "simple",
+    "connectives": [
+      "¬"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8154,
+    "sentence": "No es verdad que 3 + 3 = 6.",
+    "propositions": {
+      "P": "3 + 3 = 6"
+    },
+    "formula": "¬P",
+    "complexity": "simple",
+    "connectives": [
+      "¬"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8155,
+    "sentence": "Los murciélagos no son aves.",
+    "propositions": {
+      "P": "los murciélagos son aves"
+    },
+    "formula": "¬P",
+    "complexity": "simple",
+    "connectives": [
+      "¬"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8156,
+    "sentence": "Si llueve y no llevo paraguas, entonces me mojo.",
+    "propositions": {
+      "P": "llueve",
+      "Q": "llevo paraguas",
+      "R": "me mojo"
+    },
+    "formula": "(P ∧ ¬Q) → R",
+    "complexity": "medium",
+    "connectives": [
+      "¬",
+      "∧",
+      "→"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8157,
+    "sentence": "4 es par, y 5 es primo o 6 es primo.",
+    "propositions": {
+      "P": "4 es par",
+      "Q": "5 es primo",
+      "R": "6 es primo"
+    },
+    "formula": "P ∧ (Q ∨ R)",
+    "complexity": "medium",
+    "connectives": [
+      "∧",
+      "∨"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8158,
+    "sentence": "No es cierto que 3 sea par y 4 sea impar.",
+    "propositions": {
+      "P": "3 es par",
+      "Q": "4 es impar"
+    },
+    "formula": "¬(P ∧ Q)",
+    "complexity": "medium",
+    "connectives": [
+      "¬",
+      "∧"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8159,
+    "sentence": "Si 2 es par, entonces 3 es par o 4 es par.",
+    "propositions": {
+      "P": "2 es par",
+      "Q": "3 es par",
+      "R": "4 es par"
+    },
+    "formula": "P → (Q ∨ R)",
+    "complexity": "medium",
+    "connectives": [
+      "∨",
+      "→"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8160,
+    "sentence": "Madrid está en España o París está en Italia, y Roma está en Francia.",
+    "propositions": {
+      "P": "madrid está en españa",
+      "Q": "parís está en italia",
+      "R": "roma está en francia"
+    },
+    "formula": "(P ∨ Q) ∧ R",
+    "complexity": "medium",
+    "connectives": [
+      "∧",
+      "∨"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8161,
+    "sentence": "Si estudias y practicas, aprobarás o, al menos, mejorarás.",
+    "propositions": {
+      "P": "estudias",
+      "Q": "practicas",
+      "R": "aprobarás",
+      "S": "mejorarás"
+    },
+    "formula": "(P ∧ Q) → (R ∨ S)",
+    "complexity": "complex",
+    "connectives": [
+      "∧",
+      "∨",
+      "→"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8162,
+    "sentence": "Llueve o no llueve.",
+    "propositions": {
+      "P": "llueve"
+    },
+    "formula": "P ∨ ¬P",
+    "complexity": "simple",
+    "connectives": [
+      "¬",
+      "∨"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  },
+  {
+    "id": 8163,
+    "sentence": "Llueve y no llueve.",
+    "propositions": {
+      "P": "llueve"
+    },
+    "formula": "P ∧ ¬P",
+    "complexity": "simple",
+    "connectives": [
+      "¬",
+      "∧"
+    ],
+    "source": "https://conceptualia.es/ejemplos/ejemplos-de-proposiciones-simples-y-compuestas/"
+  }
+]
