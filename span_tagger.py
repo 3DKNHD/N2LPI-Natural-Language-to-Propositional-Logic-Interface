@@ -570,8 +570,6 @@ def _iff_context(tokens, i: int) -> bool:
     lo, hi = max(0, i - 3), min(len(tokens), i + 4)
     window = [_norm_token(t.group()) for t in tokens[lo:hi]]
     anchors = sum(1 for w in window if w in _IFF_ANCHORS)
-    if "siempre" in window and "cuando" in window:
-        return True
     if anchors >= 2:
         return True
     return any(w in _IFF_ANCHORS for w in window) and "solo" in window
@@ -803,8 +801,7 @@ def _bio_to_cues(sentence: str, tokens, labels: List[str], confs: List[float]) -
         if kind == "IFF":
             words = {_norm_token(w) for w in re.findall(r"\w+", sentence[start:end], flags=re.UNICODE)}
             iff_ok = (
-                (("si" in words or "cuando" in words) and words & {"solo", "solamente", "unicamente", "siempre"})
-                or ("siempre" in words and "cuando" in words)
+                (("si" in words or "cuando" in words) and words & {"solo", "solamente", "unicamente"})
                 or ({"necesario", "suficiente"} <= words)
                 or bool(words & {"equivale", "equivalente"})
             )
@@ -930,6 +927,9 @@ class JointSpanTagger:
             elif w == "si" and nxt == "bien":
                 lab = "B-AUNQUE"
                 p = max(p, 0.8)
+            elif w == "luego":
+                lab = "B-THEN"
+                p = max(p, 0.85)
             elif w == "por" and nxt == "si":
                 lab = "B-IF"
                 p = max(p, 0.8)
@@ -937,12 +937,15 @@ class JointSpanTagger:
                 lab = "B-IF"
                 p = max(p, 0.75)
             elif w == "siempre" and nxt in {"y", "cuando"}:
-                lab = "B-IFF"
+                lab = "B-IF"
+                p = max(p, 0.8)
+            elif w == "y" and prev == "siempre" and nxt == "cuando":
+                lab = "I-IF"
                 p = max(p, 0.8)
             elif w == "cuando" and (
                 (prev == "y" and prev2 == "siempre") or prev == "siempre"
             ):
-                lab = "I-IFF" if labels and labels[-1].endswith("IFF") else "B-IFF"
+                lab = "I-IF" if labels and labels[-1].endswith("IF") else "B-IF"
                 p = max(p, 0.8)
             elif w == "a" and nxt == "poco":
                 lab = "B-IF"
