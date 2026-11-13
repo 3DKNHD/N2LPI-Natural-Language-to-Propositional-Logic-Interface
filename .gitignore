@@ -3,9 +3,13 @@ env/
 
 #Cache
 __pycache__/
+*.pyc
 
 #Modelo No es necesario para la ejecucion
 model/
 
 #Feedback de aprendizaje (runtime)
 data/feedback.jsonl
+
+#Jornada cientifica: borrador, figuras e informes de modelos. No forma parte del traductor.
+docs/
